@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+        <title>Brandymore Castle - Steve Knoblock</title>
+		<link rel="stylesheet" href="css/home.css" />
+		<link rel="shortcut icon" href="shared/images/weather-clouds.png" />
+		<style>
+		  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+		</style>
+	</head>
+<body>
+
+<div class="grid">
+	<div class="row1">
+		<div class="col1">
+			<header class="pagetop">
+
+				<hgroup>
+				  <h1 class="logo">Brandymore Castle</h1>
+				  <h2 class="tagline">Eight miles high. Lightly touched down.</h2>
+				</hgroup>
+	
+			</header>
+		</div>
+		<div class="col2">
+			    <nav class="sitewide">
+		<ul>
+			<li id="menu-home">
+			   <a href="http://brandymorecastle.org" title="Home">Home</a>
+			</li>
+			<li id="menu-projects">
+			   <a href="http://brandymorecastle.org/projects/" title="Projects">Projects</a>
+			</li>
+			<!--
+			<li id="menu-search">
+			   <a href="http://brandymorecastle.org/search/" title="Search">Search</a>
+			</li>
+			-->
+			<li id="menu-contact">
+			   <a href="http://brandymorecastle.org/contact/" title="Contact">Contact</a>
+			</li>
+			<li id="menu-about">
+			   <a href="http://brandymorecastle.org/about/" title="About">About</a>
+			</li>
+			<!--
+			<li id="menu-blog">
+			   <a href="http://brandymorecastle.org" title="Blog">Blog</a>
+			</li>
+			-->
+		 </ul>
+    </nav>
+		</div>
+		
+	</div>
+		<div style="clear: both"></div>	
+	<div class="row2">
+		<div class="col1">
+		
+<!-- site sections -->		
+		<div style="clear: both"></div>	
+
+		<section>
+			<p style="margin: 0"><div style="float:left; margin-right: 1em">	
+			<a href="http://www.folkstreams.net"><img src="shared/images/angel-stands-by-me.jpg"></a>
+		</div> <a href="http://www.folkstreams.net">Folkstreams</a> is a collection of video documentaries on American roots culture available to the public and educators free of charge, incorporating articles and transcriptions enriching the experience of viewing and study or teaching guides. It's been called "a national preserve" and "a documentary fiend's heaven." I have been responsible for the technical development of Folkstreams since 2002 to present.
+			</p>
+</section>
+
+<div style="clear: both"></div>	
+
+		<section>
+		<div style="float:left; width:38%;margin-right:2%;overflow:auto">
+		<a href="http://www.folkstreams.net"><img src="shared/images/angel-stands-by-me.jpg"></a>
+		</div>
+		<div style="float:right;width: 60%;">
+			<p style="margin: 0"><a href="http://www.folkstreams.net">Folkstreams</a> is a collection of video documentaries on American roots culture available to the public and educators free of charge, incorporating articles and transcriptions enriching the experience of viewing and study or teaching guides. It's been called "a national preserve" and "a documentary fiend's heaven." I have been responsible for the technical development of Folkstreams since 2002 to present.
+			</p>
+		</div>
+</section>
+		
+		<section>
+		<div style="float:left; width:38%;margin-right:2%;overflow:auto">
+		<a href="http://www.folkstreams.net"><img src="shared/images/angel-stands-by-me.jpg"></a>
+		</div>
+		<div style="float:right;width: 60%;">
+			<p><a href="http://www.folkstreams.net">Folkstreams</a> is a collection of video documentaries on American roots culture available to the public and educators free of charge, incorporating articles and transcriptions enriching the experience of viewing and study or teaching guides. It's been called "a national preserve" and "a documentary fiend's heaven." I have been responsible for the technical development of Folkstreams since 2002 to present.
+			</p>
+		</div>
+</section>
+
+<section>
+		<div style="float:left; width:38%;margin-right:2%;overflow:auto">
+		<a href="http://www.flickr.com/photos/knoblock/"><img src="shared/images/concrete-leaves.jpg" height=140 width=200></a>
+		</div>
+			
+		<div style="float:left;width: 60%">
+			<p>I became interested in photography at an early age, and it stuck with me throughout my life. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
+		</div>
+</section>
+
+<section>
+		<div style="float:left; width:38%;margin-right:2%">
+		 Autumn leaves / brightest colors / in the rain
+		</div>
+			
+		<div style="float:right;width: 60%">
+			I write haiku and post them at <a href="http://twitter.com/haikuoftheday">@haikuoftheday</a> on Twitter. 
+		</div>
+</section>
+		
+		</div>
+		<div class="col2">
+
+	
+		<ul class="social">
+			<li><a href="http://twitter.com/photographist">@photographist</a></li>
+			<li><a href="http://twitter.com/haikuoftheday">@haikuoftheday</a></li>
+			<li><a href="http://github.com/steveknoblock">GitHub</a></li>
+			<li><a href="http://facebook.com/steve.knoblock">Facebook</a></li>
+			<li><a href="http://www.linkedin.com/pub/steve-knoblock/19/484/129">LinkedIn</a></li>
+			<li><a href="http://www.flickr.com/photos/knoblock/">Flickr</a></li>
+		</ul>
+	
+	<div class="share">
+		<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://brandymorecastle.org" send="false" width="450" show_faces="false" font=""></fb:like>
+	</div>
+		
+		</div>
+	</div>
+		<div style="clear: both"></div>
+	<div class="row3">
+		<footer>
+		&copy;<!-- 2008- -->2014 Steve Knoblock
+		</footer>	
+	</div>
+</div>
+
+</body>
+</html>
