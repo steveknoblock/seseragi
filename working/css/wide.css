@@ -10,6 +10,92 @@ body {
 	border: 0;
 }
 
+.infobox {
+display: block;
+max-width: 100%;
+min-width: 220px;
+padding: 2%;
+position: static;
+visibility: visible;
+/* gradient background */
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+
+#more_info3 {
+	display: none;
+	/* gradient background */
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.mb { background: transparent }
+
+
+/* Sitewide Navigation */
+nav.sitewide {
+	border: none;
+}
+
+nav.sitewide {
+	border: 0;
+	padding-bottom: 0.5em; /* Deleting this prevents floating menu dividers in IE6, but is required to prevent overlap into feature area in FF1.5 Both look okay and are usable. */
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0.5em;
+	color: #333;
+}
+
+nav.sitewide ul {
+	padding: 0;
+	padding-left: 1em;
+	margin: 0;
+	list-style: none;
+	/*
+	border-left: 1px solid #004e61;
+	border-right: 1px solid #006486;
+	*/
+	position: relative;
+	top: 0;
+	float: left;
+}
+
+    
+nav.sitewide ul li {
+	list-style: none;
+	/*float: left; */
+	padding: 0;
+	margin: 0;
+	font-size: 1.3em;
+	line-height: 1.5;
+}
+
+nav.sitewide ul a:link, nav.sitewide ul a:visited {
+	display: block;
+	/* float: left; */
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #333;
+	height: 16px;
+	font-weight: normal;
+	font-size: 1em;
+}
+
+nav.sitewide ul li a:hover {
+	background: #b3b3b3;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+nav.sitewide ul:first-child {
+	font-weight: bold;
+}
+
+
 .float_left{float:left}
 .float_right{float:right}
 .clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;overflow:hidden}
@@ -84,8 +170,8 @@ header {
 	background-position: top;
 	padding-bottom: 1em;
 	padding-top: 1em;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 0;
+	padding-right: 0;
 	margin: 0;
  }
 

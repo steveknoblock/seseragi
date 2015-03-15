@@ -14,55 +14,49 @@
 	  <h2 class="tagline">Eight miles high. Lightly touched down.</h2>
 	</hgroup>
 	
-
-	<!-- container for more/less action -->
-	<div id="more_info3">
-		<nav class="sitewide clearfix">
+	<nav class="sitewide">
         <ul>
-            <li id="menu-projects">
-               <a href="http://brandymorecastle.org/projects/" title="Projects"><b>Projects</b></a>
-            </li>
-            <li id="menu-contact">
-               <a href="http://brandymorecastle.org/contact/" title="Contact">Contact</a>
-            </li>
-            <li id="menu-about">
-               <a href="http://brandymorecastle.org/about/" title="About">About</a>
-            </li>
-         </ul>
-         
-         <ul>
-            <li id="menu-projects">
-               <a href="http://brandymorecastle.org/projects/" title="Projects"><b>Photography</b></a>
-            </li>
-            <li id="menu-contact">
-               <a href="http://brandymorecastle.org/contact/" title="Contact">Contact</a>
-            </li>
-            <li id="menu-about">
-               <a href="http://brandymorecastle.org/about/" title="About">About</a>
-            </li>
-         </ul>
-
-		 <ul>
-            <li id="menu-contact">
-               <a href="http://brandymorecastle.org/contact/" title="Contact">Contact</a>
-            </li>
-            <li id="menu-about">
-               <a href="http://brandymorecastle.org/about/" title="About">About</a>
-            </li>
-         </ul>
-    </nav>
-</header>
-
+        <!--
+            <li><input type="text" name="q" value="" /></li>
+        -->
+            <li id="menu-home">
             
 <div class="infobox mb" id="infobox3">
 <div style="float:right"><span id="more"><a href="#" class="toggle3" id="more_link3">Open</a></span>
 </div>
+<a href="http://brandymorecastle.org" title="Home">Projects</a>
+	<!-- container for more/less action -->
+	<div id="more_info3">
+	<a href="http://brandymorecastle.org" title="Home">Foo</a>
+	<a href="http://brandymorecastle.org" title="Home">Bar</a>
 </div>
-    
+</div>
+            
                
             </li>
-
-
+            <li id="menu-projects">
+               <a href="http://brandymorecastle.org/projects/" title="Projects">Projects</a>
+            </li>
+            <!--
+            <li id="menu-search">
+               <a href="http://brandymorecastle.org/search/" title="Search">Search</a>
+            </li>
+            -->
+            <li id="menu-contact">
+               <a href="http://brandymorecastle.org/contact/" title="Contact">Contact</a>
+            </li>
+            <li id="menu-about">
+               <a href="http://brandymorecastle.org/about/" title="About">About</a>
+            </li>
+            <!--
+            <li id="menu-blog">
+               <a href="http://brandymorecastle.org" title="Blog">Blog</a>
+            </li>
+            -->
+         </ul>
+    </nav>
+</header>
+       
 
 <div class="wide-one-column clearfix">
 
@@ -122,14 +116,8 @@
         </footer> 
         
 <script>
-// Support for jQuery features
-// Steve Knoblock Saturday, June 06, 2009
-
-$(document).ready(function() {
-
 	// profile collapse and expand
 	$('a.toggle3').click(function(){
-		//alert('foo');
 		$('#more_info3').toggle();
 			moretext = this.text;
 			if ( moretext == 'Open' ) { moretext = 'Close'; } else { moretext = 'Open'; }
@@ -137,8 +125,6 @@ $(document).ready(function() {
 			return false;
 		});
 });
-
-
 </script>
         
 </body>

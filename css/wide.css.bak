@@ -17,58 +17,35 @@ body {
 .clearfix{zoom:1}
 .clear{clear:both;display:block;visibility:hidden;height:0;font-size:0}
 
-.wide-one-column {
-	min-width: 768px;
-	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-	padding-bottom: 0;
-	padding-top: 3.3em;
-	padding-left: 1em;
-	padding-right: 1em;
-}
 
-.columns {
-	float: left;
-	width: 46.1%;
-	/* gradient background */
-	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-top: 1em;
-	padding-bottom: 3em;
-	border: 0px solid #999;
-	margin-left: 8px;
-	margin-right: 8px;
-}
-
-.flow {
-	width: auto;
-	padding-top: 0em;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-bottom: 1.3em;
-}
-
-.col1x, .col2x {
-    width: 2em;
+.col1, .col2 {
 	float: left;
 	width: 40%;
 	/* gradient background */
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
 	background-repeat: repeat-x;
 	background-position: top;
+	
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-top: 1em;
 	padding-bottom: 3em;
 	border: 0px solid #999;
+	margin: auto;
 }
 
 
-
+.wide-one-column {
+	min-width: 768px;
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 0;
+	padding-bottom: 0;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
 
 p {
 	font-size: 1.5em;
@@ -103,7 +80,6 @@ header hgroup h1.logo {
 header {
 	min-width: 768px;
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
-	background: #ccc;
 	background-repeat: repeat-x;
 	background-position: top;
 	padding-bottom: 1em;
@@ -114,11 +90,19 @@ header {
  }
 
 
+/* hgroup is the left half of the header, nav is the right half of the header */
+header.pag hgroup { 
+	float: left;
+	/*width: 40%;*/
+	/*height: 100%;*/
+	/*float: left;*/
+	 }
+
 header hgroup h1.logo {
 	margin: 0;
 	padding-top: 0.3em;
 	font-size: 2em;
-	color: #;
+	color: #ffcc00;
 
 }
 

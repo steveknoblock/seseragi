@@ -13,7 +13,35 @@
 	  <h2 class="tagline">Eight miles high. Lightly touched down.</h2>
 	</hgroup>
 </header>
-       
+
+	<div id="more_info3">
+		<nav class="sitewide">
+        <ul>
+            <li id="menu-projects">
+               <a href="http://brandymorecastle.org/projects/" title="Projects">Projects</a>
+            </li>
+            <li id="menu-contact">
+               <a href="http://brandymorecastle.org/contact/" title="Contact">Contact</a>
+            </li>
+            <li id="menu-about">
+               <a href="http://brandymorecastle.org/about/" title="About">About</a>
+            </li>
+         </ul>
+    </nav>
+<nav class="sitewide">
+        <ul>
+            <li id="menu-projects">
+               <a href="http://brandymorecastle.org/projects/" title="Projects">Projects</a>
+            </li>
+            <li id="menu-contact">
+               <a href="http://brandymorecastle.org/contact/" title="Contact">Contact</a>
+            </li>
+            <li id="menu-about">
+               <a href="http://brandymorecastle.org/about/" title="About">About</a>
+            </li>
+         </ul>
+    </nav>
+</header>
 
 <div class="wide-one-column clearfix">
 

@@ -1,13 +1,23 @@
 /* Sesseragi 2015 */
 
+/* todo
+remove any default margin
+body { margin: 0 }
+
+
+
+*/
+
+
 body {
 	background-color: #eee;
 	/*background-color: #f1f1f1;*/
 	font-size: 1em;
 	font-family: Garamond, Georgia, "Times New Roman", Times, serif;
-	margin: 0;
 	padding: 0;
 	border: 0;
+	/* Removes any default margin */;
+	margin: 0;
 }
 
 .float_left{float:left}
@@ -17,21 +27,43 @@ body {
 .clearfix{zoom:1}
 .clear{clear:both;display:block;visibility:hidden;height:0;font-size:0}
 
+.flow-stones {
+	float: left;
+	width: 48%;
+	/* gradient background */
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding-leftx: 1em;
+	padding-rightx: 1em;
+	padding-top: 1em;
+	padding-bottom: 3em;
+	border: 0px solid #999;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.stone {
+	width: auto;
+	padding-top: 0em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1.3em;
+}
 
 .col1, .col2 {
+    width: 2em;
 	float: left;
 	width: 40%;
 	/* gradient background */
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
 	background-repeat: repeat-x;
 	background-position: top;
-	
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-top: 1em;
 	padding-bottom: 3em;
 	border: 0px solid #999;
-	margin: auto;
 }
 
 
@@ -40,34 +72,11 @@ body {
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
 	background-repeat: repeat-x;
 	background-position: top;
+	padding: 0;
 	padding-bottom: 0;
 	padding-top: 3.3em;
 	padding-left: 1em;
 	padding-right: 1em;
-}
-
-.columns {
-	float: left;
-	width: 46.1%;
-	/* gradient background */
-	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-top: 1em;
-	padding-bottom: 3em;
-	border: 0px solid #999;
-	margin-left: 8px;
-	margin-right: 8px;
-}
-
-.flow {
-	width: auto;
-	padding-top: 0em;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-bottom: 1.3em;
 }
 
 p {
@@ -103,6 +112,7 @@ header hgroup h1.logo {
 header {
 	min-width: 768px;
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background: #ccc;
 	background-repeat: repeat-x;
 	background-position: top;
 	padding-bottom: 1em;
@@ -112,14 +122,6 @@ header {
 	margin: 0;
  }
 
-
-/* hgroup is the left half of the header, nav is the right half of the header */
-header.pag hgroup { 
-	float: left;
-	/*width: 40%;*/
-	/*height: 100%;*/
-	/*float: left;*/
-	 }
 
 header hgroup h1.logo {
 	margin: 0;
