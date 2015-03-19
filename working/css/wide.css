@@ -65,6 +65,7 @@ nav.sitewide ul {
 
     
 nav.sitewide ul li {
+	/*background: blue;*/
 	list-style: none;
 	/*float: left; */
 	padding: 0;
@@ -76,17 +77,20 @@ nav.sitewide ul li {
 nav.sitewide ul a:link, nav.sitewide ul a:visited {
 	display: block;
 	/* float: left; */
-	padding: 10px 15px;
+	padding: 0.3em;
 	text-decoration: none;
 	color: #333;
-	height: 16px;
+
 	font-weight: normal;
-	font-size: 1em;
+
 }
 
 nav.sitewide ul li a:hover {
+	padding: 0.3em;
 	background: #b3b3b3;
 	color: #fff;
+	font-weight: normal;
+	font-size: 1em;
 	text-decoration: none;
 	border-bottom: none;
 }
@@ -103,8 +107,21 @@ nav.sitewide ul:first-child {
 .clearfix{zoom:1}
 .clear{clear:both;display:block;visibility:hidden;height:0;font-size:0}
 
+.row{
+	/*background: red;*/
+	/* gradient background 
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	*/
+	padding-top: 2em;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .col1, .col2 {
+    /*width: 2em;*/
 	float: left;
 	width: 40%;
 	/* gradient background */
@@ -118,6 +135,29 @@ nav.sitewide ul:first-child {
 	padding-bottom: 3em;
 	border: 0px solid #999;
 	margin: auto;
+}
+
+.col1 {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.col2 {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.row{
+	/*background: red;*/
+	/* gradient background 
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	*/
+	padding-top: 2em;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -198,6 +238,7 @@ header hgroup h2.tagline {
 	color: #3377AA;
 	font-size: 1em;
 }
+
 
 
 #slider {

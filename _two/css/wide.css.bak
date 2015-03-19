@@ -201,7 +201,6 @@ header hgroup h1.logo {
 	}
 
 
-
 header {
 	min-width: 768px;
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
