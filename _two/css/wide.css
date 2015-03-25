@@ -32,6 +32,11 @@ visibility: visible;
 	background-position: top;
 }
 
+#more_link3 {
+	font-size: 1.3em;
+	text-decoration: none
+}
+
 .mb { background: transparent }
 
 

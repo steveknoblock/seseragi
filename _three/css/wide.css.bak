@@ -33,8 +33,7 @@ visibility: visible;
 }
 
 #more_link3 {
-	font-size: 1.3em;
-	text-decoration: none
+	font-size: 1.3em
 }
 
 .mb { background: transparent }
@@ -126,7 +125,6 @@ nav.sitewide ul:first-child {
 }
 
 .col1, .col2 {
-    /*width: 2em;*/
 	float: left;
 	width: 40%;
 	/* gradient background */
@@ -243,7 +241,6 @@ header hgroup h2.tagline {
 	color: #3377AA;
 	font-size: 1em;
 }
-
 
 
 #slider {
