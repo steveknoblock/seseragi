@@ -10,25 +10,13 @@ body {
 	border: 0;
 }
 
-.infoboxx {
-	width: 250px;
-	overflow: auto;
-	font-size: smaller;
-	margin: 0 0 0 0;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-top: 0;
-	padding-bottom: 3em;
-	//box-shadow: 10px 10px 30px 20px #f1f1f1 inset;
-    background: transparent;
-    float: left;
-    padding: 2%;
- 
-}
-
 .infobox {
-display: block;max-width: 100%;min-width: 220px;padding: 2%;position: static;visibility: visible;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;border-color: #eee #ddd #bbb;border-width: 1px;border-style: solid;box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 3px; 
-
+display: block;
+max-width: 100%;
+min-width: 220px;
+padding: 2%;
+position: static;
+visibility: visible;
 /* gradient background */
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
 	background-repeat: repeat-x;
@@ -37,10 +25,84 @@ display: block;max-width: 100%;min-width: 220px;padding: 2%;position: static;vis
 
 
 #more_info3 {
-	display: none
+	display: none;
+	/* gradient background */
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+#more_link3 {
+	font-size: 1.3em;
+	text-decoration: none
 }
 
 .mb { background: transparent }
+
+
+/* Sitewide Navigation */
+nav.sitewide {
+	border: none;
+}
+
+nav.sitewide {
+	border: 0;
+	padding-bottom: 0.5em; /* Deleting this prevents floating menu dividers in IE6, but is required to prevent overlap into feature area in FF1.5 Both look okay and are usable. */
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0.5em;
+	color: #333;
+}
+
+nav.sitewide ul {
+	padding: 0;
+	padding-left: 1em;
+	margin: 0;
+	list-style: none;
+	/*
+	border-left: 1px solid #004e61;
+	border-right: 1px solid #006486;
+	*/
+	position: relative;
+	top: 0;
+	float: left;
+}
+
+    
+nav.sitewide ul li {
+	/*background: blue;*/
+	list-style: none;
+	/*float: left; */
+	padding: 0;
+	margin: 0;
+	font-size: 1.3em;
+	line-height: 1.5;
+}
+
+nav.sitewide ul a:link, nav.sitewide ul a:visited {
+	display: block;
+	/* float: left; */
+	padding: 0.3em;
+	text-decoration: none;
+	color: #333;
+
+	font-weight: normal;
+
+}
+
+nav.sitewide ul li a:hover {
+	padding: 0.3em;
+	background: #b3b3b3;
+	color: #fff;
+	font-weight: normal;
+	font-size: 1em;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+nav.sitewide ul:first-child {
+	font-weight: bold;
+}
 
 
 .float_left{float:left}
@@ -50,6 +112,18 @@ display: block;max-width: 100%;min-width: 220px;padding: 2%;position: static;vis
 .clearfix{zoom:1}
 .clear{clear:both;display:block;visibility:hidden;height:0;font-size:0}
 
+.row{
+	/*background: red;*/
+	/* gradient background 
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	*/
+	padding-top: 2em;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .col1, .col2 {
 	float: left;
@@ -65,6 +139,29 @@ display: block;max-width: 100%;min-width: 220px;padding: 2%;position: static;vis
 	padding-bottom: 3em;
 	border: 0px solid #999;
 	margin: auto;
+}
+
+.col1 {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.col2 {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.row{
+	/*background: red;*/
+	/* gradient background 
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	*/
+	padding-top: 2em;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -145,6 +242,17 @@ header hgroup h2.tagline {
 	color: #3377AA;
 	font-size: 1em;
 }
+
+
+pre {
+	padding: 1em 1.3em;
+	margin-top: 1em;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #000;
+	font-family: monospace;
+}
+
 
 
 #slider {

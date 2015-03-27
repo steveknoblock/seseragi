@@ -32,6 +32,11 @@ visibility: visible;
 	background-position: top;
 }
 
+#more_link3 {
+	font-size: 1.3em;
+	text-decoration: none
+}
+
 .mb { background: transparent }
 
 
@@ -121,7 +126,6 @@ nav.sitewide ul:first-child {
 }
 
 .col1, .col2 {
-    /*width: 2em;*/
 	float: left;
 	width: 40%;
 	/* gradient background */
@@ -237,6 +241,16 @@ header hgroup h2.tagline {
 	text-align: center;
 	color: #3377AA;
 	font-size: 1em;
+}
+
+
+pre {
+	padding: 1em 1.3em;
+	margin-top: 1em;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #000;
+	font-family: monospace;
 }
 
 

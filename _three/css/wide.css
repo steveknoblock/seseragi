@@ -126,7 +126,6 @@ nav.sitewide ul:first-child {
 }
 
 .col1, .col2 {
-    /*width: 2em;*/
 	float: left;
 	width: 40%;
 	/* gradient background */
@@ -187,9 +186,9 @@ p {
 
 footer {
 background-color: transparent;
-	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/footer_background_gray.png);
-	margin: 2px;
-	padding: 4px;
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	padding: 0;
+	min-height: 5em;
 	text-align: center;
 	text-align: center
 }
@@ -242,6 +241,16 @@ header hgroup h2.tagline {
 	text-align: center;
 	color: #3377AA;
 	font-size: 1em;
+}
+
+
+pre {
+	padding: 1em 1.3em;
+	margin-top: 1em;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #000;
+	font-family: monospace;
 }
 
 
