@@ -179,7 +179,7 @@ nav.sitewide ul:first-child {
 
 p {
 	font-size: 1.5em;
-	line-height:1.33333
+	line-height: 1.33333
 }
 
 
@@ -241,6 +241,7 @@ header hgroup h2.tagline {
 	text-align: center;
 	color: #3377AA;
 	font-size: 1em;
+	font-weight: 400;
 }
 
 

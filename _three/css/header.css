@@ -1,0 +1,49 @@
+header hgroup h1.logo {
+    /*background: transparent;*/
+    margin-top: 0.25em;
+	color:#f1f1f1; 
+	font-size: 24px;
+	text-align: center;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	font-weight: normal;
+	}
+
+
+
+header {
+	min-width: 768px;
+	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+ }
+
+
+/* hgroup is the left half of the header, nav is the right half of the header */
+header.pag hgroup { 
+	float: left;
+	/*width: 40%;*/
+	/*height: 100%;*/
+	/*float: left;*/
+	 }
+
+header hgroup h1.logo {
+	margin: 0;
+	padding-top: 0.3em;
+	font-size: 2em;
+	color: #333;
+
+}
+
+header hgroup h2.tagline {
+  background: transparent;
+	text-align: center;
+	color: #3377AA;
+	font-size: 1em;
+	font-weight: 400;
+}

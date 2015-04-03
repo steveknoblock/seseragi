@@ -5,6 +5,7 @@ body {
 	/*background-color: #f1f1f1;*/
 	font-size: 1em;
 	font-family: Garamond, Georgia, "Times New Roman", Times, serif;
+	font-family: 'Lora', "Times New Roman", Times, serif;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -41,13 +42,17 @@ visibility: visible;
 
 
 /* Sitewide Navigation */
+ /* Deleting this prevents floating menu dividers in IE6, 
+ but is required to prevent overlap into feature
+ area in FF1.5 Both look okay and are usable. */
+ 
 nav.sitewide {
-	border: none;
+	border: none
 }
 
 nav.sitewide {
 	border: 0;
-	padding-bottom: 0.5em; /* Deleting this prevents floating menu dividers in IE6, but is required to prevent overlap into feature area in FF1.5 Both look okay and are usable. */
+	padding-bottom: 0.5em;
 	padding-left: 0;
 	padding-right: 0;
 	padding-top: 0.5em;
@@ -75,7 +80,6 @@ nav.sitewide ul li {
 	/*float: left; */
 	padding: 0;
 	margin: 0;
-	font-size: 1.3em;
 	line-height: 1.5;
 }
 
@@ -101,7 +105,7 @@ nav.sitewide ul li a:hover {
 }
 
 nav.sitewide ul:first-child {
-	font-weight: bold;
+	font-weight: normal;
 }
 
 
@@ -112,19 +116,6 @@ nav.sitewide ul:first-child {
 .clearfix{zoom:1}
 .clear{clear:both;display:block;visibility:hidden;height:0;font-size:0}
 
-.row{
-	/*background: red;*/
-	/* gradient background 
-	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-	*/
-	padding-top: 2em;
-	margin: 0;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .col1, .col2 {
 	float: left;
 	width: 40%;
@@ -132,17 +123,16 @@ nav.sitewide ul:first-child {
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
 	background-repeat: repeat-x;
 	background-position: top;
-	
 	padding-left: 1em;
 	padding-right: 1em;
-	padding-top: 1em;
+	padding-top: .5em;
 	padding-bottom: 3em;
 	border: 0px solid #999;
-	margin: auto;
+	margin: 0 0 0 0;
 }
 
 .col1 {
-	margin-left: 1em;
+	margin-left: 0;
 	margin-right: 1em;
 }
 
@@ -152,18 +142,23 @@ nav.sitewide ul:first-child {
 }
 
 .row{
-	/*background: red;*/
 	/* gradient background 
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
 	background-repeat: repeat-x;
 	background-position: top;
 	*/
+	padding-top: 1em;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	
 	padding-top: 2em;
 	margin: 0;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+/* Panels */
 
 .wide-one-column {
 	min-width: 768px;
@@ -177,17 +172,22 @@ nav.sitewide ul:first-child {
 	padding-right: 1em;
 }
 
+.wide-one-column h1 {
+	text-align: center
+}
+
+
 p {
-	font-size: 1.5em;
-	line-height:1.33333
+	font-size: 1.3em;
+	line-height: 1.5;
+	font-family: 'Lora', serif;
 }
 
 
 
 footer {
-background-color: transparent;
 	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
-	padding: 0;
+	padding-top: 1em;
 	min-height: 5em;
 	text-align: center;
 	text-align: center
@@ -219,15 +219,6 @@ header {
 	margin: 0;
  }
 
-
-/* hgroup is the left half of the header, nav is the right half of the header */
-header.pag hgroup { 
-	float: left;
-	/*width: 40%;*/
-	/*height: 100%;*/
-	/*float: left;*/
-	 }
-
 header hgroup h1.logo {
 	margin: 0;
 	padding-top: 0.3em;
@@ -241,6 +232,7 @@ header hgroup h2.tagline {
 	text-align: center;
 	color: #3377AA;
 	font-size: 1em;
+	font-weight: 400;
 }
 
 
@@ -253,7 +245,10 @@ pre {
 	font-family: monospace;
 }
 
-
+#menu-projects {
+font-family: 'Lato', sans-serif;
+ font-size: 1em
+}
 
 #slider {
  	background-color: #333;
