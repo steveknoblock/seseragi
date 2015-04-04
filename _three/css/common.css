@@ -1,4 +1,4 @@
-/* Sesseragi 2015 */
+/* Seseragi 2015 */
 
 body {
 	background-color: #eee;
@@ -16,6 +16,17 @@ p {
 	font-family: 'Lora', serif;
 }
 
+/*
+.wide-one-column * p {
+	margin-top: 0.5em;
+}
+*/
+
+.col1 p, .col2 p {
+	/*background: red;*/
+	margin-top: 0.3em;
+}
+
 pre {
 	padding: 1em 1.3em;
 	margin-top: 1em;
@@ -25,25 +36,13 @@ pre {
 	font-family: monospace;
 }
 
-/*
-.flow-stream {
-	min-width: 768px;
-	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
-			background-repeat: repeat-x;
-			background-position: top;
-			padding: 8px;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 2em;
-			margin: 8px;
-}
-*/
+
 .top {
 	padding-top: 1em;
 }
 
 .prose {
-font-size: 1.3em
+	font-size: 1.3em
 }
 
 
@@ -52,28 +51,6 @@ h1 {
 	padding: 0;
 	font-size: 1em;
 }
-
-/*
-.flow-stones {
-margin: 0;
-padding: 0;
-border: 0;
-	float: left;
-	width: 48%;
-	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-}
-*/
-/*
-.stone {
-	width: auto;
-	padding-top: 0em;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-bottom: 3em;
-}
-*/
 
 
 
@@ -100,14 +77,6 @@ background-color: transparent;
 	font-size: 12px;
 	text-align: center
 }
-
-
-
- 
- header {
- 	margin-top: 0;
- 	padding-top: 2em;
- }
 
 header hgroup h2.tagline {
   background: transparent;
