@@ -87,7 +87,6 @@ nav.sitewide ul:first-child {
 }
 
 #more_link3 {
-	font-size: 1.3em;
 	text-decoration: none
 }
 
@@ -96,3 +95,38 @@ font-family: 'Lato', sans-serif;
  font-size: 1em
 }
 
+
+.btn {
+      background-color: #4285f4;
+    }
+
+navx:hover {
+      background-color: #296CDB;
+    }
+
+    .btn:focus {
+      background-color: #0F52C1;
+    
+      /* The outline parameter surpresses the border
+      color / outline when focused */
+      outline: 0;
+    }
+
+    .btn:active {
+      background-color: #0039A8;
+    }
+	
+.border-menu {
+  position: relative;
+  padding-left: 1.25em;
+}
+.border-menu:before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #000;
+  border-bottom: 0.125em solid #000;
+}
