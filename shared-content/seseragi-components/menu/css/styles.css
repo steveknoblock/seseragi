@@ -81,7 +81,7 @@ nav.sitewide ul:first-child {
 #more_info3 {
 	display: none;
 	/* gradient background */
-	background: transparent url(http://brandymorecastle.org/themes/seseragi/img/page_background_gray.png);
+	background: transparent url(../img/page_background_gray.png);
 	background-repeat: repeat-x;
 	background-position: top;
 }
