@@ -1,13 +1,9 @@
-/* Seseragi 2015 */
-/*
+/* Seseragi 2015 Typography */
+
+
 body {
-	background-color: #eee;
-	/*background-color: #f1f1f1;*/
 	font-size: 1em;
 	font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
-	margin: 0;
-	padding: 0;
-	border: 0;
 }
 
 p {
@@ -17,13 +13,26 @@ p {
 }
 
 pre {
-	padding: 1em 1.3em;
-	margin-top: 1em;
-	border: 1px solid #ccc;
-	background: #fff;
-	color: #000;
-	font-family: monospace;
+	font-family: "Inconsolata", "Lucida Sans", monospace;
 }
+
+
+header hgroup h1.logo {
+	font-size: 24px;
+	text-align: center;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	font-weight: normal;
+	}
+	
+header hgroup h2.tagline {
+  background: transparent;
+	text-align: center;
+	color: #3377AA;
+	font-size: 1em;
+	font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+}
+
 
 .top {
 	padding-top: 1em;
@@ -33,27 +42,10 @@ pre {
 	font-size: 1.3em
 }
 
-
-h1 {
-	margin: 0;
-	padding: 0;
-	font-size: 1em;
-}
-
-
-
-header hgroup h1.logo {
-    /*background: transparent;*/
-    margin-top: 0.25em;
-	color: #f1f1f1; 
-	font-size: 24px;
+.wide-one-column h1 {
 	text-align: center;
-	letter-spacing: 0.25em;
-	text-transform: uppercase;
-	font-family: Georgia, serif;
-	font-weight: normal;
-	}
-	
+	font-size: 1.5em
+}
 
 
 footer {
@@ -62,15 +54,7 @@ background-color: transparent;
 	margin: 2px;
 	padding: 4px;
 	text-align: center;
-	font-size: 12px;
+	font-size: 0.75em;
 	text-align: center
 }
 
-header hgroup h2.tagline {
-  background: transparent;
-	text-align: center;
-	color: #3377AA;
-	font-size: 0.75em;
-}
-	
-*/

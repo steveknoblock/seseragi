@@ -1,7 +1,177 @@
+@import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
 /* Seseragi 2015 */
+/* base */
+/* fonts */
+/* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
+/* Seseragi 2015 Typography */
+/* line 4, ../scss/_typography.scss */
+body {
+  font-size: 1em;
+  font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+}
 
-@import url(common.css);
-@import	url(header.css);
-@import url(layout.css);
-@import url(nav-menu.css);
-@import	url(footer.css);
+/* line 9, ../scss/_typography.scss */
+p {
+  font-size: 1.3em;
+  line-height: 1.5;
+  font-family: 'Lora', serif;
+}
+
+/* line 15, ../scss/_typography.scss */
+pre {
+  font-family: "Inconsolata", "Lucida Sans", monospace;
+}
+
+/* line 20, ../scss/_typography.scss */
+header hgroup h1.logo {
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* line 28, ../scss/_typography.scss */
+header hgroup h2.tagline {
+  background: transparent;
+  text-align: center;
+  color: #3377AA;
+  font-size: 1em;
+  font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+}
+
+/* line 37, ../scss/_typography.scss */
+.top {
+  padding-top: 1em;
+}
+
+/* line 41, ../scss/_typography.scss */
+.prose {
+  font-size: 1.3em;
+}
+
+/* line 45, ../scss/_typography.scss */
+.wide-one-column h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* line 51, ../scss/_typography.scss */
+footer {
+  background-color: transparent;
+  background: transparent url("../img/footer_background_gray.png");
+  margin: 2px;
+  padding: 4px;
+  text-align: center;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+/* Sesseragi 2015 */
+/* line 3, ../scss/_layout.scss */
+body {
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Panels */
+/* line 12, ../scss/_layout.scss */
+.wide-one-column {
+  min-width: 768px;
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  padding: 0;
+  padding-bottom: 0;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* line 24, ../scss/_layout.scss */
+.wide-one-column h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* line 29, ../scss/_layout.scss */
+.tagline {
+  text-align: center;
+}
+
+/* grid */
+/* line 36, ../scss/_layout.scss */
+.float_left {
+  float: left;
+}
+
+/* line 37, ../scss/_layout.scss */
+.float_right {
+  float: right;
+}
+
+/* line 38, ../scss/_layout.scss */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 39, ../scss/_layout.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 40, ../scss/_layout.scss */
+.clearfix {
+  zoom: 1;
+}
+
+/* line 41, ../scss/_layout.scss */
+.clear {
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+
+/* line 44, ../scss/_layout.scss */
+.container {
+  overflow: hidden;
+  padding: 1em 2em;
+}
+
+@media (min-width: 560px) {
+  /* line 50, ../scss/_layout.scss */
+  .col {
+    float: left;
+    margin-right: 2%;
+  }
+
+  /* line 55, ../scss/_layout.scss */
+  .col > li:nth-child(even) {
+    clear: left;
+  }
+}
+/* line 60, ../scss/_layout.scss */
+.col {
+  /* gradient background */
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  padding: 0 1em;
+  box-sizing: border-box;
+  width: 48%;
+}
+
+@media (max-width: 600px) {
+  /* Collapse grid to one column */
+  /* line 75, ../scss/_layout.scss */
+  .col {
+    width: 100%;
+  }
+}
