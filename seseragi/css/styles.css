@@ -168,10 +168,33 @@ body {
   width: 48%;
 }
 
-@media (max-width: 600px) {
-  /* Collapse grid to one column */
-  /* line 75, ../scss/_layout.scss */
+/* Collapse to three columns */
+@media (max-width: 1000px) {
+  /* line 76, ../scss/_layout.scss */
   .col {
+    float: left;
+    width: 33%;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+}
+/* Collapse to two columns */
+@media (max-width: 800px) {
+  /* line 90, ../scss/_layout.scss */
+  .col {
+    float: left;
+    width: 50%;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+}
+/* Collapse to one column */
+@media (max-width: 650px) {
+  /* line 104, ../scss/_layout.scss */
+  .col {
+    float: none;
     width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
   }
 }
