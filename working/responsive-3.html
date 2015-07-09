@@ -2,77 +2,62 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name=viewport content="width=device-width, initial-scale=1">
 <title>Responsive 3 > 1</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style  type="text/css">
+<style>
 
 section {
-	/*background: gray;*/
-	/*float: left;*/
-	/*width: 28%;*/
+	float: left;
 	margin: 0;
 	box-sizing: border-box;
+	padding-left: 1em;
+	padding-right: 1em;
 	}
+
+
 div {
-	width: 100%
-	}
-/*
-
-
-div:nth-child(even) {
-	clear: left;
-	padding-right: 0.5em;
-	background: red;
-}
-
-div:nth-child(odd) {
-	padding-left: 0.5em;
-}
-*/
-
-/*
-
-applies the rules if the viewport width is is less than the maxium width?
-
-
-Container is 100% width. 
-
-Boxes are set to 25%, you get 4 per row. (33% for 3 per row)
-
-Set to 50%, you get 2 per row. 
-
-Set to 100%, you get 1 per row
-
-
-*/
-
-
-@media (min-width: 1000px) {
-section {
-	background: red;
-	width: 33%;
-	}
-}
-
-
-@media (min-width: 1000px) and (orientation: landscape) {
-section {
-	background: blue;
-	width: 50%;
-	}
-}
-
-/* if browser window is 414px or less, use these styles. */
-
-@media (min-width: 414px) and (orientation: landscape) {
-section {
-	background: #ccc;
 	width: 100%;
+}
+	
+
+
+@media (min-width: 1280px) {
+
+}
+
+/** This media query sets the number of columns to three.
+**/
+
+@media (max-width: 1280px) {
+	section {
+	width: 33.33333%;
 	}
 }
 
 
+/** This media query reduces the number of columns to two.
+**/
 
+@media (max-width: 650px) {
+
+	section {
+		width: 50%;
+	}
+
+	section:nth-child(odd)  {
+	clear: left;
+	}
+}
+
+
+/** This media query reduces the number of columns to one.
+**/
+
+@media (max-width: 414px) {
+	section {
+		width: 100%;
+	  }
+}
 </style>
 </head>
 <body>
@@ -90,7 +75,12 @@ section {
 	<section>
 	<p>3. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
 	</section>
+	
+	<section>
+	<p>4. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+	</section>
 </div>
+
 
 
 </body>

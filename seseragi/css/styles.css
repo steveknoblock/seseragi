@@ -168,33 +168,46 @@ body {
   width: 48%;
 }
 
-/* Collapse to three columns */
-@media (max-width: 1000px) {
-  /* line 76, ../scss/_layout.scss */
-  .col {
-    float: left;
-    width: 33%;
-    padding: 0.5em;
-    box-sizing: border-box;
+/* line 71, ../scss/_layout.scss */
+section {
+  float: left;
+  margin: 0;
+  box-sizing: border-box;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* line 80, ../scss/_layout.scss */
+div {
+  width: 100%;
+}
+
+/** This media query sets the number of columns to three.
+**/
+@media (max-width: 1280px) {
+  /* line 94, ../scss/_layout.scss */
+  section {
+    width: 33.33333%;
   }
 }
-/* Collapse to two columns */
-@media (max-width: 800px) {
-  /* line 90, ../scss/_layout.scss */
-  .col {
-    float: left;
-    width: 50%;
-    padding: 0.5em;
-    box-sizing: border-box;
-  }
-}
-/* Collapse to one column */
+/** This media query reduces the number of columns to two.
+**/
 @media (max-width: 650px) {
-  /* line 104, ../scss/_layout.scss */
-  .col {
-    float: none;
+  /* line 105, ../scss/_layout.scss */
+  section {
+    width: 50%;
+  }
+
+  /* line 109, ../scss/_layout.scss */
+  section:nth-child(odd) {
+    clear: left;
+  }
+}
+/** This media query reduces the number of columns to one.
+**/
+@media (max-width: 414px) {
+  /* line 119, ../scss/_layout.scss */
+  section {
     width: 100%;
-    padding: 0.5em;
-    box-sizing: border-box;
   }
 }
