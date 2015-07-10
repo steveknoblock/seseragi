@@ -92,7 +92,7 @@ div {
 
 @media (max-width: 1280px) {
 	section {
-	width: 33.33333%;
+		width: 33.33333%;
 	}
 }
 
@@ -102,12 +102,12 @@ div {
 
 @media (max-width: 650px) {
 
-	section {
+	section.text {
 		width: 50%;
 	}
 
-	section:nth-child(odd)  {
-	clear: left;
+	section.text:nth-child(odd)  {
+		clear: left;
 	}
 }
 
@@ -116,7 +116,7 @@ div {
 **/
 
 @media (max-width: 414px) {
-	section {
+	section.text {
 		width: 100%;
 	  }
 }

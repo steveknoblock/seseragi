@@ -194,12 +194,12 @@ div {
 **/
 @media (max-width: 650px) {
   /* line 105, ../scss/_layout.scss */
-  section {
+  section.text {
     width: 50%;
   }
 
   /* line 109, ../scss/_layout.scss */
-  section:nth-child(odd) {
+  section.text:nth-child(odd) {
     clear: left;
   }
 }
@@ -207,7 +207,7 @@ div {
 **/
 @media (max-width: 414px) {
   /* line 119, ../scss/_layout.scss */
-  section {
+  section.text {
     width: 100%;
   }
 }
