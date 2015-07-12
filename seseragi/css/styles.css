@@ -68,7 +68,7 @@ footer {
 }
 
 /* Sesseragi 2015 */
-/* line 3, ../scss/_layout.scss */
+/* line 3, ../scss/_layout-bak.scss */
 body {
   background-color: #eee;
   margin: 0;
@@ -77,7 +77,7 @@ body {
 }
 
 /* Panels */
-/* line 12, ../scss/_layout.scss */
+/* line 12, ../scss/_layout-bak.scss */
 .wide-one-column {
   min-width: 768px;
   background: transparent url(../img/page_background_gray.png);
@@ -90,29 +90,29 @@ body {
   padding-right: 1em;
 }
 
-/* line 24, ../scss/_layout.scss */
+/* line 24, ../scss/_layout-bak.scss */
 .wide-one-column h1 {
   text-align: center;
   font-size: 1.5em;
 }
 
-/* line 29, ../scss/_layout.scss */
+/* line 29, ../scss/_layout-bak.scss */
 .tagline {
   text-align: center;
 }
 
 /* grid */
-/* line 36, ../scss/_layout.scss */
+/* line 36, ../scss/_layout-bak.scss */
 .float_left {
   float: left;
 }
 
-/* line 37, ../scss/_layout.scss */
+/* line 37, ../scss/_layout-bak.scss */
 .float_right {
   float: right;
 }
 
-/* line 38, ../scss/_layout.scss */
+/* line 38, ../scss/_layout-bak.scss */
 .clearfix:before, .clearfix:after {
   content: "\0020";
   display: block;
@@ -120,17 +120,17 @@ body {
   overflow: hidden;
 }
 
-/* line 39, ../scss/_layout.scss */
+/* line 39, ../scss/_layout-bak.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 40, ../scss/_layout.scss */
+/* line 40, ../scss/_layout-bak.scss */
 .clearfix {
   zoom: 1;
 }
 
-/* line 41, ../scss/_layout.scss */
+/* line 41, ../scss/_layout-bak.scss */
 .clear {
   clear: both;
   display: block;
@@ -139,25 +139,25 @@ body {
   font-size: 0;
 }
 
-/* line 44, ../scss/_layout.scss */
+/* line 44, ../scss/_layout-bak.scss */
 .container {
   overflow: hidden;
   padding: 1em 2em;
 }
 
+/*
 @media (min-width: 560px) {
-  /* line 50, ../scss/_layout.scss */
-  .col {
-    float: left;
-    margin-right: 2%;
-  }
-
-  /* line 55, ../scss/_layout.scss */
-  .col > li:nth-child(even) {
-    clear: left;
-  }
+	.col {
+	float: left;
+	margin-right: 2%;
+	}
+	
+	.col > li:nth-child(even) {
+	clear: left;
 }
-/* line 60, ../scss/_layout.scss */
+}
+*/
+/* line 62, ../scss/_layout-bak.scss */
 .col {
   /* gradient background */
   background: transparent url(../img/page_background_gray.png);
@@ -168,46 +168,69 @@ body {
   width: 48%;
 }
 
-/* line 71, ../scss/_layout.scss */
-section {
-  float: left;
-  margin: 0;
+/* line 73, ../scss/_layout-bak.scss */
+section.text {
+  margin: 0 auto;
   box-sizing: border-box;
   padding-left: 1em;
   padding-right: 1em;
 }
 
-/* line 80, ../scss/_layout.scss */
-div {
+/* line 81, ../scss/_layout-bak.scss */
+section.root {
   width: 100%;
 }
 
+/* line 86, ../scss/_layout-bak.scss */
+section.panel {
+  /* gradient background */
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  width: 100%;
+  clear: both;
+}
+
+/* todo make this recursive, but follow the inception rule, no more than
+four levels deep (except for text) */
 /** This media query sets the number of columns to three.
 **/
 @media (max-width: 1280px) {
-  /* line 94, ../scss/_layout.scss */
-  section {
+  /* line 108, ../scss/_layout-bak.scss */
+  .grid section {
     width: 33.33333%;
   }
+
+  /*
+  	.text {
+  		width: 55em;
+  	}
+  	*/
 }
 /** This media query reduces the number of columns to two.
 **/
-@media (max-width: 650px) {
-  /* line 105, ../scss/_layout.scss */
-  section.text {
+@media (max-width: 800px) {
+  /* line 125, ../scss/_layout-bak.scss */
+  .grid section {
     width: 50%;
+    margin: 0;
   }
 
-  /* line 109, ../scss/_layout.scss */
-  section.text:nth-child(odd) {
+  /* line 130, ../scss/_layout-bak.scss */
+  .grid section {
+    float: left;
+  }
+
+  /* line 134, ../scss/_layout-bak.scss */
+  section.textoff:nth-child(odd) {
     clear: left;
   }
 }
 /** This media query reduces the number of columns to one.
 **/
 @media (max-width: 414px) {
-  /* line 119, ../scss/_layout.scss */
-  section.text {
+  /* line 144, ../scss/_layout-bak.scss */
+  .grid {
     width: 100%;
   }
 }

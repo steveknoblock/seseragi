@@ -1,0 +1,148 @@
+/* Sesseragi 2015 */
+
+body {
+	background-color: #eee;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Panels */
+
+.wide-one-column {
+	min-width: 768px;
+	background: transparent url(../img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 0;
+	padding-bottom: 0;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.wide-one-column h1 {
+	text-align: center;
+	font-size: 1.5em
+}
+
+.tagline { text-align: center }
+
+/* grid */
+
+
+
+
+.float_left{float:left}
+.float_right{float:right}
+.clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;overflow:hidden}
+.clearfix:after{clear:both}
+.clearfix{zoom:1}
+.clear{clear:both;display:block;visibility:hidden;height:0;font-size:0}
+
+
+.container {
+	overflow: hidden;
+	padding: 1em 2em;
+}
+
+/*
+@media (min-width: 560px) {
+	.col {
+	float: left;
+	margin-right: 2%;
+	}
+	
+	.col > li:nth-child(even) {
+	clear: left;
+}
+}
+*/
+
+.col {
+	/* gradient background */
+	background: transparent url(../img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 0 1em;
+	box-sizing: border-box;
+	width: 48%
+}
+
+
+section.text {
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-left: 1em;
+	padding-right: 1em;
+	}
+
+
+section.root {
+	width: 100%;
+}
+	
+
+section.panel {
+/* gradient background */
+	background: transparent url(../img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	width: 100%;
+	clear: both;
+}
+
+
+/* todo make this recursive, but follow the inception rule, no more than
+four levels deep (except for text) */
+
+
+@media (min-width: 1280px) {
+
+}
+
+/** This media query sets the number of columns to three.
+**/
+
+@media (max-width: 1280px) {
+	.grid section {
+		width: 33.33333%;
+	}
+
+/*
+	.text {
+		width: 55em;
+	}
+	*/
+}
+
+
+/** This media query reduces the number of columns to two.
+**/
+
+@media (max-width: 800px) {
+
+	.grid section {
+		width: 50%;
+		margin: 0;
+	}
+
+	.grid section  {
+		float: left;
+	}
+
+	section.textoff:nth-child(odd)  {
+		clear: left;
+	}
+}
+
+
+/** This media query reduces the number of columns to one.
+**/
+
+@media (max-width: 414px) {
+	.grid {
+		width: 100%;
+	  }
+}
+
