@@ -170,7 +170,7 @@ body {
 
 /* line 73, ../scss/_layout-bak.scss */
 section.text {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   box-sizing: border-box;
   padding-left: 1em;
   padding-right: 1em;
@@ -198,6 +198,7 @@ four levels deep (except for text) */
 @media (max-width: 1280px) {
   /* line 108, ../scss/_layout-bak.scss */
   .grid section {
+    background-color: red;
     width: 33.33333%;
   }
 
@@ -210,27 +211,24 @@ four levels deep (except for text) */
 /** This media query reduces the number of columns to two.
 **/
 @media (max-width: 800px) {
-  /* line 125, ../scss/_layout-bak.scss */
-  .grid section {
+  /* line 126, ../scss/_layout-bak.scss */
+  .grid:nth-child(1) {
+    background-color: red;
     width: 50%;
     margin: 0;
   }
 
-  /* line 130, ../scss/_layout-bak.scss */
+  /* line 132, ../scss/_layout-bak.scss */
   .grid section {
     float: left;
-  }
-
-  /* line 134, ../scss/_layout-bak.scss */
-  section.textoff:nth-child(odd) {
-    clear: left;
   }
 }
 /** This media query reduces the number of columns to one.
 **/
 @media (max-width: 414px) {
-  /* line 144, ../scss/_layout-bak.scss */
-  .grid {
+  /* line 143, ../scss/_layout-bak.scss */
+  .grid:nth-child(1) {
+    background-color: blue;
     width: 100%;
   }
 }
