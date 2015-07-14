@@ -91,28 +91,22 @@ body {
 }
 
 /* line 24, ../scss/_layout-bak.scss */
-.wide-one-column h1 {
-  text-align: center;
-  font-size: 1.5em;
-}
-
-/* line 29, ../scss/_layout-bak.scss */
 .tagline {
   text-align: center;
 }
 
 /* grid */
-/* line 36, ../scss/_layout-bak.scss */
+/* line 31, ../scss/_layout-bak.scss */
 .float_left {
   float: left;
 }
 
-/* line 37, ../scss/_layout-bak.scss */
+/* line 32, ../scss/_layout-bak.scss */
 .float_right {
   float: right;
 }
 
-/* line 38, ../scss/_layout-bak.scss */
+/* line 33, ../scss/_layout-bak.scss */
 .clearfix:before, .clearfix:after {
   content: "\0020";
   display: block;
@@ -120,17 +114,17 @@ body {
   overflow: hidden;
 }
 
-/* line 39, ../scss/_layout-bak.scss */
+/* line 34, ../scss/_layout-bak.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 40, ../scss/_layout-bak.scss */
+/* line 35, ../scss/_layout-bak.scss */
 .clearfix {
   zoom: 1;
 }
 
-/* line 41, ../scss/_layout-bak.scss */
+/* line 36, ../scss/_layout-bak.scss */
 .clear {
   clear: both;
   display: block;
@@ -139,7 +133,7 @@ body {
   font-size: 0;
 }
 
-/* line 44, ../scss/_layout-bak.scss */
+/* line 39, ../scss/_layout-bak.scss */
 .container {
   overflow: hidden;
   padding: 1em 2em;
@@ -157,32 +151,28 @@ body {
 }
 }
 */
-/* line 62, ../scss/_layout-bak.scss */
-.col {
-  /* gradient background */
-  background: transparent url(../img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
-  padding: 0 1em;
-  box-sizing: border-box;
-  width: 48%;
-}
-
-/* line 73, ../scss/_layout-bak.scss */
+/* gradient background */
+/* background: transparent url(../img/page_background_gray.png); */
+/* background-repeat: repeat-x; */
+/* background-position: top; */
+/* line 64, ../scss/_layout-bak.scss */
 section.text {
+  box-sizing: border-box;
+  padding-left: 1em;
+  padding-right: 1em;
   /* margin: 0 auto; 
   box-sizing: border-box;
   padding-left: 1em;
   padding-right: 1em;*/
 }
 
-/* line 81, ../scss/_layout-bak.scss */
+/* line 75, ../scss/_layout-bak.scss */
 section.root {
   width: 100%;
 }
 
-/* line 86, ../scss/_layout-bak.scss */
-section.paneloff {
+/* line 80, ../scss/_layout-bak.scss */
+section.panel {
   /* gradient background */
   background: transparent url(../img/page_background_gray.png);
   background-repeat: repeat-x;
@@ -191,28 +181,45 @@ section.paneloff {
   clear: both;
 }
 
-/* line 95, ../scss/_layout-bak.scss */
+/* line 90, ../scss/_layout-bak.scss */
+.panel > .text > h1 {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+
+/* line 98, ../scss/_layout-bak.scss */
 footer, .grid {
   clear: both;
 }
 
+/* line 100, ../scss/_layout-bak.scss */
+footer {
+  /* gradient background */
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  padding: 1em;
+}
+
 /* todo make this recursive, but follow the inception rule, no more than
 four levels deep (except for text) */
+/* line 117, ../scss/_layout-bak.scss */
+.grid > section > h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
 /** This media query sets the number of columns to three.
 **/
 @media (max-width: 1280px) {
-  /* line 110, ../scss/_layout-bak.scss */
+  /* line 127, ../scss/_layout-bak.scss */
   .grid > section {
     background-color: red;
     width: 33.33333%;
     float: left;
   }
 
-  /*
-  section.grid:nth-child(1) {
-  	width: 33.33333%;
-  }
-  */
   /*
   	.text {
   		width: 55em;
@@ -222,7 +229,7 @@ four levels deep (except for text) */
 /** This media query reduces the number of columns to two.
 **/
 @media (max-width: 1024px) {
-  /* line 132, ../scss/_layout-bak.scss */
+  /* line 144, ../scss/_layout-bak.scss */
   .grid > section {
     background-color: green;
     width: 50%;
@@ -231,18 +238,8 @@ four levels deep (except for text) */
 }
 /** This media query reduces the number of columns to one.
 **/
-/* float: none; */
-/*
 @media (max-width: 414px) {
-	section.grid section {
-		
-		width: 100%;
-		
-	  }
-}
-*/
-@media (max-width: 414px) {
-  /* line 153, ../scss/_layout-bak.scss */
+  /* line 156, ../scss/_layout-bak.scss */
   .grid > section {
     background-color: blue;
     width: 100%;

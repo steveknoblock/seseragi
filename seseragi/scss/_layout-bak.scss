@@ -21,11 +21,6 @@ body {
 	padding-right: 1em;
 }
 
-.wide-one-column h1 {
-	text-align: center;
-	font-size: 1.5em
-}
-
 .tagline { text-align: center }
 
 /* grid */
@@ -59,18 +54,17 @@ body {
 }
 */
 
-.col {
-	/* gradient background */
-	background: transparent url(../img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-	padding: 0 1em;
-	box-sizing: border-box;
-	width: 48%
-}
+
+/* gradient background */
+/* background: transparent url(../img/page_background_gray.png); */
+/* background-repeat: repeat-x; */
+/* background-position: top; */
 
 
 section.text {
+	box-sizing: border-box;
+	padding-left: 1em;
+	padding-right: 1em;
 	/* margin: 0 auto; 
 	box-sizing: border-box;
 	padding-left: 1em;
@@ -83,16 +77,35 @@ section.root {
 }
 	
 
-section.paneloff {
+section.panel {
 /* gradient background */
 	background: transparent url(../img/page_background_gray.png);
 	background-repeat: repeat-x;
 	background-position: top;
 	width: 100%;
 	clear: both;
+	
 }
 
+.panel > .text > h1 {
+	text-align: center;
+	padding-top: 1em;
+	font-size: 1.5em;
+}
+
+
+
 footer, .grid { clear: both }
+
+footer { 
+/* gradient background */
+	background: transparent url(../img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 1em;
+}
+
+
 
 /* todo make this recursive, but follow the inception rule, no more than
 four levels deep (except for text) */
@@ -101,6 +114,10 @@ four levels deep (except for text) */
 @media (min-width: 1280px) {
 
 }
+.grid > section > h1 {
+		text-align: center;
+		font-size: 1.5em;
+	}
 
 /** This media query sets the number of columns to three.
 **/
@@ -112,11 +129,6 @@ four levels deep (except for text) */
 		width: 33.33333%;
 		float: left;
 	  }
-	/*
-	section.grid:nth-child(1) {
-		width: 33.33333%;
-	}
-	*/
 
 /*
 	.text {
@@ -139,16 +151,7 @@ four levels deep (except for text) */
 
 /** This media query reduces the number of columns to one.
 **/
-/* float: none; */
-/*
-@media (max-width: 414px) {
-	section.grid section {
-		
-		width: 100%;
-		
-	  }
-}
-*/
+
 @media (max-width: 414px) {
 	.grid > section {
 		background-color: blue;
