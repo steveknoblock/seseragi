@@ -1,0 +1,91 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>Responsive 3 > 1</title>
+<style>
+
+section {
+	float: left;
+	margin: 0;
+	box-sizing: border-box;
+	padding-left: 1em;
+	padding-right: 1em;
+	}
+
+
+div {
+	width: 100%;
+}
+	
+
+
+@media (min-width: 1280px) {
+
+}
+
+/** This media query sets the number of columns to three.
+**/
+
+@media (max-width: 1280px) {
+	section {
+	width: 33.33333%;
+	}
+}
+
+
+/** This media query reduces the number of columns to two.
+**/
+
+@media (max-width: 650px) {
+
+	section {
+		width: 50%;
+	}
+
+	section:nth-child(odd)  {
+	clear: left;
+	}
+}
+
+
+/** This media query reduces the number of columns to one.
+**/
+
+@media (max-width: 414px) {
+	section {
+		width: 100%;
+	  }
+}
+</style>
+</head>
+<body>
+<!-- grid with short content -->
+<section class="panel grid">
+	<section class="text">
+		<h1>Sweet mornings of spring (breifly)</h1>
+		<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.
+		</p>
+	</section>
+	<section class="text">
+		<h1>Sweet mornings of spring</h1>
+		<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.
+		</p>
+	</section>
+	<section class="text">
+		<h1>Sweet mornings of spring</h1>
+		<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.
+		</p>
+	</section>
+	<section class="text">
+		<h1>Sweet mornings of spring</h1>
+		<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.
+		</p>
+	</section>
+</section>
+
+   
+</body>
+</html>

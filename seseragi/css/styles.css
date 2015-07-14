@@ -170,10 +170,10 @@ body {
 
 /* line 73, ../scss/_layout-bak.scss */
 section.text {
-  /* margin: 0 auto; */
+  /* margin: 0 auto; 
   box-sizing: border-box;
   padding-left: 1em;
-  padding-right: 1em;
+  padding-right: 1em;*/
 }
 
 /* line 81, ../scss/_layout-bak.scss */
@@ -182,7 +182,7 @@ section.root {
 }
 
 /* line 86, ../scss/_layout-bak.scss */
-section.panel {
+section.paneloff {
   /* gradient background */
   background: transparent url(../img/page_background_gray.png);
   background-repeat: repeat-x;
@@ -191,17 +191,28 @@ section.panel {
   clear: both;
 }
 
+/* line 95, ../scss/_layout-bak.scss */
+footer, .grid {
+  clear: both;
+}
+
 /* todo make this recursive, but follow the inception rule, no more than
 four levels deep (except for text) */
 /** This media query sets the number of columns to three.
 **/
 @media (max-width: 1280px) {
-  /* line 108, ../scss/_layout-bak.scss */
-  .grid section {
+  /* line 110, ../scss/_layout-bak.scss */
+  .grid > section {
     background-color: red;
     width: 33.33333%;
+    float: left;
   }
 
+  /*
+  section.grid:nth-child(1) {
+  	width: 33.33333%;
+  }
+  */
   /*
   	.text {
   		width: 55em;
@@ -210,25 +221,31 @@ four levels deep (except for text) */
 }
 /** This media query reduces the number of columns to two.
 **/
-@media (max-width: 800px) {
-  /* line 126, ../scss/_layout-bak.scss */
-  .grid:nth-child(1) {
-    background-color: red;
-    width: 50%;
-    margin: 0;
-  }
-
+@media (max-width: 1024px) {
   /* line 132, ../scss/_layout-bak.scss */
-  .grid section {
+  .grid > section {
+    background-color: green;
+    width: 50%;
     float: left;
   }
 }
 /** This media query reduces the number of columns to one.
 **/
+/* float: none; */
+/*
 @media (max-width: 414px) {
-  /* line 143, ../scss/_layout-bak.scss */
-  .grid:nth-child(1) {
+	section.grid section {
+		
+		width: 100%;
+		
+	  }
+}
+*/
+@media (max-width: 414px) {
+  /* line 153, ../scss/_layout-bak.scss */
+  .grid > section {
     background-color: blue;
     width: 100%;
+    float: none;
   }
 }

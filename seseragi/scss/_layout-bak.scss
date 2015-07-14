@@ -71,10 +71,10 @@ body {
 
 
 section.text {
-	/* margin: 0 auto; */
+	/* margin: 0 auto; 
 	box-sizing: border-box;
 	padding-left: 1em;
-	padding-right: 1em;
+	padding-right: 1em;*/
 	}
 
 
@@ -83,7 +83,7 @@ section.root {
 }
 	
 
-section.panel {
+section.paneloff {
 /* gradient background */
 	background: transparent url(../img/page_background_gray.png);
 	background-repeat: repeat-x;
@@ -92,6 +92,7 @@ section.panel {
 	clear: both;
 }
 
+footer, .grid { clear: both }
 
 /* todo make this recursive, but follow the inception rule, no more than
 four levels deep (except for text) */
@@ -105,10 +106,17 @@ four levels deep (except for text) */
 **/
 
 @media (max-width: 1280px) {
-	.grid section {
+
+	.grid > section {
 		background-color: red;
 		width: 33.33333%;
+		float: left;
+	  }
+	/*
+	section.grid:nth-child(1) {
+		width: 33.33333%;
 	}
+	*/
 
 /*
 	.text {
@@ -117,32 +125,34 @@ four levels deep (except for text) */
 	*/
 }
 
-
 /** This media query reduces the number of columns to two.
 **/
 
-@media (max-width: 800px) {
-
-	.grid:nth-child(1) {
-		background-color: red;
+@media (max-width: 1024px) {
+	.grid > section {
+		background-color: green;
 		width: 50%;
-		margin: 0;
-	}
-
-	.grid section  {
 		float: left;
-	}
-
+	  }
 }
 
 
 /** This media query reduces the number of columns to one.
 **/
-
+/* float: none; */
+/*
 @media (max-width: 414px) {
-	.grid:nth-child(1) {
-		background-color: blue;
+	section.grid section {
+		
 		width: 100%;
+		
 	  }
 }
-
+*/
+@media (max-width: 414px) {
+	.grid > section {
+		background-color: blue;
+		width: 100%;
+		float:none;
+	  }
+}
