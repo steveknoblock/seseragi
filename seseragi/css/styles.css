@@ -68,7 +68,7 @@ footer {
 }
 
 /* Sesseragi 2015 */
-/* line 3, ../scss/_layout-bak.scss */
+/* line 3, ../scss/_layout.scss */
 body {
   background-color: #eee;
   margin: 0;
@@ -77,36 +77,42 @@ body {
 }
 
 /* Panels */
-/* line 12, ../scss/_layout-bak.scss */
-.wide-one-column {
-  min-width: 768px;
-  background: transparent url(../img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
-  padding: 0;
-  padding-bottom: 0;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-/* line 24, ../scss/_layout-bak.scss */
+/* line 12, ../scss/_layout.scss */
 .tagline {
   text-align: center;
 }
 
 /* grid */
-/* line 31, ../scss/_layout-bak.scss */
+/* line 17, ../scss/_layout.scss */
+.panel {
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: #eee;
+  padding-top: 0.5em;
+  width: 100%;
+  /* border-top: 1px solid turquoise; */
+  clear: both;
+}
+
+/* line 28, ../scss/_layout.scss */
+.grid {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+}
+
+/* line 35, ../scss/_layout.scss */
 .float_left {
   float: left;
 }
 
-/* line 32, ../scss/_layout-bak.scss */
+/* line 36, ../scss/_layout.scss */
 .float_right {
   float: right;
 }
 
-/* line 33, ../scss/_layout-bak.scss */
+/* line 37, ../scss/_layout.scss */
 .clearfix:before, .clearfix:after {
   content: "\0020";
   display: block;
@@ -114,17 +120,17 @@ body {
   overflow: hidden;
 }
 
-/* line 34, ../scss/_layout-bak.scss */
+/* line 38, ../scss/_layout.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 35, ../scss/_layout-bak.scss */
+/* line 39, ../scss/_layout.scss */
 .clearfix {
   zoom: 1;
 }
 
-/* line 36, ../scss/_layout-bak.scss */
+/* line 40, ../scss/_layout.scss */
 .clear {
   clear: both;
   display: block;
@@ -133,7 +139,7 @@ body {
   font-size: 0;
 }
 
-/* line 39, ../scss/_layout-bak.scss */
+/* line 43, ../scss/_layout.scss */
 .container {
   overflow: hidden;
   padding: 1em 2em;
@@ -155,7 +161,7 @@ body {
 /* background: transparent url(../img/page_background_gray.png); */
 /* background-repeat: repeat-x; */
 /* background-position: top; */
-/* line 64, ../scss/_layout-bak.scss */
+/* line 68, ../scss/_layout.scss */
 section.text {
   box-sizing: border-box;
   padding-left: 1em;
@@ -164,38 +170,31 @@ section.text {
   box-sizing: border-box;
   padding-left: 1em;
   padding-right: 1em;*/
+  overflow: hidden;
 }
 
-/* line 75, ../scss/_layout-bak.scss */
-section.root {
+/* line 80, ../scss/_layout.scss */
+section {
+  box-sizing: border-box;
   width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
-/* line 80, ../scss/_layout-bak.scss */
-section.panel {
-  /* gradient background */
-  background: transparent url(../img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
-  width: 100%;
-  clear: both;
-}
-
-/* line 90, ../scss/_layout-bak.scss */
+/* line 88, ../scss/_layout.scss */
 .panel > .text > h1 {
   text-align: center;
   padding-top: 1em;
   font-size: 1.5em;
 }
 
-/* line 98, ../scss/_layout-bak.scss */
+/* line 96, ../scss/_layout.scss */
 footer, .grid {
   clear: both;
 }
 
-/* line 100, ../scss/_layout-bak.scss */
+/* line 98, ../scss/_layout.scss */
 footer {
-  /* gradient background */
   background: transparent url(../img/page_background_gray.png);
   background-repeat: repeat-x;
   background-position: top;
@@ -204,7 +203,7 @@ footer {
 
 /* todo make this recursive, but follow the inception rule, no more than
 four levels deep (except for text) */
-/* line 117, ../scss/_layout-bak.scss */
+/* line 114, ../scss/_layout.scss */
 .grid > section > h1 {
   text-align: center;
   font-size: 1.5em;
@@ -213,25 +212,19 @@ four levels deep (except for text) */
 /** This media query sets the number of columns to three.
 **/
 @media (max-width: 1280px) {
-  /* line 127, ../scss/_layout-bak.scss */
+  /* this is the one screwing up the background */
+  /* line 125, ../scss/_layout.scss */
   .grid > section {
-    background-color: red;
     width: 33.33333%;
     float: left;
   }
-
-  /*
-  	.text {
-  		width: 55em;
-  	}
-  	*/
 }
 /** This media query reduces the number of columns to two.
 **/
 @media (max-width: 1024px) {
-  /* line 144, ../scss/_layout-bak.scss */
+  /* line 135, ../scss/_layout.scss */
   .grid > section {
-    background-color: green;
+    /* background-color: green; */
     width: 50%;
     float: left;
   }
@@ -239,9 +232,9 @@ four levels deep (except for text) */
 /** This media query reduces the number of columns to one.
 **/
 @media (max-width: 414px) {
-  /* line 156, ../scss/_layout-bak.scss */
+  /* line 147, ../scss/_layout.scss */
   .grid > section {
-    background-color: blue;
+    /* background-color: blue; */
     width: 100%;
     float: none;
   }
