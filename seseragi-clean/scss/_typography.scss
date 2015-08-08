@@ -1,0 +1,60 @@
+/* Seseragi 2015 Typography */
+
+
+body {
+	font-size: 1em;
+	font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+}
+
+p {
+	font-size: 1.3em;
+	line-height: 1.5;
+	font-family: 'Lora', serif;
+}
+
+pre {
+	font-family: "Inconsolata", "Lucida Sans", monospace;
+}
+
+
+header hgroup h1.logo {
+	font-size: 24px;
+	text-align: center;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	font-weight: normal;
+	}
+	
+header hgroup h2.tagline {
+  background: transparent;
+	text-align: center;
+	color: #3377AA;
+	font-size: 1em;
+	font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+}
+
+
+.top {
+	padding-top: 1em;
+}
+
+.prose {
+	font-size: 1.3em
+}
+
+.wide-one-column h1 {
+	text-align: center;
+	font-size: 1.5em
+}
+
+
+footer {
+background-color: transparent;
+	background: transparent url('../img/footer_background_gray.png');
+	margin: 2px;
+	padding: 4px;
+	text-align: center;
+	font-size: 0.75em;
+	text-align: center
+}
+

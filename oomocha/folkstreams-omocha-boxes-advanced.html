@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Omocha Boxes</title>
+		<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Cabin:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<!-- JavaScripts -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    //<!--
+    jQuery.noConflict();    //-->
+</script>
+		<style>
+.infobox {
+	width: 250px;
+	overflow: auto;
+	font-size: smaller;
+	margin: 0 0 0 0;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0;
+	padding-bottom: 3em;
+	border: 1px;
+	border-style: dashed;
+	border-color: #333
+}
+
+.grayback { background: #eee }
+
+.info { margin: 0 0 0 0; margin-bottom: 6px; padding-left: 6px }
+
+#more_info {
+	display: none
+}
+
+#more_info2 {
+	display: none
+}
+</style>
+
+
+<script>
+
+// Support for jQuery features
+// Steve Knoblock Saturday, June 06, 2009
+
+$(document).ready(function() {
+
+	// profile collapse and expand
+	$('a.toggle').click(function(){
+		$('#more_info').toggle();
+			moretext = this.text;
+			if ( moretext == 'Read more' ) { moretext = 'Close'; } else { moretext = 'Read more'; }
+			$('#more_link').text(moretext);
+			return false;
+		});
+
+
+	// profile collapse and expand
+	$('a.toggle').click(function(){
+		$('#more_info2').toggle();
+			moretext = this.text;
+			if ( moretext == 'Open' ) { moretext = 'Close'; } else { moretext = 'Open'; }
+			$('#more_link2').text(moretext);
+			return false;
+		});
+		
+		
+		
+	// profile collapse and expand
+	$('a.toggle').click(function(){
+		$('#more_info3').toggle();
+			moretext = this.text;
+			if ( moretext == 'Open' ) { moretext = 'Close'; } else { moretext = 'Open'; }
+			$('#more_link3').text(moretext);
+			return false;
+		});
+});
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
+</script>
+	</head>
+<body>
+
+<div class="infobox" id="infobox">
+<div><span id="more"><a href="#" class="toggle" id="more_link">Read more</a></span></div>
+A film portrait of the last Black medicine-show performer, Arthur "Peg Leg Sam" Jackson, with harmonica songs, tales of hoboing, buckdances, and a live medicine-show performance.
+	<!-- container for more/less action -->
+	<div id="more_info">
+	<p>A portrait of Arthur "Peg Leg Sam" Jackson --black harmonica player, singer, and comedian who made his living "busking" on the street and performing in patent-medicine shows touring southern towns.  Footage includes excerpts from one of his last medicine shows, videotaped at a county fair in 1972, and material filmed near his home in South Carolina in 1975.  The performance includes harmonica solos, songs, a parody of a chanted sermon, folktales and reminiscences, and three buck dances. 
+	<p>A clip from this film appeared in Jean-Piere Jeunet's popular French feature <em><a href="http://en.wikipedia.org/wiki/Le_Fabuleux_Destin_d'Am%C3%A9lie_Poulain" target="_blank">Amelie</a></em>.  <em>Born for Hard Luck</em> is available on DVD from <a href="http://davenportfilms.com" target="_blank">Davenport Films</a>.
+	<p>If you are interested in other films about medicine shows, we recommend  <em><a href="http://www.folkstreams.net/film,68" target="_blank">Free Show Tonight</a></em>, by academy award winner Paul Wagner. 
+	</div>
+</div>
+</div>
+
+
+<p>Next
+</p>
+
+
+<div class="infobox" id="infobox">
+<div><span id="more"><a href="#" class="toggle" id="more_link2">Open</a></span></div>
+Arthur "Peg Leg Sam" Jackson
+	<!-- container for more/less action -->
+	<div id="more_info2">
+	<p>Arthur "Peg Leg Sam" Jackson was a black harmonica player, singer, and comedian who made his living "busking" on the street and performing in patent-medicine shows touring southern towns.  Footage includes excerpts from one of his last medicine shows, videotaped at a county fair in 1972, and material filmed near his home in South Carolina in 1975.  The performance includes harmonica solos, songs, a parody of a chanted sermon, folktales and reminiscences, and three buck dances.
+	</p>
+	</div>
+</div>
+</div>
+
+<p>Next
+</p>
+
+
+<div class="infobox grayback" id="infobox">
+<div style="float:right"><span id="more"><a href="#" class="toggle" id="more_link3">Open</a></span></div>
+Arthur "Peg Leg Sam" Jackson
+	<!-- container for more/less action -->
+	<div id="more_info3">
+	<p>Arthur "Peg Leg Sam" Jackson was a black harmonica player, singer, and comedian who made his living "busking" on the street and performing in patent-medicine shows touring southern towns.  Footage includes excerpts from one of his last medicine shows, videotaped at a county fair in 1972, and material filmed near his home in South Carolina in 1975.  The performance includes harmonica solos, songs, a parody of a chanted sermon, folktales and reminiscences, and three buck dances.
+	</p>
+	</div>
+</div>
+</div>
+
+
+
+</body>
+</html>
