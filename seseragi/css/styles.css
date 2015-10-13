@@ -167,6 +167,9 @@ body {
 /* line 60, ../scss/_layout.scss */
 .callout p {
   font-size: 1em;
+  /*
+  margin: 0; padding-top: 1em; margin-right: 1em;
+  */
 }
 
 /*
