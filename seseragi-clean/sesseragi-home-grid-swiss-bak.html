@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Homepage</title>
+    <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../shared-content/seseragi-components/menu/css/menu.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
+    <style>
+
+    @import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
+
+    #more_info3 { 
+      display: grid;
+    }
+
+    body {
+      font-size: 1em;
+      font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+    }
+
+    .callout {
+      margin: 0 0 0 0;
+      display: block;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: auto;
+    }
+
+    .callout > p {
+      float: right;
+    }
+
+
+    /* This media query reduces the number of columns to one.
+     */
+    @media (min-width: 255px) {
+  
+        .grid-content {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: auto;
+          margin: 2% auto;
+          grid-gap: 25px;
+          margin-top: 0px;
+        }
+    }
+
+    /* This media query reduces the number of columns to two.
+     */
+     @media (min-width: 500px) {
+  
+        .grid-content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+          margin: 2% auto;
+          grid-gap: 25px;
+          margin-top: 0px;
+        }
+    }
+
+    /* This media query reduces the number of columns to three.
+     */
+    @media (min-width: 700px) {
+  
+        .grid-content {
+          display: grid;
+          /*grid-template-columns: 0.3fr 0.3fr 0.3fr;*/
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: auto;
+          margin: 2% auto;
+          grid-gap: 25px;
+          margin-top: 0px;
+        }
+    }
+    
+  .panel {
+    background: transparent url(img/page_background_gray.png);
+    background-repeat: repeat-x;
+    background-position: top;
+    background-color: #eee;
+    padding-top: 0.5em;
+    width: 100%;
+}
+
+    .grid-content-img {
+          display: grid;
+          grid-template-columns: 3fr 3fr;
+          
+          margin: 2% auto;
+          grid-gap: 25px;
+          margin-top: 0px;
+      }
+
+      .nav-grid {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-template-rows: auto;
+          margin: 0;
+          grid-gap: 3px;
+          margin-top: 0px;
+      }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  </head>
+<body>
+
+<header>
+	<hgroup>
+	  <h1 class="logo">Seseragi</h1>
+	  <h2 class="tagline">The sound of flowing water.</h2>
+	</hgroup>
+		
+	<!-- container for more/less action -->
+	<div id="more_info31">
+    <div class="infobox mb" id="infobox3">
+<div style="float:right"><span id="more"><a href="#" class="toggle3" id="more_link3"><div class="border-menu">Menu</div></a></span>
+</div>
+</div>
+		<nav id="more_info3" class="nav-grid">
+        <ul>
+            <li>
+               <a href="http://brandymorecastle.org/projects/">Projects</a>
+            </li>
+            <li>
+               <a href="http://brandymorecastle.org/photography/">Photography</a>
+            </li>
+            <li>
+               <a href="http://brandymorecastle.org/code/">Code</a>
+            </li>
+         </ul>
+         
+         <ul id="menu-labels">
+            <li>
+               <a href="http://brandymorecastle.org/projects/">Photography</a>
+            </li>
+            <li>
+               <a href="http://brandymorecastle.org/contact/">Poetry</a>
+            </li>
+            <li>
+               <a href="http://brandymorecastle.org/about/">Writing</a>
+            </li>
+         </ul>
+
+		 <ul>
+		 <li id="menu-contact">
+               <a href="http://brandymorecastle.org/contact/">Facebook</a>
+            </li>
+            <li>
+               <a href="http://brandymorecastle.org/contact/">@photographist</a>
+            </li>
+			<li>
+               <a href="http://brandymorecastle.org/about/">About</a>
+            </li>
+         </ul>
+    </nav>
+</header>
+
+            
+
+
+<style>
+.calloutx {
+	padding-top: 1em;
+ font-size: 1em;
+}
+
+.calloutx img {max-width:100% !important;
+    height:auto;
+    /* display:block; */}
+.calloutx p {
+   font-size: 1em
+  /*
+  margin: 0; padding-top: 1em; margin-right: 1em;
+  */
+}
+
+ </style>
+
+<!--
+  If the image is wider than 50% of the container, the image should be displayed flush right.
+
+  If possible, the first image should be displayed flush with the top of the container.
+
+  It has to be intelligent.
+
+  The image and accompanying text must move together. The text should not exceed the width of the image.
+
+  What happens to an image that is smaller than half the container width?
+
+  Stack horizontally until its over half?
+
+  What if the smaller images have different aspect ratios? What if some are tall and skinny?
+
+  These are decisions normally made by the graphic designer laying out the book. If the photos were large,
+  they would lay them out flush with the right edge of the page. If they were small, they wouldn't be used
+  on the page, or some other way would be found, like a grid. Instead of computing a grid with a mix of 
+  any size images, they would choose the aspect ratio and size for the page. I don't want to get into this.
+
+  If the images are all 4:3 or 3:2 they can be fairly safely arranged in a grid.
+
+  A simple rule might be if the image aspect is tall and skinny to put it centered a two row high column. The images
+  wouldn't fit together but they would all take up the same space.
+
+  The media query gives some intelligence to remove content that doesn't fit the design, but then its
+  hiding content from the reader they might want or need.
+
+To do this kind of design, requires an awareness of where edges are. Or just sending elements against edges until
+they naturally stop.
+
+- upper left
+- upper right
+- lower right
+- lower left
+- right
+- left
+
+a web page scrolls so there is no bottom
+the end of a container does have a bottom
+
+this is a little more complex, becuase a designer would place the caption above the bottom right flush image
+
+-->
+
+<div class="grid-content-img panel">
+    <section>
+        <div class="callout">
+            <div class="photo"><a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+            </div>
+            <p class="caption">I took my first photograph at five years old. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
+        </div>
+    </section>
+
+    <section>
+         <div class="callout">
+            <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+            <p>I took my first photograph at five years old. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="callout">
+            <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+            <p>I took my first photograph at five years old. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="callout">
+            <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+            <p>I took my first photograph at five years old. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
+        </div>
+    </section>
+
+   <section>
+        <div class="callout">
+            <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+            <p>I took my first photograph at five years old. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
+        </div>
+    </section>
+</div>
+
+
+	<footer>
+        &copy;<!-- 2008-2014 Seseragi Theme -->2015 Steve Knoblock Seseragi Theme
+    </footer> 
+        
+<script>
+// Support for jQuery features
+// Steve Knoblock Saturday, June 06, 2009
+/*
+$(document).ready(function() {
+	// profile collapse and expand
+	$('a.toggle3').click(function(){
+		$('#more_info3').toggle();
+			//moretext = this.text;
+			//if ( moretext == 'Open' ) { moretext = 'Close'; } else { moretext = 'Open'; }
+			//$('#more_link3').text(moretext);
+			return false;
+		});
+});
+*/
+</script>
+        
+<script type="text/javascript">
+// Script to hide/show menu
+var triggerElement = document.querySelector('a.toggle3');
+var menu = document.querySelector('#more_info3');
+triggerElement.addEventListener('click', function (event) {
+      if (menu.style.display == "") {
+          menu.style.display = "none";
+          //triggerElement.innerHTML = "Show Menu";
+      } else {
+          menu.style.display = "";
+          //triggerElement.innerHTML = "Hide Menu";
+      }
+    }
+  );
+</script>
+
+</body>
+</html>
