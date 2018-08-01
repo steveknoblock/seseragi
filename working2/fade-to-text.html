@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Fade to Text</title>
+    <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../shared-content/seseragi-components/menu/css/menu.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
+    <style>
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  </head>
+<body>
+
+
+
+<div class="faded">
+    <section id="miximage">
+           Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image Image image 
+    </section>
+    <section id="mixtext">
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text 
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text 
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text 
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text 
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text 
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text
+        <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text 
+    </section>
+</div>
+
+
+	<footer>
+        &copy;<!-- 2008-2014 Seseragi Theme -->2014 Steve Knoblock Seseragi Theme
+    </footer> 
+        
+<script>
+
+//var duration = 1500;
+var duration = 100;
+
+/*
+    offset returns the position of the first element relative to the
+    document.
+    It returns this position as top and left point of the container.
+
+    This suggests I cannot detect scrolling the bottom without
+    calculating. top + height, left + width
+
+*/
+
+function isScrolledPastTop(elem) {
+    p = $(elem).offset();
+    console.log(p);
+    var bottomOfWindowVPos = $(window).scrollTop() + $(window).height();
+    var topOfElemVPos = $(elem).offset().top + $(elem).outerHeight();
+    bottom_of_object = $(elem).offset().top + $(this).outerHeight();
+    if( topOfElemVPos > bottomOfWindowVPos ) {
+        return true;
+    }
+    return false;
+}
+
+//bottom_of_object = $(this).offset().top + $(this).outerHeight();
+
+  <!--//--><![CDATA[//><!--
+jQuery(document).ready(function($) { 
+  $(window).scroll(function() {
+
+
+//Get the current vertical position of the scroll bar for the first element in the set of matched elements
+
+    var top = isScrolledPastTop($(this));
+
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+    console.log(bottom_of_window);
+    if($(this).scrollTop() > 200) {
+      $("#miximage").fadeIn(duration, 0.33); 
+      //$("#miximage").fadeTo( "slow", 0.33 );
+    //} else {
+      //$("#miximage").fadeOut(duration);
+    }       
+  });
+  
+  });
+//--><!]]>
+
+
+
+</script>
+        
+</body>
+</html>

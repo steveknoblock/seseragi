@@ -10,9 +10,33 @@
 
     @import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
 
+    #menu-nav { 
+      display: "";
+    }
+
     body {
       font-size: 1em;
       font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+    }
+
+    .callout {
+      margin: 0 0 0 0;
+      display: block;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: auto;
+    }
+
+    .callout > p {
+      float: right;
+    }
+
+    /* This really needs a gutter on the left of the grid. */
+    section h1 {
+      padding-left: 1em;
+    }
+
+    section p {
+      padding-left: 1em;
     }
 
     /* This media query reduces the number of columns to one.
@@ -21,7 +45,7 @@
   
         .grid-content {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(1, 1fr);
           grid-template-rows: auto;
           margin: 2% auto;
           grid-gap: 25px;
@@ -67,20 +91,46 @@
     width: 100%;
 }
 
+    .grid-content-img {
+          display: grid;
+          grid-template-columns: 3fr 3fr;
+          
+          margin: 2% auto;
+          grid-gap: 25px;
+          margin-top: 0px;
+      }
+
+      .stupid_container_for_css_grid {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-template-rows: auto;
+          margin: 0;
+          grid-gap: 3px;
+          margin-top: 0px;
+      }
     </style>
+    <!--
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    -->
   </head>
 <body>
 
 <header>
-	<hgroup>
-	  <h1 class="logo">Seseragi</h1>
-	  <h2 class="tagline">The sound of flowing water.</h2>
-	</hgroup>
-		
-	<!-- container for more/less action -->
-	<div id="more_info3">
-		<nav class="sitewide clearfix">
+  <hgroup>
+    <h1 class="logo">Seseragi</h1>
+    <h2 class="tagline">The sound of flowing water.</h2>
+  </hgroup>
+    
+
+  <!-- container for more/less action -->
+  <div id="more_info">
+    <div class="infobox mb" id="infobox3">
+      <div><span id="more"><a href="#" class="toggle3" id="more_link3"><div class="border-menu">Menu</div></a></span>
+      </div>
+    </div>
+    
+    <nav id="menu-navx" class="nav-gridx">
+      <div class="stupid_container_for_css_grid">
         <ul>
             <li>
                <a href="http://brandymorecastle.org/projects/">Projects</a>
@@ -93,7 +143,7 @@
             </li>
          </ul>
          
-         <ul>
+         <ul id="menu-labels">
             <li>
                <a href="http://brandymorecastle.org/projects/">Photography</a>
             </li>
@@ -105,36 +155,37 @@
             </li>
          </ul>
 
-		 <ul>
-		 <li id="menu-contact">
+     <ul>
+     <li id="menu-contact">
                <a href="http://brandymorecastle.org/contact/">Facebook</a>
             </li>
-            <li id="menu-contact">
+            <li>
                <a href="http://brandymorecastle.org/contact/">@photographist</a>
             </li>
-			<li>
+      <li>
                <a href="http://brandymorecastle.org/about/">About</a>
             </li>
          </ul>
+         </div>
     </nav>
+    
 </header>
-
-            
-<div class="infobox mb" id="infobox3">
-<div style="float:right"><span id="more"><a href="#" class="toggle3" id="more_link3"><div class="border-menu">Menu</div></a></span>
-</div>
-</div>
+  
 
 <style>
-.callout {
+
+nav a {
+  text-decoration: none
+}
+.calloutx {
 	padding-top: 1em;
  font-size: 1em;
 }
 
-.callout img {max-width:100% !important;
+.calloutx img {max-width:100% !important;
     height:auto;
     display:block;}
-.callout p {
+.calloutx p {
    font-size: 1em
   /*
   margin: 0; padding-top: 1em; margin-right: 1em;
@@ -142,7 +193,7 @@
 }
  </style>
 
-<div class="grid-content panel">
+<div class="grid-content panel panel-cards">
 	<section>
         <h1>A wonderful serenity</h1>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
@@ -165,7 +216,7 @@
 </div>
 
 
-<div class="panel text">
+<div class="panel text panel-wide">
     <section style="margin-left: auto; margin-right: auto; max-width: 55em">
         <h1 style="text-align: center">Heading</h1>
         <p>1. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
@@ -173,19 +224,13 @@
 
 </div>
 
-<div class="panel image">
-    <section style="">
-        <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
-        <p>1. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
-    </section>
 
-</div>
-
-<div class="grid-content panel">
+<div class="grid-content-img panel">
     <section>
         <div class="callout">
-            <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
-            <p>I took my first photograph at five years old. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
+            <div class="photo"><a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+            </div>
+            <p class="caption">I took my first photograph at five years old. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
         </div>
     </section>
 
@@ -209,29 +254,59 @@
             <p>I took my first photograph at five years old. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
         </div>
     </section>
+
+    <section>
+        <div class="callout">
+            <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+            <p>I took my first photograph at five years old. You can see some of my work on <a href="http://www.flickr.com/photos/knoblock/">Flickr</a>.</p>
+        </div>
+    </section>
 </div>
 
 
 	<footer>
         &copy;<!-- 2008-2014 Seseragi Theme -->2015 Steve Knoblock Seseragi Theme
-    </footer> 
+  </footer> 
         
-<script>
-// Support for jQuery features
-// Steve Knoblock Saturday, June 06, 2009
+<script type="text/javascript">
+// Vanilla js to hide/show menu
+/*
 
-$(document).ready(function() {
-	// profile collapse and expand
-	$('a.toggle3').click(function(){
-		$('#more_info3').toggle();
-			//moretext = this.text;
-			//if ( moretext == 'Open' ) { moretext = 'Close'; } else { moretext = 'Open'; }
-			//$('#more_link3').text(moretext);
-			return false;
-		});
-});
+This is getting annoying. A standard way to remove
+and add an element is to use the display property.
+Typically, display is set to 'block' to add and
+show the element.
+
+The problem is that the NAV element is a CSS
+grid container AND a block. It can't be both at
+the same time.
+
+Setting
+
+display: block
+
+removes the grid status.
 
 
+
+
+*/
+
+
+var triggerElement = document.querySelector('a.toggle3');
+console.log("triggerElement: " + triggerElement);
+var menu = document.querySelector('nav');
+console.log("menuElement:" + menu);
+triggerElement.addEventListener('click', function (event) {
+  console.log("heard the click");
+
+      if (menu.style.display == 'none') {
+         menu.style.display = 'block';
+      } else {
+         menu.style.display = 'none';
+      }
+    }
+  );
 </script>
         
 </body>

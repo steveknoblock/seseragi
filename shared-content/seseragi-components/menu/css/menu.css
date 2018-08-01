@@ -1,7 +1,7 @@
 /* Sesseragi 2015 */
 
 .infobox {
-display: block;
+/* display: block; */
 max-width: 100%;
 min-width: 220px;
 padding: 2%;
@@ -30,7 +30,7 @@ nav.sitewide {
 
 nav.sitewide ul {
 	padding: 0;
-	padding-left: 1em;
+	/*padding-left: 1em;*/
 	margin: 0;
 	list-style: none;
 	/*
@@ -43,7 +43,7 @@ nav.sitewide ul {
 }
 
     
-nav.sitewide ul li {
+nav ul li {
 	/*background: blue;*/
 	list-style: none;
 	/*float: left; */
@@ -53,7 +53,7 @@ nav.sitewide ul li {
 }
 
 nav.sitewide ul a:link, nav.sitewide ul a:visited {
-	display: block;
+	/* display: block; */
 	/* float: left; */
 	padding: 0.3em;
 	text-decoration: none;
@@ -78,8 +78,8 @@ nav.sitewide ul:first-child {
 }
 
 
-#more_info3 {
-	display: none;
+#more_info {
+	/* display: none; */
 	/* gradient background */
 	background: transparent url(../img/page_background_gray.png);
 	background-repeat: repeat-x;
