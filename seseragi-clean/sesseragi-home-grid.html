@@ -10,8 +10,8 @@
 
     @import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
 
-    #menu-nav { 
-      display: "";
+    nav { 
+      display: none;
     }
 
     body {
@@ -157,10 +157,10 @@
 
      <ul>
      <li id="menu-contact">
-               <a href="http://brandymorecastle.org/contact/">Facebook</a>
+               <a href="http://twitter.com/haikuoftheday">@haikuoftheday</a>
             </li>
             <li>
-               <a href="http://brandymorecastle.org/contact/">@photographist</a>
+               <a href="http://twitter.com/photographist">@photographist</a>
             </li>
       <li>
                <a href="http://brandymorecastle.org/about/">About</a>
@@ -299,8 +299,8 @@ var menu = document.querySelector('nav');
 console.log("menuElement:" + menu);
 triggerElement.addEventListener('click', function (event) {
   console.log("heard the click");
-
-      if (menu.style.display == 'none') {
+  console.log("menu.style.display: " + menu.style.display);
+      if (menu.style.display == 'none' || menu.style.display == '') {
          menu.style.display = 'block';
       } else {
          menu.style.display = 'none';
