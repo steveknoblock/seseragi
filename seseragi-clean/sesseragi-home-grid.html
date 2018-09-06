@@ -3,22 +3,27 @@
   <head>
     <title>Homepage</title>
     <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles-working.css" />
     <link rel="stylesheet" href="../shared-content/seseragi-components/menu/css/menu.css" />
     <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
     <style>
-
-    @import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
 
     nav { 
       display: none;
     }
 
-    body {
-      font-size: 1em;
-      font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+    .toggle {
+      display: block;
     }
 
+.stupid_container_for_css_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  margin: 0;
+  grid-gap: 3px;
+  margin-top: 0px;
+}
     .callout {
       margin: 0 0 0 0;
       display: block;
@@ -30,7 +35,6 @@
       float: right;
     }
 
-    /* This really needs a gutter on the left of the grid. */
     section h1 {
       padding-left: 1em;
     }
@@ -38,76 +42,8 @@
     section p {
       padding-left: 1em;
     }
-
-    /* This media query reduces the number of columns to one.
-     */
-    @media (min-width: 255px) {
-  
-        .grid-content {
-          display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          grid-template-rows: auto;
-          margin: 2% auto;
-          grid-gap: 25px;
-          margin-top: 0px;
-        }
-    }
-
-    /* This media query reduces the number of columns to two.
-     */
-     @media (min-width: 500px) {
-  
-        .grid-content {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: auto;
-          margin: 2% auto;
-          grid-gap: 25px;
-          margin-top: 0px;
-        }
-    }
-
-    /* This media query reduces the number of columns to three.
-     */
-    @media (min-width: 700px) {
-  
-        .grid-content {
-          display: grid;
-          /*grid-template-columns: 0.3fr 0.3fr 0.3fr;*/
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: auto;
-          margin: 2% auto;
-          grid-gap: 25px;
-          margin-top: 0px;
-        }
-    }
     
-  .panel {
-    background: transparent url(img/page_background_gray.png);
-    background-repeat: repeat-x;
-    background-position: top;
-    background-color: #eee;
-    padding-top: 0.5em;
-    width: 100%;
-}
 
-    .grid-content-img {
-          display: grid;
-          grid-template-columns: 3fr 3fr;
-          
-          margin: 2% auto;
-          grid-gap: 25px;
-          margin-top: 0px;
-      }
-
-      .stupid_container_for_css_grid {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: auto;
-          margin: 0;
-          grid-gap: 3px;
-          margin-top: 0px;
-      }
     </style>
     <!--
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -125,8 +61,7 @@
   <!-- container for more/less action -->
   <div id="more_info">
     <div class="infobox mb" id="infobox3">
-      <div><span id="more"><a href="#" class="toggle3" id="more_link3"><div class="border-menu">Menu</div></a></span>
-      </div>
+      <div class="border-menu menu-button">Menu</div>
     </div>
     
     <nav id="menu-navx" class="nav-gridx">
@@ -287,12 +222,12 @@ display: block
 
 removes the grid status.
 
-
+Do I really have to deal with this insanity?
 
 
 */
 
-
+/*
 var triggerElement = document.querySelector('a.toggle3');
 console.log("triggerElement: " + triggerElement);
 var menu = document.querySelector('nav');
@@ -307,6 +242,22 @@ triggerElement.addEventListener('click', function (event) {
       }
     }
   );
+*/
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOM Loaded');
+  triggerElement = document.querySelector('.menu-button'); // <---------- get reference to element triggering toggle
+  console.log("triggerElement: " + triggerElement);
+  menu = document.querySelector('nav');                    // <---------- get reference to element being toggled
+  console.log("menu: " + menu);
+  triggerElement.addEventListener('click', function() {    // <----------- assign event listener to element we want to trgger toggle
+    console.log("heard the click");
+    menu.classList.toggle('toggle');
+  });
+});
+
+
 </script>
         
 </body>
