@@ -1,155 +1,133 @@
-/* Sesseragi 2015 */
-
-body {
-	background-color: #eee;
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
+/* Sesseragi 2018 - layout */
 
 /* Panels */
-
-.tagline { text-align: center }
-
+.tagline {
+  text-align: center;
+}
 
 /* grid */
 
 .panel {
-        background: transparent url(../img/page_background_gray.png);
-    	background-repeat: repeat-x;
-    	background-position: top;
-        background-color: #eee;
-        padding-top: 0.5em;
-        width: 100%;
-       /* border-top: 1px solid turquoise; */
-        clear:both;
-    }
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: #eee;
+  padding-top: 0.5em;
+  width: 100%;
+  /* border-top: 1px solid turquoise; */
+  clear: both;
+}
 
- .grid {
-        width: 100%;
-        overflow: hidden; // show collapsed parent element so background image displays
-        clear: both;
-    }
+.grid {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+}
 
+.float_left {
+  float: left;
+}
 
-.float_left{float:left}
-.float_right{float:right}
-.clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;overflow:hidden}
-.clearfix:after{clear:both}
-.clearfix{zoom:1}
-.clear{clear:both;display:block;visibility:hidden;height:0;font-size:0}
+.float_right {
+  float: right;
+}
 
-.callout {
-	padding-top: 1em;
- font-size: 1em;
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  /* display: block; */
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clear {
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
 
 .container {
-	overflow: hidden;
-	padding: 1em 2em;
+  overflow: hidden;
+  padding: 1em 2em;
 }
-
-/*
-@media (min-width: 560px) {
-	.col {
-	float: left;
-	margin-right: 2%;
-	}
-	
-	.col > li:nth-child(even) {
-	clear: left;
-}
-}
-*/
-
-
-/* gradient background */
-/* background: transparent url(../img/page_background_gray.png); */
-/* background-repeat: repeat-x; */
-/* background-position: top; */
-
-
-section.text {
-	box-sizing: border-box;
-	padding-left: 1em;
-	padding-right: 1em;
-	/* margin: 0 auto; 
-	box-sizing: border-box;
-	padding-left: 1em;
-	padding-right: 1em;*/
-	overflow: hidden;
-	}
-
-
-section {
-	box-sizing: border-box;
-	width: 100%;
-	padding-left: 1em;
-	padding-right: 1em;
-}
-	
 
 .panel > .text > h1 {
-	text-align: center;
-	padding-top: 1em;
-	font-size: 1.5em;
+  text-align: center;
+  padding-top: 1em;
+  font-size: 1.5em;
 }
 
-
-
-footer, .grid { clear: both }
-
-footer { 
-	background: transparent url(../img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-	padding: 1em;
+footer, .grid {
+  clear: both;
 }
 
-
-
-/* todo make this recursive, but follow the inception rule, no more than
-four levels deep (except for text) */
-
-
-@media (min-width: 1280px) {
-
-}
-.grid > section > h1 {
-		text-align: center;
-		font-size: 1.5em;
-	}
-
-/** This media query sets the number of columns to three.
-**/
-
-@media (max-width: 1280px) {
-
-/* this is the one screwing up the background */
-	.grid > section {
-		width: 33.33333%;
-		float: left;
-	  }
+footer {
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  padding: 1em;
 }
 
-/** This media query reduces the number of columns to two.
-**/
+/* New Styles */
 
-@media (max-width: 1024px) {
-	.grid > section {
-		/* background-color: green; */
-		width: 50%;
-		float: left;
-	  }
+    nav { 
+      display: none;
+    }
+
+    
+
+    .callout {
+      margin: 0 0 0 0;
+      display: block;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: auto;
+    }
+
+    .callout > p {
+      float: right;
+    }
+
+    /* This really needs a gutter on the left of the grid. */
+    section h1 {
+      padding-left: 1em;
+    }
+
+    section p {
+      padding-left: 1em;
+    }
+
+
+    
+.panel {
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: #eee;
+  padding-top: 0.5em;
+  width: 100%;
 }
 
+.grid-content-img {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  margin: 2% auto;
+  grid-gap: 25px;
+  margin-top: 0px;
+}
 
-/** This media query reduces the number of columns to one.
-**/
-
-@media (max-width: 414px) {
-	.grid > section {
-		/* background-color: blue; */
-		width: 100%;
-		float:none;
-	  }
+.stupid_container_for_css_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  margin: 0;
+  grid-gap: 3px;
+  margin-top: 0px;
 }
