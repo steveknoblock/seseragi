@@ -68,12 +68,6 @@ body {
 }
 
 /* Panels */
-/*
-.tagline {
-  text-align: center;
-}
-*/
-/* grid */
 .panel {
   background: transparent url(../img/page_background_gray.png);
   /* move to base */
@@ -82,20 +76,28 @@ body {
   background-position: top;
   /* move to base */
   background-color: #eee;
-  /* move to base */
   padding-top: 0.5em;
   width: 100%;
-  /* border-top: 1px solid turquoise; */
-  clear: both;
 }
 
-/*
-.grid {
-  width: 100%;
-  overflow: hidden;
-  clear: both;
+/* CSS Grid */
+.grid-content-img {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  margin: 2% auto;
+  grid-gap: 25px;
+  margin-top: 0px;
 }
-*/
+
+.stupid_container_for_css_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  margin: 0;
+  grid-gap: 3px;
+  margin-top: 0px;
+}
+
 .float_left {
   float: left;
 }
@@ -104,50 +106,6 @@ body {
   float: right;
 }
 
-/*
-.clearfix:before, .clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-*/
-/*
-.clearfix:after {
-  clear: both;
-}
-*/
-/*
-.clearfix {
-  zoom: 1;
-}
-*/
-/*
-.clear {
-  clear: both;
-  visibility: hidden;
-  height: 0;
-  font-size: 0;
-}
-*/
-/*
-.container {
-  overflow: hidden;
-  padding: 1em 2em;
-}
-*/
-/*
-.panel > .text > h1 {
-  text-align: center;
-  padding-top: 1em;
-  font-size: 1.5em;
-}
-*/
-/*
-footer, .grid {
-  clear: both;
-}
-*/
 footer {
   background: transparent url(../img/page_background_gray.png);
   /* move to base */
@@ -181,35 +139,6 @@ section h1 {
 
 section p {
   padding-left: 1em;
-}
-
-.panel {
-  background: transparent url(../img/page_background_gray.png);
-  /* move to base */
-  background-repeat: repeat-x;
-  /* move to base */
-  background-position: top;
-  /* move to base */
-  background-color: #eee;
-  padding-top: 0.5em;
-  width: 100%;
-}
-
-.grid-content-img {
-  display: grid;
-  grid-template-columns: 3fr 3fr;
-  margin: 2% auto;
-  grid-gap: 25px;
-  margin-top: 0px;
-}
-
-.stupid_container_for_css_grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-  margin: 0;
-  grid-gap: 3px;
-  margin-top: 0px;
 }
 
 /* Seseragi 2018 - media */
