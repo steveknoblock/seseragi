@@ -1,28 +1,39 @@
 /* Sesseragi 2018 - layout */
 
+body {
+  background-color: #eee; /* move to base */
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 /* Panels */
+/*
 .tagline {
   text-align: center;
 }
+*/
 
 /* grid */
 
 .panel {
-  background: transparent url(../img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
-  background-color: #eee;
+  background: transparent url(../img/page_background_gray.png); /* move to base */
+  background-repeat: repeat-x; /* move to base */
+  background-position: top; /* move to base */
+  background-color: #eee; /* move to base */
   padding-top: 0.5em;
   width: 100%;
   /* border-top: 1px solid turquoise; */
   clear: both;
 }
 
+/*
 .grid {
   width: 100%;
   overflow: hidden;
   clear: both;
 }
+*/
 
 .float_left {
   float: left;
@@ -32,47 +43,61 @@
   float: right;
 }
 
+/*
 .clearfix:before, .clearfix:after {
   content: "\0020";
-  /* display: block; */
+  display: block;
   height: 0;
   overflow: hidden;
 }
+*/
 
+/*
 .clearfix:after {
   clear: both;
 }
+*/
 
+/*
 .clearfix {
   zoom: 1;
 }
+*/
 
+/*
 .clear {
   clear: both;
   visibility: hidden;
   height: 0;
   font-size: 0;
 }
+*/
 
+/*
 .container {
   overflow: hidden;
   padding: 1em 2em;
 }
+*/
 
+/*
 .panel > .text > h1 {
   text-align: center;
   padding-top: 1em;
   font-size: 1.5em;
 }
+*/
 
+/*
 footer, .grid {
   clear: both;
 }
+*/
 
 footer {
-  background: transparent url(../img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
+  background: transparent url(../img/page_background_gray.png); /* move to base */
+  background-repeat: repeat-x; /* move to base */
+  background-position: top; /* move to base */
   padding: 1em;
 }
 
@@ -105,11 +130,11 @@ footer {
     }
 
 
-    
+
 .panel {
-  background: transparent url(../img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
+  background: transparent url(../img/page_background_gray.png); /* move to base */
+  background-repeat: repeat-x; /* move to base */
+  background-position: top; /* move to base */
   background-color: #eee;
   padding-top: 0.5em;
   width: 100%;

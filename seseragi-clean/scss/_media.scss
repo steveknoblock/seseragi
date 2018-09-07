@@ -34,7 +34,7 @@
 
     .grid-content {
       display: grid;
-      /*grid-template-columns: 0.3fr 0.3fr 0.3fr;*/
+      /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto;
       margin: 2% auto;

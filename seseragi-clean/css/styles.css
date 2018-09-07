@@ -59,29 +59,43 @@ footer {
 }
 
 /* Sesseragi 2018 - layout */
+body {
+  background-color: #eee;
+  /* move to base */
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 /* Panels */
+/*
 .tagline {
   text-align: center;
 }
-
+*/
 /* grid */
 .panel {
   background: transparent url(../img/page_background_gray.png);
+  /* move to base */
   background-repeat: repeat-x;
+  /* move to base */
   background-position: top;
+  /* move to base */
   background-color: #eee;
+  /* move to base */
   padding-top: 0.5em;
   width: 100%;
   /* border-top: 1px solid turquoise; */
   clear: both;
 }
 
+/*
 .grid {
   width: 100%;
   overflow: hidden;
   clear: both;
 }
-
+*/
 .float_left {
   float: left;
 }
@@ -90,47 +104,57 @@ footer {
   float: right;
 }
 
+/*
 .clearfix:before, .clearfix:after {
-  content: " ";
-  /* display: block; */
+  content: "\0020";
+  display: block;
   height: 0;
   overflow: hidden;
 }
-
+*/
+/*
 .clearfix:after {
   clear: both;
 }
-
+*/
+/*
 .clearfix {
   zoom: 1;
 }
-
+*/
+/*
 .clear {
   clear: both;
   visibility: hidden;
   height: 0;
   font-size: 0;
 }
-
+*/
+/*
 .container {
   overflow: hidden;
   padding: 1em 2em;
 }
-
+*/
+/*
 .panel > .text > h1 {
   text-align: center;
   padding-top: 1em;
   font-size: 1.5em;
 }
-
+*/
+/*
 footer, .grid {
   clear: both;
 }
-
+*/
 footer {
   background: transparent url(../img/page_background_gray.png);
+  /* move to base */
   background-repeat: repeat-x;
+  /* move to base */
   background-position: top;
+  /* move to base */
   padding: 1em;
 }
 
@@ -161,8 +185,11 @@ section p {
 
 .panel {
   background: transparent url(../img/page_background_gray.png);
+  /* move to base */
   background-repeat: repeat-x;
+  /* move to base */
   background-position: top;
+  /* move to base */
   background-color: #eee;
   padding-top: 0.5em;
   width: 100%;
@@ -183,6 +210,45 @@ section p {
   margin: 0;
   grid-gap: 3px;
   margin-top: 0px;
+}
+
+/* Seseragi 2018 - media */
+/* This media query reduces the number of columns to one.
+ */
+@media (min-width: 255px) {
+  .grid-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin: 2% auto;
+    grid-gap: 25px;
+    margin-top: 0px;
+  }
+}
+/* This media query reduces the number of columns to two.
+ */
+@media (min-width: 500px) {
+  .grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin: 2% auto;
+    grid-gap: 25px;
+    margin-top: 0px;
+  }
+}
+/* This media query reduces the number of columns to three.
+ */
+@media (min-width: 700px) {
+  .grid-content {
+    display: grid;
+    /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin: 2% auto;
+    grid-gap: 25px;
+    margin-top: 0px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
