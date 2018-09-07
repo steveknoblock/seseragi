@@ -1,10 +1,15 @@
-/* Sesseragi 2018 - layout */
+/* Sesseragi 2018 - Layout */
+
 
 body {
   background-color: #eee; /* move to base */
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+nav { 
+  display: none;
 }
 
 /* Panels */
@@ -37,6 +42,8 @@ body {
   margin-top: 0px;
 }
 
+/* Text and Callouts */
+
 .float_left {
   float: left;
 }
@@ -45,6 +52,27 @@ body {
   float: right;
 }
 
+.callout {
+  margin: 0 0 0 0;
+  display: block;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: auto;
+}
+
+.callout > p {
+  float: right;
+}
+
+/* This really needs a gutter on the left of the grid. */
+section h1 {
+  padding-left: 1em;
+}
+
+section p {
+  padding-left: 1em;
+}
+
+/* Footer */
 
 footer {
   background: transparent url(../img/page_background_gray.png); /* move to base */
@@ -52,35 +80,6 @@ footer {
   background-position: top; /* move to base */
   padding: 1em;
 }
-
-/* New Styles */
-
-    nav { 
-      display: none;
-    }
-
-    
-
-    .callout {
-      margin: 0 0 0 0;
-      display: block;
-      grid-template-columns: 2fr 2fr;
-      grid-template-rows: auto;
-    }
-
-    .callout > p {
-      float: right;
-    }
-
-    /* This really needs a gutter on the left of the grid. */
-    section h1 {
-      padding-left: 1em;
-    }
-
-    section p {
-      padding-left: 1em;
-    }
-
 
 
 

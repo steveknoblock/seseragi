@@ -1,6 +1,7 @@
 /* Seseragi 2018 */
+/* (CC) 2015-2018 Steve Knoblock */
 /* Seseragi 2018 - base */
-/* Seseragi 2018 - fonts */
+/* Seseragi 2018 - Fonts */
 /* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
 @import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
 /* Seseragi 2018 - Typography */
@@ -49,22 +50,22 @@ header hgroup h2.tagline {
 }
 
 footer {
-  background-color: transparent;
-  background: transparent url("../img/footer_background_gray.png");
-  margin: 2px;
-  padding: 4px;
-  text-align: center;
   font-size: 0.75em;
   text-align: center;
+  min-height: 7em;
 }
 
-/* Sesseragi 2018 - layout */
+/* Sesseragi 2018 - Layout */
 body {
   background-color: #eee;
   /* move to base */
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+nav {
+  display: none;
 }
 
 /* Panels */
@@ -98,27 +99,13 @@ body {
   margin-top: 0px;
 }
 
+/* Text and Callouts */
 .float_left {
   float: left;
 }
 
 .float_right {
   float: right;
-}
-
-footer {
-  background: transparent url(../img/page_background_gray.png);
-  /* move to base */
-  background-repeat: repeat-x;
-  /* move to base */
-  background-position: top;
-  /* move to base */
-  padding: 1em;
-}
-
-/* New Styles */
-nav {
-  display: none;
 }
 
 .callout {
@@ -141,7 +128,18 @@ section p {
   padding-left: 1em;
 }
 
-/* Seseragi 2018 - media */
+/* Footer */
+footer {
+  background: transparent url(../img/page_background_gray.png);
+  /* move to base */
+  background-repeat: repeat-x;
+  /* move to base */
+  background-position: top;
+  /* move to base */
+  padding: 1em;
+}
+
+/* Seseragi 2018 - Media */
 /* This media query reduces the number of columns to one.
  */
 @media (min-width: 255px) {

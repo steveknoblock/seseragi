@@ -49,12 +49,8 @@ header hgroup h2.tagline {
 
 
 footer {
-background-color: transparent;
-	background: transparent url('../img/footer_background_gray.png');
-	margin: 2px;
-	padding: 4px;
-	text-align: center;
 	font-size: 0.75em;
-	text-align: center
+	text-align: center;
+	min-height: 7em;
 }
 
