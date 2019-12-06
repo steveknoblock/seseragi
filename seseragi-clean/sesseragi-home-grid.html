@@ -2,12 +2,11 @@
 <html>
   <head>
     <title>Homepage</title>
-    <meta charset=utf-8>
+    <meta charset="utf-8">
     <meta name=description content="Page calming design">
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png" />
+    <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
     <link rel="stylesheet" href="css/styles.css" />
-    
     <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
     <style>
     .callout {
@@ -28,26 +27,8 @@
     section p {
       padding-left: 1em;
     }
-    </style>
-    <!--
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    -->
-  </head>
-<body>
 
-<header>
-  <hgroup>
-    <h1 class="logo">Seseragi</h1>
-    <h2 class="tagline">The sound of flowing water.</h2>
-  </hgroup>
-  <div is='panel-menu'></div>
-</header>
-<style>
-
-nav a {
-  text-decoration: none
-}
-.calloutx {
+    .calloutx {
 	padding-top: 1em;
  font-size: 1em;
 }
@@ -60,6 +41,22 @@ nav a {
   /*
   margin: 0; padding-top: 1em; margin-right: 1em;
   */
+}
+    </style>
+  </head>
+<body>
+
+<header>
+  <hgroup>
+    <h1 class="logo">Seseragi</h1>
+    <h2 class="tagline">The sound of flowing water.</h2>
+  </hgroup>
+  <div is='panel-menu'></div>
+</header>
+
+<style>
+nav a {
+  text-decoration: none
 }
  </style>
 
@@ -85,7 +82,6 @@ nav a {
     </section>
 </div>
 
-
 <div class="panel text panel-wide">
     <section style="margin-left: auto; margin-right: auto; max-width: 55em">
         <h1 style="text-align: center">Heading</h1>
@@ -93,7 +89,6 @@ nav a {
     </section>
 
 </div>
-
 
 <div class="grid-content-img panel">
     <section>
@@ -133,52 +128,11 @@ nav a {
     </section>
 </div>
 
+<footer>
+      &copy;<!-- 2008-2019 Seseragi Theme -->2019 Steve Knoblock Seseragi Theme
+</footer> 
 
-	<footer>
-        &copy;<!-- 2008-2014 Seseragi Theme -->2015 Steve Knoblock Seseragi Theme
-  </footer> 
-        
 <script type="text/javascript">
-// Vanilla js to hide/show menu
-/*
-
-This is getting annoying. A standard way to remove
-and add an element is to use the display property.
-Typically, display is set to 'block' to add and
-show the element.
-
-The problem is that the NAV element is a CSS
-grid container AND a block. It can't be both at
-the same time.
-
-Setting
-
-display: block
-
-removes the grid status.
-
-Do I really have to deal with this insanity?
-
-
-*/
-
-/*
-var triggerElement = document.querySelector('a.toggle3');
-console.log("triggerElement: " + triggerElement);
-var menu = document.querySelector('nav');
-console.log("menuElement:" + menu);
-triggerElement.addEventListener('click', function (event) {
-  console.log("heard the click");
-  console.log("menu.style.display: " + menu.style.display);
-      if (menu.style.display == 'none' || menu.style.display == '') {
-         menu.style.display = 'block';
-      } else {
-         menu.style.display = 'none';
-      }
-    }
-  );
-*/
-
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM Loaded');
@@ -223,24 +177,41 @@ nav {
 	background-position: top;
 }
 
+.border-menu {
+  position: relative;
+  padding-left: 1.25em;
+  margin-left: 0.25em;
+}
+
+.border-menu:before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #000;
+  border-bottom: 0.125em solid #000;
+}
+
   </style>
-  <div class='menu-button' id='panel-menu-button'>
-    <div id="menu-button-text">menu</div>
+  <div class='menu-button border-menu' id='panel-menu-button'>
+    <div id="menu-button-text">Menu</div>
   </div>
 
   <nav id="menu-nav" class="nav-grid">
     <div class="container">
     <ul id="menu-home">
       <li>
-         <a href="http://brandymorecastle.org/projects/">Projects</a>
+          <a href="http://brandymorecastle.org/projects/">Projects</a>
       </li>
       <li>
-         <a href="http://brandymorecastle.org/photography/">Photography</a>
+          <a href="http://brandymorecastle.org/photography/">Photography</a>
       </li>
       <li>
-         <a href="http://brandymorecastle.org/code/">Code</a>
+          <a href="http://brandymorecastle.org/code/">Code</a>
       </li>
-   </ul>
+    </ul>
 
     <ul id="menu-labels">
       <li>
