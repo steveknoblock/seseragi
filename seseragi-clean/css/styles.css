@@ -99,7 +99,7 @@ nav {
   margin-top: 0px;
 }
 
-/* Text and Callouts */
+/* Text and actions */
 .float_left {
   float: left;
 }
@@ -108,16 +108,19 @@ nav {
   float: right;
 }
 
-.callout {
+.action {
   margin: 0 0 0 0;
   display: block;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: auto;
 }
 
-.callout > p {
+.action > p {
   float: right;
 }
+
+/* responsive images */
+section img {  height: auto;  width: 100%; }
 
 /* This really needs a gutter on the left of the grid. */
 section h1 {

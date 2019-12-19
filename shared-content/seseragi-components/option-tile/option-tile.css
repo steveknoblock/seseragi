@@ -1,0 +1,82 @@
+
+/*
+	Structure is
+
+.option-surface
+	.option-tiles
+		.option-tile
+
+
+w/ CSS Grid
+
+.grid {
+	
+}
+
+
+*/
+
+.option-tile-source { visibility: hidden; }
+
+
+.option-surface { 
+	box-sizing: border-box;
+}
+
+.option-tiles {
+	/* border: 1px solid red; */
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+.option-tiles li { 
+	width: auto;
+	background: white;
+	color: black;
+	list-style: none;
+	border: 1px solid #ccc;
+	/* border-radius: 4px; */
+	padding: .3em;
+	margin: .3em;
+	float: left;
+	overflow: hidden;
+	cursor: hand;
+}
+
+.option-tiles li:hover {
+	border: 1px solid #333;
+}
+
+li.option-tile-selected {
+	background: #eee;
+	border: 1px solid blue;
+	padding: .3em;
+	margin: .3em;
+}
+
+
+@media (max-width: 600px) {
+
+	.option-surface {
+		max-width: 100%;
+	}
+
+	.option-tilex {
+		width: 33.3%;
+		float: left;
+	 }
+}
+
+/** This media query reduces the number of columns to one.
+**/
+
+@media (max-width: 414px) {
+	li {
+		/* background-color: blue; */
+		width: 92%;
+		float:none;
+	  }
+}
+
+}
