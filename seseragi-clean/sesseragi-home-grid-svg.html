@@ -19,8 +19,6 @@
   </script>
 <style>
 
-
-
   /*
   
   A tile is typically squares of the same size although other kinds
@@ -292,7 +290,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     .toggle {
       display: block;
-      /* transition: all 1s ease-out; */
     }
 
   .container {
@@ -310,20 +307,16 @@ nav {
 	background-position: top;
 }
 
-nav ul {
-  padding-top: 1.5em;
-}
-
-.border-menu {
+.border-menux {
   position: relative;
   padding-left: 1.25em;
   margin-left: 0.25em;
 }
 
-.border-menu:before {
+.border-menux:before {
     content: "";
     position: absolute;
-    top: 0.2em;
+    top: -0.10em;
     left: 0;
     width: 1em;
     height: 0.125em;
@@ -333,15 +326,17 @@ nav ul {
 }
 
 #menu-button-text {
-  font-size: 1.5em;
-  padding-left: 0.5em
+  font-size: 1em
 }
-
-nav ul { padding-top: 0.5em;}
-nav ul li a { font-size: 1.2em; text-decoration: none; }
   </style>
   <div class='menu-button border-menu' id='panel-menu-button'>
-    <div id="menu-button-text">Menu</div>
+    <style>svg{display:block;height:100%;width:100%}</style>
+    <!-- color options: #757575, #69c1d2 -->
+    <svg style="fill:#757575;width:48px;height:48px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+    </svg><!--
+    <div id="menu-button-text">Menu<div>-->
   </div>
 
   <nav id="menu-nav" class="nav-grid">
