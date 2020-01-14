@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <title>Homepage</title>
     <meta charset="utf-8">
     <meta name=description content="Page calming design">
@@ -80,7 +80,7 @@
     margin: .3em;
   }
   
-  
+  /*
   @media (max-width: 600px) {
   
     .option-surface {
@@ -92,18 +92,19 @@
       float: left;
      }
   }
-  
+*/
   /** This media query reduces the number of columns to one.
   **/
-  
+/*
   @media (max-width: 414px) {
     li {
-      /* background-color: blue; */
+      
       width: 92%;
       float:none;
       }
   }
-  
+*/
+
   }
   
   
@@ -282,57 +283,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <template id="panel-menu">
     <link rel="stylesheet" href="../shared-content/seseragi-components/menu/css/menu.css" />
-    <style>
 
-    nav { 
-      display: none;
-    }
-
-    .toggle {
-      display: block;
-    }
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    margin: 0;
-    grid-gap: 3px;
-    margin-top: 0px;
-}
-
-nav {
-	background: transparent url(img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-}
-
-.border-menux {
-  position: relative;
-  padding-left: 1.25em;
-  margin-left: 0.25em;
-}
-
-.border-menux:before {
-    content: "";
-    position: absolute;
-    top: -0.10em;
-    left: 0;
-    width: 1em;
-    height: 0.125em;
-    border-top: 0.375em double #000;
-    border-bottom: 0.125em solid #000;
-    font-size: 2em;
-}
-
-#menu-button-text {
-  font-size: 1em
-}
-  </style>
   <div class='menu-button border-menu' id='panel-menu-button'>
     <style>svg{display:block;height:100%;width:100%}</style>
     <!-- color options: #757575, #69c1d2 -->
-    <svg style="fill:#757575;width:48px;height:48px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg style="fill:#757575;width:24px;height:24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
     </svg><!--
@@ -366,14 +321,14 @@ nav {
     </ul>
 
     <ul>
+      <li>
+        <a href="http://brandymorecastle.org/about/">About</a>
+      </li>
       <li id="menu-contact">
             <a href="http://twitter.com/haikuoftheday">@haikuoftheday</a>
       </li>
         <li>
             <a href="http://twitter.com/photographist">@photographist</a>
-        </li>
-        <li>
-          <a href="http://brandymorecastle.org/about/">About</a>
         </li>
       </ul>
       </div>

@@ -1,153 +1,134 @@
-/* Sesseragi */
+/**
+ * Sesseragi Menu Component
+ * CSS
+ * (c) Steve Knoblock 2014-2020
+ * MIT License
+ */
 
-.infobox {
-	/* display: block; */
-	max-width: 100%;
-	min-width: 220px;
-	padding: 1em;
-	position: static;
-	visibility: visible;
+nav { 
+    display: none;
 }
 
-/* Sitewide Navigation */
- /* Deleting this prevents floating menu dividers in IE6, 
- but is required to prevent overlap into feature
- area in FF1.5 Both look okay and are usable. */
-
-/*
-nav.sitewide {
-	border: none
+.toggle {
+    display: block;
 }
-
-nav.sitewide {
-	border: 0;
-	padding-bottom: 0.5em;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 0.5em;
-	color: #333;
-}
-*/
-/*
-	border-left: 1px solid #004e61;
-	border-right: 1px solid #006486;
-	*/
-	/*padding-left: 1em;*/
-/*
-nav.sitewide ul {
-	padding: 0;
-	
-	margin: 0;
-	list-style: none;
-	
-	position: relative;
-	top: 0;
-	float: left;
-}
-*/
 
 nav {
-	padding-bottom: 1em;
+    background: transparent url(../img/page_background_gray.png);
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+nav {
+    padding-bottom: 1em;
 }
 
 nav ul {
-	list-style: none;
-	margin: 0 0 0 0;
-	padding-top: 1.5em;
+    list-style: none;
+    margin: 0 0 0 0;
+    padding-top: 1.5em;
+    padding-left: 0.5em;
 }
     
 nav ul li {
-	/*background: blue;*/
-	list-style: none;
-	/*float: left; */
-	padding: 0;
-	margin: 0;
-	line-height: 2.0;
+    /*background: blue;*/
+    list-style: none;
+    /*float: left; */
+    padding: 0;
+    margin: 0;
+    line-height: 2.0;
 }
 
 nav ul li a {
-	font-size: 1em;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    text-decoration: none
 }
 
-/*
-nav.sitewide ul a:link, nav.sitewide ul a:visited {
-	padding: 0.3em;
-	text-decoration: none;
-	color: #333;
-	font-weight: normal;
+nav ul li a:visited { text-decoration: none };
+
+.border-menux {
+position: relative;
+padding-left: 1.25em;
+margin-left: 0.25em;
 }
-*/
-/*
-nav.sitewide ul li a:hover {
-	padding: 0.3em;
-	background: #b3b3b3;
-	color: #fff;
-	font-weight: normal;
-	font-size: 1em;
-	text-decoration: none;
-	border-bottom: none;
-}
-*/
-/*
-nav.sitewide ul:first-child {
-	font-weight: normal;
-}
-*/
-
-#more_info {
-	/* display: none; */
-	/* gradient background */
-	background: transparent url(../img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-}
-
-#more_link3 {
-	text-decoration: none
-}
-
-#menu-projects {
-font-family: 'Lato', sans-serif;
- font-size: 1em
-}
-
-
-.btn {
-      background-color: #4285f4;
-    }
-
-/*
-nav:hover {
-      background-color: #296CDB;
-    }
-*/
-    .btn:focus {
-      background-color: #0F52C1;
-    
-      /* The outline parameter surpresses the border
-      color / outline when focused */
-      outline: 0;
-    }
-
-    .btn:active {
-      background-color: #0039A8;
-    }
-	
-.border-menu {
-  position: relative;
-  padding-left: 0.5em;
-  margin-left: 0em;
-}
-
 
 .border-menux:before {
-  content: "";
-  position: absolute;
-  top: 0.25em;
-  left: 0;
-  width: 1em;
-  height: 0.125em;
-  border-top: 0.375em double #000;
-  border-bottom: 0.125em solid #000;
+    content: "";
+    position: absolute;
+    top: -0.10em;
+    left: 0;
+    width: 1em;
+    height: 0.125em;
+    border-top: 0.375em double #000;
+    border-bottom: 0.125em solid #000;
+    font-size: 2em;
 }
+
+#menu-button-text {
+font-size: 1em
+}
+
+/* Seseragi 2018 - Media */
+/* This media query reduces the number of columns to one.
+ */
+ @media (min-width: 255px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        margin: 0;
+        grid-gap: 3px;
+        margin-top: 0px;
+    }
+    .nav-gridoff {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      margin: 2% auto;
+      grid-gap: 25px;
+      margin-top: 0px;
+    }
+  }
+  /* This media query reduces the number of columns to two.
+   */
+  @media (min-width: 500px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        margin: 0;
+        grid-gap: 3px;
+        margin-top: 0px;
+    }
+    .nav-gridoff {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      margin: 2% auto;
+      grid-gap: 25px;
+      margin-top: 0px;
+    }
+  }
+  /* This media query reduces the number of columns to three.
+   */
+  @media (min-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        margin: 0;
+        grid-gap: 3px;
+        margin-top: 0px;
+    }
+    .nav-gridoff {
+      display: grid;
+      /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      margin: 2% auto;
+      grid-gap: 25px;
+      margin-top: 0px;
+    }
+  }
