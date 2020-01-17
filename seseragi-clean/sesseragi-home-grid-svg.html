@@ -263,39 +263,30 @@ nav a {
       &copy;<!-- 2008-2019 Seseragi Theme -->2019 Steve Knoblock Seseragi Theme
 </footer> 
 
-<script type="text/javascript">
 
-document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOM Loaded');
-  triggerElement = document.querySelector('.menu-button'); // <---------- get reference to element triggering toggle
-  console.log("triggerElement: " + triggerElement);
-  menu = document.querySelector('nav');                    // <---------- get reference to element being toggled
-  console.log("menu: " + menu);
-  triggerElement.addEventListener('click', function() {    // <----------- assign event listener to element we want to trgger toggle
-    console.log("heard the click");
-    menu.classList.toggle('toggle');
-  });
-});
-
-
-</script>
 
 
 <template id="panel-menu">
     <link rel="stylesheet" href="../shared-content/seseragi-components/menu/css/menu.css" />
 
   <div class='menu-button border-menu' id='panel-menu-button'>
-    <style>svg{display:block;height:100%;width:100%}</style>
+    
     <!-- color options: #757575, #69c1d2 -->
-    <svg style="fill:#757575;width:24px;height:24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg id="panel-menu-open" style="fill:#757575;width:24px;height:24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-    </svg><!--
-    <div id="menu-button-text">Menu<div>-->
+    </svg>
+
+    <svg id="panel-menu-close" class="hide" xmlns="http://www.w3.org/2000/svg" 
+    style="fill:#757575;width:24px;height:24px" viewBox="0 0 16 16">
+      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
+    </svg>
+    <!--<div id="menu-button-text">Menu<div>-->
   </div>
 
-  <nav id="menu-nav" class="nav-grid">
+  <nav id="menu-nav" class="nav-grid hide">
     <div class="container">
+
     <ul id="menu-home">
       <li>
           <a href="http://brandymorecastle.org/projects/">Projects</a>
@@ -354,12 +345,16 @@ class PanelMenu extends HTMLDivElement {
       shadowRoot.appendChild(templateContent.cloneNode(true));
 
       const shadowButton = shadowRoot.querySelector('#panel-menu-button');
+      const shadowMenuOpen = shadowRoot.querySelector('#panel-menu-open');
+      const shadowMenuClose = shadowRoot.querySelector('#panel-menu-close');
 
       const shadowNav = shadowRoot.querySelector('#menu-nav');
 
       shadowButton.addEventListener('click', function(e) { 
         //console.log("heard the click");
-        shadowNav.classList.toggle('toggle');
+        shadowNav.classList.toggle('hide');
+        shadowMenuOpen.classList.toggle('hide');
+        shadowMenuClose.classList.toggle('hide');
       });
 
     }

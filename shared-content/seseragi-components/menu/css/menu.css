@@ -5,12 +5,30 @@
  * MIT License
  */
 
+ /*
 nav { 
-    display: none;
+   
+}
+*/
+
+#panel-menu-openx {
+  display: block
+}
+
+#panel-menu-closex {
+  display: none !important
 }
 
 .toggle {
     display: block;
+}
+
+.hide {
+  display: none
+}
+
+.show {
+  display: block
 }
 
 nav {
@@ -132,3 +150,10 @@ font-size: 1em
       margin-top: 0px;
     }
   }
+
+  .nav-grid {
+    transition-property: height;
+    transition-duration: 4s;
+    transition-delay: 2s;
+  }
+
