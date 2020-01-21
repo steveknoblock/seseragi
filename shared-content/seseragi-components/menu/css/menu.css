@@ -31,10 +31,16 @@ nav {
   display: block
 }
 
+.roll {
+  height: 200px;
+}
+
+
 nav {
     background: transparent url(../img/page_background_gray.png);
     background-repeat: repeat-x;
     background-position: top;
+    transition: height 0.4s linear;
 }
 
 nav {
@@ -65,24 +71,6 @@ nav ul li a {
 }
 
 nav ul li a:visited { text-decoration: none };
-
-.border-menux {
-position: relative;
-padding-left: 1.25em;
-margin-left: 0.25em;
-}
-
-.border-menux:before {
-    content: "";
-    position: absolute;
-    top: -0.10em;
-    left: 0;
-    width: 1em;
-    height: 0.125em;
-    border-top: 0.375em double #000;
-    border-bottom: 0.125em solid #000;
-    font-size: 2em;
-}
 
 #menu-button-text {
 font-size: 1em
@@ -151,9 +139,5 @@ font-size: 1em
     }
   }
 
-  .nav-grid {
-    transition-property: height;
-    transition-duration: 4s;
-    transition-delay: 2s;
-  }
+  
 
