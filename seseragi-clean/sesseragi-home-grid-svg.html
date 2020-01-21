@@ -4,111 +4,11 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <title>Homepage</title>
     <meta charset="utf-8">
-    <meta name=description content="Page calming design">
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="description" content="Page calming design">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
     <link rel="stylesheet" href="css/styles.css" />
     <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
-    <script src="../shared-content/seseragi-components/option-tile/optionTile.js"></script>
-<link rel="stylesheet" href="../shared-content/seseragi-components/option-tile/option-tile.css">
-
-<script>
-  $(document).ready(function(ind, val){
-      $('<div>').optionTile();
-  });
-  </script>
-<style>
-
-  /*
-  
-  A tile is typically squares of the same size although other kinds
-   of tile exist like subway tile in running bond. This does not create a grid, but tiles can change size with content. A kanban typically has equally spaced columns. A CSS grid could be better for a square tiling or even columns.
-  
-    Structure is
-  <div class="option-surface">
-    <ul id="option-name" class="option-tiles">
-        <li data-select-index="1" data-cost="100">&nbsp;<span>Option overflow-x: Tile 1</span>&nbsp;<span class="delta"></span></li>
-        <li data-select-index="2" data-cost="200">&nbsp;<span>Option Tile 2</span>&nbsp;<span class="delta"></span></li>
-        <li data-select-index="3" data-cost="300">&nbsp;<span>Option Tile 3</span>&nbsp;<span class="delta"></span></li>
-        <li data-select-index="4" data-cost="400">&nbsp;<span>Option Tile 4</span>&nbsp;<span class="delta"></span></li>      
-    </ul>
-  </div>
-  
-  .option-surface
-    .option-tiles
-      .option-tile
-  
-  */
-  
-  .option-tile-source { visibility: hidden; }
-  
-  
-  .option-surface { 
-    width: 640px;
-    box-sizing: border-box;
-    border-bottom: 1px gray solid;
-  }
-  
-  .option-tiles li { 
-    background: white;
-    color: black;
-    list-style: none;
-    border: 1px solid #ccc;
-    /* border-radius: 4px; */
-    padding: .3em;
-    margin: .3em;
-    float: left;
-    overflow: hidden;
-    cursor: hand;
-  }
-  
-  ul.option-tiles li:hover {
-    border: 1px solid #333;
-  }
-  
-  ul.option-tiles {
-    /* border: 1px solid red; */
-    padding: 0;
-    margin: 0;
-    clear: both;
-  }
-  
-  li.option-tile-selected {
-    background: #eee;
-    border: 1px solid blue;
-    padding: .3em;
-    margin: .3em;
-  }
-  
-  /*
-  @media (max-width: 600px) {
-  
-    .option-surface {
-      max-width: 100%;
-    }
-  
-    .option-tilex {
-      width: 33.3%;
-      float: left;
-     }
-  }
-*/
-  /** This media query reduces the number of columns to one.
-  **/
-/*
-  @media (max-width: 414px) {
-    li {
-      
-      width: 92%;
-      float:none;
-      }
-  }
-*/
-
-  }
-  
-  
-  </style>
     <style>
 
 /* Container holding the image and the text */
@@ -172,14 +72,6 @@
   <hgroup>
     <h1 class="logo">Seseragi</h1>
     <h2 class="tagline">The sound of flowing water.</h2>
-    <form>
-    <select id="option-007" class="option-tile-source">
-      <option value="1" data-cost="">Apple Magic Mouse</option>
-      <option value="2" data-cost="">Magic Trackpad</option>
-      <option value="3" data-cost="69">Apple Magic Mouse + Magic Trackpad</option>
-      <option value="4" data-cost="">Apple Mouse</option>
-    </select>
-  </form>
   </hgroup>
   <div is='panel-menu'></div>
 </header>
@@ -286,7 +178,6 @@ nav a {
 
   <nav id="menu-nav" class="nav-grid hide">
     <div class="container">
-
     <ul id="menu-home">
       <li>
           <a href="http://brandymorecastle.org/projects/">Projects</a>
