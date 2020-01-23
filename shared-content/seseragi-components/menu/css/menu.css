@@ -1,23 +1,9 @@
 /**
- * Sesseragi Menu Component
+ * Panel Menu Component
  * CSS
  * (c) Steve Knoblock 2014-2020
  * MIT License
  */
-
- /*
-nav { 
-   
-}
-*/
-
-#panel-menu-openx {
-  display: block
-}
-
-#panel-menu-closex {
-  display: none !important
-}
 
 .toggle {
     display: block;
@@ -36,9 +22,6 @@ nav {
     background-repeat: repeat-x;
     background-position: top;
     transition: height 0.4s linear;
-}
-
-nav {
     padding-bottom: 1em;
 }
 
@@ -48,11 +31,9 @@ nav ul {
     padding-top: 1.5em;
     padding-left: 0.5em;
 }
-    
+
 nav ul li {
-    /*background: blue;*/
     list-style: none;
-    /*float: left; */
     padding: 0;
     margin: 0;
     line-height: 2.0;
@@ -68,69 +49,46 @@ nav ul li a {
 nav ul li a:visited { text-decoration: none };
 
 #menu-button-text {
-font-size: 1em
+  font-size: 1em
 }
 
-/* Seseragi 2018 - Media */
 /* This media query reduces the number of columns to one.
  */
- @media (min-width: 255px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: auto;
-        /* margin: 0; */
-        margin: 2% auto;
-        grid-gap: 3px;
-        margin-top: 0px;
-    }
-    .nav-gridoff {
+@media (min-width: 255px) {
+  .container {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: auto;
+      /* margin: 0; */
       margin: 2% auto;
-      grid-gap: 25px;
+      /* grid-gap: 25px;  */
+      grid-gap: 3px;
       margin-top: 0px;
-    }
   }
-  /* This media query reduces the number of columns to two.
-   */
-  @media (min-width: 500px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        margin: 0;
-        grid-gap: 3px;
-        margin-top: 0px;
-    }
-    .nav-gridoff {
+}
+
+/* This media query reduces the number of columns to two.
+  */
+@media (min-width: 500px) {
+  .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
-      margin: 2% auto;
-      grid-gap: 25px;
+      margin: 0;
+      grid-gap: 3px;
       margin-top: 0px;
-    }
   }
-  /* This media query reduces the number of columns to three.
-   */
-  @media (min-width: 700px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        margin: 0;
-        grid-gap: 3px;
-        margin-top: 0px;
-    }
-    .nav-gridoff {
+}
+
+/* This media query reduces the number of columns to three.
+  */
+@media (min-width: 700px) {
+  .container {
       display: grid;
-      /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto;
-      margin: 2% auto;
-      grid-gap: 25px;
+      margin: 0;
+      grid-gap: 3px;
       margin-top: 0px;
-    }
   }
+}
