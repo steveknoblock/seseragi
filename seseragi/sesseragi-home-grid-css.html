@@ -4,7 +4,7 @@
     <title>Homepage</title>
     <meta name="description" content="Page calming design">
     <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
     <link rel="stylesheet" href="css/styles.css" />
     <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
@@ -50,21 +50,9 @@
       padding-left: 1em;
     }
 
-    .actionx {
-      padding-top: 1em;
-      font-size: 1em;
+    nav a {
+      text-decoration: none
     }
-
-    .actionx img {max-width:100% !important;
-        height:auto;
-        display:block;}
-
-    .actionx p {
-      font-size: 1em
-      /*
-      margin: 0; padding-top: 1em; margin-right: 1em;
-      */
-}
     </style>
   </head>
 <body>
@@ -73,19 +61,9 @@
   <hgroup>
     <h1 class="logo">Seseragi</h1>
     <h2 class="tagline">The sound of flowing water.</h2>
-    <form>
-    <select id="option-007" class="option-tile-source">
-    </select>
-  </form>
   </hgroup>
   <div is='panel-menu'></div>
 </header>
-
-<style>
-nav a {
-  text-decoration: none
-}
- </style>
 
 <div class="grid-content panel panel-cards">
 	<section>
@@ -120,7 +98,7 @@ nav a {
 <div class="grid-content-img panel" style="padding-top:2rem; background: inherit;">
     <section>
         <div class="action">
-            <div class="photox container">
+            <div class="container">
               <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
               <p class=" centered"><a href="" style="color:white">Photographs</a></p>
             </div>
@@ -129,7 +107,7 @@ nav a {
 
     <section>
       <div class="action">
-          <div class="photox container">
+          <div class="container">
             <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
             <p class=" centered"><a href="" style="color:white">Photographs</a></p>
           </div>
@@ -138,7 +116,7 @@ nav a {
 
   <section>
     <div class="action">
-        <div class="photox container">
+        <div class="container">
           <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
           <p class=" centered"><a href="" style="color:white">Photographs</a></p>
         </div>
@@ -147,7 +125,7 @@ nav a {
 
 <section>
   <div class="action">
-      <div class="photox container">
+      <div class="container">
         <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
         <p class=" centered"><a href="" style="color:white">Photographs</a></p>
       </div>
@@ -157,7 +135,7 @@ nav a {
 </div>
 
 <footer>
-      &copy;<!-- 2008-2019 Seseragi Theme -->2019 Steve Knoblock Seseragi Theme
+      &copy;<!-- 2008-2019 Seseragi Theme -->2020 Steve Knoblock Seseragi Theme
 </footer> 
 
 <script type="text/javascript">
@@ -177,70 +155,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </script>
 
-
+<!-- HTML Template -->
 <template id="panel-menu">
     <link rel="stylesheet" href="../shared-content/seseragi-components/panel-menu/css/menu.css" />
-    <style>
 
-    nav { 
-      display: none;
-    }
-
-    .toggle {
-      display: block;
-      /* transition: all 1s ease-out; */
-    }
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    margin: 0;
-    grid-gap: 3px;
-    margin-top: 0px;
-}
-
-nav {
-	background: transparent url(img/page_background_gray.png);
-	background-repeat: repeat-x;
-	background-position: top;
-}
-
-nav ul {
-  padding-top: 1.5em;
-}
-
-.border-menu {
-  position: relative;
-  padding-left: 1.25em;
-  margin-left: 0.25em;
-}
-
-.border-menu:before {
-    content: "";
-    position: absolute;
-    top: 0.2em;
-    left: 0;
-    width: 1em;
-    height: 0.125em;
-    border-top: 0.375em double #000;
-    border-bottom: 0.125em solid #000;
-    font-size: 2em;
-}
-
-#menu-button-text {
-  font-size: 1.5em;
-  padding-left: 0.5em
-}
-
-nav ul { padding-top: 0.5em;}
-nav ul li a { font-size: 1.2em; text-decoration: none; }
-  </style>
   <div class='menu-button border-menu' id='panel-menu-button'>
     <div id="menu-button-text">Menu</div>
   </div>
 
-  <nav id="menu-nav" class="nav-grid">
+  <nav id="menu-nav" class="nav-grid hide">
     <div class="container">
     <ul id="menu-home">
       <li>
@@ -267,55 +190,20 @@ nav ul li a { font-size: 1.2em; text-decoration: none; }
     </ul>
 
     <ul>
+      <li>
+        <a href="http://brandymorecastle.org/about/">About</a>
+      </li>
       <li id="menu-contact">
             <a href="http://twitter.com/haikuoftheday">@haikuoftheday</a>
       </li>
         <li>
             <a href="http://twitter.com/photographist">@photographist</a>
         </li>
-        <li>
-          <a href="http://brandymorecastle.org/about/">About</a>
-        </li>
       </ul>
       </div>
   </nav>
 </template>
 
-<script>
-
-customElements.define('panel-menu',
-
-class PanelMenu extends HTMLDivElement {
-  constructor() {
-    super();
-
-    document.addEventListener('DOMContentLoaded', function () {
-      console.log('DOM Loaded');
-    });
-
-      const template = document.getElementById('panel-menu');
-      const templateContent = template.content;
-      
-      const shadowRoot = this.attachShadow({mode: 'open'});
-      shadowRoot.appendChild(templateContent.cloneNode(true));
-
-      const shadowButton = shadowRoot.querySelector('#panel-menu-button');
-
-      const shadowNav = shadowRoot.querySelector('#menu-nav');
-
-      shadowButton.addEventListener('click', function(e) { 
-        //console.log("heard the click");
-        shadowNav.classList.toggle('toggle');
-      });
-
-    }
-}
-, { extends: 'div'} );
-
-</script>
-
-
-
-
+<script src='../shared-content/seseragi-components/panel-menu/js/panel-menu.js' ></script>
 </body>
 </html>

@@ -1,15 +1,16 @@
 <!doctype html>
 <html>
   <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <title>Homepage</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Page calming design">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
-    <style>
+   <title>Homepage</title>
+    <meta name='description' content='Page calming design'>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='shortcut icon' href='../shared-content/images/weather-clouds.png' />
+    <link rel='stylesheet' href='css/styles.css' type='text/css' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato|Lora' type='text/css'>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js' ></script>
+
+   <style>
 
     /* Container holding the image and the text */
     .container {
@@ -198,43 +199,7 @@
   </nav>
 </template>
 
-<script>
 
-customElements.define('panel-menu',
-
-class PanelMenu extends HTMLDivElement {
-  constructor() {
-    super();
-
-    document.addEventListener('DOMContentLoaded', function () {
-      console.log('DOM Loaded');
-    });
-
-      const template = document.getElementById('panel-menu');
-      const templateContent = template.content;
-      
-      const shadowRoot = this.attachShadow({mode: 'open'});
-      shadowRoot.appendChild(templateContent.cloneNode(true));
-
-      const shadowButton = shadowRoot.querySelector('#panel-menu-button');
-      const shadowMenuOpen = shadowRoot.querySelector('#panel-menu-open');
-      const shadowMenuClose = shadowRoot.querySelector('#panel-menu-close');
-
-      const shadowNav = shadowRoot.querySelector('#menu-nav');
-
-      shadowButton.addEventListener('click', function(e) { 
-        //console.log("heard the click");
-        shadowNav.classList.toggle('hide');
-        shadowNav.classList.toggle('roll');
-        shadowMenuOpen.classList.toggle('hide');
-        shadowMenuClose.classList.toggle('hide');
-      });
-
-    }
-}
-, { extends: 'div'} );
-
-</script>
-
+<script src='../shared-content/seseragi-components/panel-menu/js/panel-menu.js' ></script>
 </body>
 </html>

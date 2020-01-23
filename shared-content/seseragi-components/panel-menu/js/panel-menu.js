@@ -14,9 +14,10 @@ class PanelMenu extends HTMLDivElement {
       console.log('DOM Loaded');
     });
 
-      const template = document.getElementById('panel-menu');
-      const templateContent = template.content;
       
+      const template = document.getElementById('panel-menu');
+      console.log(template);
+      const templateContent = template.content;
       const shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.appendChild(templateContent.cloneNode(true));
 
