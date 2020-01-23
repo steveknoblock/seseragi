@@ -31,11 +31,6 @@ nav {
   display: block
 }
 
-.roll {
-  height: 200px;
-}
-
-
 nav {
     background: transparent url(../img/page_background_gray.png);
     background-repeat: repeat-x;
