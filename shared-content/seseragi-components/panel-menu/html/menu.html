@@ -1,39 +1,102 @@
-<!-- container for more/less action -->
-	<div id="more_info3">
-		<nav class="sitewide clearfix">
-        <ul>
-            <li>
-               <a href="http://brandymorecastle.org/projects/">Projects</a>
-            </li>
-            <li>
-               <a href="http://brandymorecastle.org/photography/">Photography</a>
-            </li>
-            <li>
-               <a href="http://brandymorecastle.org/code/">Code</a>
-            </li>
-         </ul>
-         
-         <ul>
-            <li>
-               <a href="http://brandymorecastle.org/projects/">Photography</a>
-            </li>
-            <li>
-               <a href="http://brandymorecastle.org/contact/">Poetry</a>
-            </li>
-            <li>
-               <a href="http://brandymorecastle.org/about/">Writing</a>
-            </li>
-         </ul>
+<template id="panel-menu">
+   <link rel="stylesheet" href="../shared-content/seseragi-components/panel-menu/css/menu.css" />
+   <style>
 
-		 <ul>
-		 <li id="menu-contact">
-               <a href="http://brandymorecastle.org/contact/">Facebook</a>
-            </li>
-            <li id="menu-contact">
-               <a href="http://brandymorecastle.org/contact/">@photographist</a>
-            </li>
-			<li>
-               <a href="http://brandymorecastle.org/about/">About</a>
-            </li>
-         </ul>
-    </nav>
+   nav { 
+     display: none;
+   }
+
+   .toggle {
+     display: block;
+     /* transition: all 1s ease-out; */
+   }
+
+ .container {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: auto;
+   margin: 0;
+   grid-gap: 3px;
+   margin-top: 0px;
+}
+
+nav {
+  background: transparent url(img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
+nav ul {
+ padding-top: 1.5em;
+}
+
+.border-menu {
+ position: relative;
+ padding-left: 1.25em;
+ margin-left: 0.25em;
+}
+
+.border-menu:before {
+   content: "";
+   position: absolute;
+   top: 0.2em;
+   left: 0;
+   width: 1em;
+   height: 0.125em;
+   border-top: 0.375em double #000;
+   border-bottom: 0.125em solid #000;
+   font-size: 2em;
+}
+
+#menu-button-text {
+ font-size: 1.5em;
+ padding-left: 0.5em
+}
+
+nav ul { padding-top: 0.5em;}
+nav ul li a { font-size: 1.2em; text-decoration: none; }
+ </style>
+ <div class='menu-button border-menu' id='panel-menu-button'>
+   <div id="menu-button-text">Menu</div>
+ </div>
+
+ <nav id="menu-nav" class="nav-grid">
+   <div class="container">
+   <ul id="menu-home">
+     <li>
+         <a href="http://brandymorecastle.org/projects/">Projects</a>
+     </li>
+     <li>
+         <a href="http://brandymorecastle.org/photography/">Photography</a>
+     </li>
+     <li>
+         <a href="http://brandymorecastle.org/code/">Code</a>
+     </li>
+   </ul>
+
+   <ul id="menu-labels">
+     <li>
+        <a href="http://brandymorecastle.org/projects/">Photography</a>
+     </li>
+     <li>
+        <a href="http://brandymorecastle.org/contact/">Poetry</a>
+     </li>
+     <li>
+        <a href="http://brandymorecastle.org/about/">Writing</a>
+     </li>
+   </ul>
+
+   <ul>
+     <li id="menu-contact">
+           <a href="http://twitter.com/haikuoftheday">@haikuoftheday</a>
+     </li>
+       <li>
+           <a href="http://twitter.com/photographist">@photographist</a>
+       </li>
+       <li>
+         <a href="http://brandymorecastle.org/about/">About</a>
+       </li>
+     </ul>
+     </div>
+ </nav>
+</template>

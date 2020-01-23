@@ -1,5 +1,6 @@
 /**
  * panel-menu.js
+ * A web component panel menu.
  * (c)2020 Steve Knoblock
  * MIT LICENSE
  */
