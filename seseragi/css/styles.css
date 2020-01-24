@@ -99,24 +99,11 @@ nav {
   margin-top: 0px;
 }
 
-/* Text and actions */
-.float_left {
-  float: left;
-}
-
-.float_right {
-  float: right;
-}
-
 .action {
   margin: 0 0 0 0;
   display: block;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: auto;
-}
-
-.action > p {
-  float: right;
 }
 
 /* responsive images */
