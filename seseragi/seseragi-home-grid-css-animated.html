@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Homepage</title>
+    <meta name="description" content="Page calming design">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <style>
+
+    /* Container holding the image and the text */
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    /* Centered text */
+    .centered {
+        border-width: 1px;
+        border-color: white;
+        border-style: solid;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1em;
+    }
+
+    .action {
+      margin: 0 0 0 0;
+      display: block;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: auto;
+    }
+
+    .action > p {
+      float: right;
+      font-size: 1em
+    }
+
+    section h1 {
+      padding-left: 1em;
+    }
+
+    section p {
+      padding-left: 1em;
+    }
+
+    nav a {
+      text-decoration: none
+    }
+    
+    </style>
+  </head>
+<body>
+
+<header>
+  <hgroup>
+    <h1 class="logo">Seseragi</h1>
+    <h2 class="tagline">The sound of flowing water.</h2>
+  </hgroup>
+  <div is='panel-menu'></div>
+</header>
+
+<div class="grid-content panel panel-cards">
+	<section>
+        <h1>A wonderful serenity</h1>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+	</section>
+	
+	<section>
+        <h1>Sweet mornings of spring</h1>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+	</section>
+	
+	<section>
+        <h1>I am alone</h1>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+	</section>
+
+    <section>
+        <h1>The charm of existence</h1>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+    </section>
+</div>
+
+<div class="panel text panel-wide">
+    <section style="margin-left: auto; margin-right: auto; max-width: 55em">
+        <h1 style="text-align: center">Heading</h1>
+        <p>1. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+    </section>
+
+</div>
+
+<div class="grid-content-img panel" style="padding-top:2rem; background: inherit;">
+    <section>
+        <div class="action">
+            <div class="container">
+              <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+              <p class=" centered"><a href="" style="color:white">Photographs</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="action">
+          <div class="container">
+            <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+            <p class=" centered"><a href="" style="color:white">Photographs</a></p>
+          </div>
+      </div>
+  </section>
+
+  <section>
+    <div class="action">
+        <div class="container">
+          <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+          <p class=" centered"><a href="" style="color:white">Photographs</a></p>
+        </div>
+    </div>
+</section>
+
+<section>
+  <div class="action">
+      <div class="container">
+        <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+        <p class=" centered"><a href="" style="color:white">Photographs</a></p>
+      </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+      &copy;<!-- 2008-2019 Seseragi Theme -->2020 Steve Knoblock Seseragi Theme
+</footer> 
+
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOM Loaded');
+  triggerElement = document.querySelector('.menu-button'); // <---------- get reference to element triggering toggle
+  console.log("triggerElement: " + triggerElement);
+  menu = document.querySelector('nav');                    // <---------- get reference to element being toggled
+  console.log("menu: " + menu);
+  triggerElement.addEventListener('click', function() {    // <----------- assign event listener to element we want to trgger toggle
+    console.log("heard the click");
+    menu.classList.toggle('toggle');
+  });
+});
+
+
+</script>
+
+<!-- HTML Template -->
+<template id="panel-menu">
+    <link rel="stylesheet" href="../shared-content/seseragi-components/panel-menu/css/menu.css" />
+    <style>
+
+        /*!
+         * Hamburgers
+         * @description Tasty CSS-animated hamburgers
+         * @author Jonathan Suh @jonsuh
+         * @site https://jonsuh.com/hamburgers
+         * @link https://github.com/jonsuh/hamburgers
+         */
+         .hamburger {
+          padding: 15px 15px;
+          display: inline-block;
+          cursor: pointer;
+          transition-property: opacity, filter;
+          transition-duration: 0.15s;
+          transition-timing-function: linear;
+          font: inherit;
+          color: inherit;
+          text-transform: none;
+          background-color: transparent;
+          border: 0;
+          margin: 0;
+          overflow: visible; }
+          .hamburger:hover {
+            opacity: 0.7; }
+          .hamburger.is-active:hover {
+            opacity: 0.7; }
+          .hamburger.is-active .hamburger-inner,
+          .hamburger.is-active .hamburger-inner::before,
+          .hamburger.is-active .hamburger-inner::after {
+            background-color: #000; }
+        
+        .hamburger-box {
+          width: 40px;
+          height: 24px;
+          display: inline-block;
+          position: relative; }
+        
+        .hamburger-inner {
+          display: block;
+          top: 50%;
+          margin-top: -2px; }
+          .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            width: 40px;
+            height: 4px;
+            background-color: #000;
+            border-radius: 4px;
+            position: absolute;
+            transition-property: transform;
+            transition-duration: 0.15s;
+            transition-timing-function: ease; }
+          .hamburger-inner::before, .hamburger-inner::after {
+            content: "";
+            display: block; }
+          .hamburger-inner::before {
+            top: -10px; }
+          .hamburger-inner::after {
+            bottom: -10px; }
+                /*
+           * Squeeze
+           */
+        .hamburger--squeeze .hamburger-inner {
+          transition-duration: 0.075s;
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+          .hamburger--squeeze .hamburger-inner::before {
+            transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+          .hamburger--squeeze .hamburger-inner::after {
+            transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+        
+        .hamburger--squeeze.is-active .hamburger-inner {
+          transform: rotate(45deg);
+          transition-delay: 0.12s;
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+          .hamburger--squeeze.is-active .hamburger-inner::before {
+            top: 0;
+            opacity: 0;
+            transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+          .hamburger--squeeze.is-active .hamburger-inner::after {
+            bottom: 0;
+            transform: rotate(-90deg);
+            transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+            </style>
+       
+        
+        <button class="hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+        </button>
+              
+        <style>
+        /*
+        div.box:not(:defined) {
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+        }
+        */
+        div.box { 
+          opacity: 0;
+          height: 0;
+          transition: height 5s ease-in-out;
+          /* transition: opacity 0.3s ease-in-out;  */
+        }
+        
+        div.load {
+          height: 250px;
+          background-color: blue;
+          opacity: 1;
+        }</style>
+
+        <!-- 
+            <div class='menu-button border-menu' id='panel-menu-button'>
+    <div id="menu-button-text">Menu</div>
+  </div>
+        -->
+<button class="hamburger hamburger--squeeze menu-button border-menu" type="button" id='panel-menu-button'>
+    <button class="hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+        </button>
+</button>
+
+  <nav id="menu-nav" class="nav-grid hide">
+    <div class="container">
+    <ul id="menu-home">
+      <li>
+          <a href="http://brandymorecastle.org/projects/">Projects</a>
+      </li>
+      <li>
+          <a href="http://brandymorecastle.org/photography/">Photography</a>
+      </li>
+      <li>
+          <a href="http://brandymorecastle.org/code/">Code</a>
+      </li>
+    </ul>
+
+    <ul id="menu-labels">
+      <li>
+         <a href="http://brandymorecastle.org/projects/">Photography</a>
+      </li>
+      <li>
+         <a href="http://brandymorecastle.org/contact/">Poetry</a>
+      </li>
+      <li>
+         <a href="http://brandymorecastle.org/about/">Writing</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="http://brandymorecastle.org/about/">About</a>
+      </li>
+      <li id="menu-contact">
+            <a href="http://twitter.com/haikuoftheday">@haikuoftheday</a>
+      </li>
+        <li>
+            <a href="http://twitter.com/photographist">@photographist</a>
+        </li>
+      </ul>
+      </div>
+  </nav>
+</template>
+
+<script src='../shared-content/seseragi-components/panel-menu/js/panel-menu.js' ></script>
+</body>
+</html>
