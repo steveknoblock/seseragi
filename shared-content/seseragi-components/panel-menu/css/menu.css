@@ -110,3 +110,31 @@ nav ul li a:visited { text-decoration: none };
       margin-top: 0px;
   }
 }
+
+.drop-capped {
+  font-family: ReithSans;
+  font-stretch: normal;
+  font-weight: 700;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid #444;
+  color: #444;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  font-size: 58px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 8px 10px 4px 0;
+  /*text-transform: uppercase;*/
+  height: 84px;
+  width: 84px;
+}
+
+.drop-capped-circle {
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.3em;
+  border: 2px solid #3377;
+}

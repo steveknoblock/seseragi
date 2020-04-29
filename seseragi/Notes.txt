@@ -1,0 +1,46 @@
+Notes
+--
+
+The only difference between the older version of Seseragi and the new is the header presentation. I can create two different headers to experiment with each.
+
+The older page header is a gradient that extends downward until it merges into the page body. Its similar to the gradient that extends downward from the header into the page body on the newer design.
+
+The newer header HTML is
+
+<header>
+  <hgroup>
+    <h1 class="logo">Seseragi</h1>
+    <h2 class="tagline">The sound of flowing water.</h2>
+  </hgroup>
+  <div is='panel-menu'></div>
+</header>
+
+and the older header is
+
+<header id="ledge_container">
+    <hgroup>
+      <h1 id="logo">My website</h1>
+      <h2 id="slogan">A lot of effort went into making this effortless.</h2>
+    </hgroup>
+   <!-- navigation goes here -->
+</header>
+
+They are nearly identical except perhaps for CSS styles.
+
+The old header used floats to divide the header into left and right sections.
+
+On the newer design, the gradient was removed from the header and folded into the navigation menu.
+
+A class named 'panel' was defined to place the downward gradient behind any element, mostly used for creating visual separation between page sections.
+
+The first section became essentially the top gradient for content such as text.
+
+Or in other words, the gradient associated with text became part of the text instead of the page and the header became a non-gradient area.
+
+They are somewhat opposites.
+
+
+The old Seseragi design has a border creating a visual space for the "page" with the gradient behind it, and the text flowing underneath with or without a header above it.
+
+
+

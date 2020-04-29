@@ -49,6 +49,33 @@
       text-decoration: none
     }
     
+.drop-capped {
+    font-family: ReithSans;
+    font-stretch: normal;
+    font-weight: 700;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 2px solid #444;
+    color: #444;
+    display: -ms-flexbox;
+    display: flex;
+    float: left;
+    font-size: 58px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 8px 10px 4px 0;
+    text-transform: uppercase;
+    height: 84px;
+    width: 84px;
+}
+
+.drop-capped-circle {
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 3.3em;
+    border: 2px solid #3377;
+}
     </style>
   </head>
 <body>
@@ -64,7 +91,7 @@
 <div class="grid-content panel panel-cards">
 	<section>
         <h1>A wonderful serenity</h1>
-        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p><span class="drop-capped drop-capped-circle">A</span> wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
 	</section>
 	
 	<section>
@@ -86,7 +113,7 @@
 <div class="panel text panel-wide">
     <section style="margin-left: auto; margin-right: auto; max-width: 55em">
         <h1 style="text-align: center">Heading</h1>
-        <p>1. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p><span class="drop-capped drop-capped-circle">A</span> wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
     </section>
 
 </div>
@@ -156,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <link rel="stylesheet" href="../shared-content/seseragi-components/panel-menu/css/menu.css" />
 
   <div class='menu-button border-menu' id='panel-menu-button'>
-    <div id="menu-button-text">Menu</div>
+    <div id="menu-button-text" class="">Menu</div>
   </div>
 
   <nav id="menu-nav" class="nav-grid hide">
