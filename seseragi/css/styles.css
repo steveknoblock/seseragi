@@ -118,6 +118,10 @@ section p {
   padding-left: 1em;
 }
 
+section.article {
+  overflow-wrap: break-word;
+}
+
 /* Footer */
 footer {
   background: transparent url(../img/page_background_gray.png);
@@ -127,6 +131,72 @@ footer {
   background-position: top;
   /* move to base */
   padding: 1em;
+}
+
+    /* Container holding the image and the text */
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    /* Centered text */
+    .centered {
+        border-width: 1px;
+        border-color: white;
+        border-style: solid;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1em;
+    }
+
+    .action {
+      margin: 0 0 0 0;
+      display: block;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: auto;
+    }
+
+    section h1 {
+      padding-left: 1em;
+    }
+
+    section p {
+      padding-left: 1em;
+    }
+
+    nav a, .action a {
+      text-decoration: none
+    }
+    
+.drop-capped {
+    font-family: ReithSans;
+    font-stretch: normal;
+    font-weight: 700;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 2px solid #444;
+    color: #444;
+    display: -ms-flexbox;
+    display: flex;
+    float: left;
+    font-size: 58px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 8px 10px 4px 0;
+    text-transform: uppercase;
+    height: 84px;
+    width: 84px;
+}
+
+.drop-capped-circle {
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 3.3em;
+    border: 2px solid #3377;
 }
 
 /* Seseragi 2018 - Media */
