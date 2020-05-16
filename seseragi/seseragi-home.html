@@ -12,15 +12,18 @@
   </head>
 <body>
 
-<header>
+  <!-- it really does need to stick to the top, and reduce the length of the logo banner when menu is open 
+  much less trouble when the whole header is pinned
+  -->
+<header class="panel pin-to-top">
   <hgroup>
     <h1 class="logo">Seseragi</h1>
     <h2 class="tagline">The sound of flowing water.</h2>
   </hgroup>
-  <div is='panel-menu'></div>
+  <div class="" is='panel-menu'></div>
 </header>
 
-<div class="grid-content panel panel-cards">
+<div class="grid-content panel panel-cards" style="scroll-snap-align: start;">
 	<section>
         <h1>A wonderful serenity</h1>
         <p><span class="drop-capped drop-capped-circle">A</span> wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>

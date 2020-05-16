@@ -36,6 +36,11 @@ header hgroup h2.tagline {
   font-family: "Lora", "Georgia", "Times New Roman", "Times", serif;
 }
 
+.pin-to-top {
+  position: sticky;
+  top: 0;
+}
+
 .top {
   padding-top: 1em;
 }
