@@ -8,6 +8,10 @@
      --black-level: #000;
      --body-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
      --body-font-size: 1em;
+
+     --seseragi-gray: #eee;
+     --seseragi-white: #fff;
+     --seseragi-black: #000;
 }
 
 body {

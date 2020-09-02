@@ -2,9 +2,23 @@ Sesseragi
 
 Theme without any Brandymore Castle-specific elements.
 
+New
+--
+
+The new design will focus on a set of page types.
+
+
+home page
+article page
+contents or index page
+photos/mosaic page
 
 
 
+
+
+Old
+--
 
 fonts are for only font import
 
