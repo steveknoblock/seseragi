@@ -14,7 +14,9 @@ contents or index page
 photos/mosaic page
 
 
+What will these pages show?
 
+An article page will show an article.
 
 
 Old
