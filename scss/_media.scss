@@ -1,0 +1,45 @@
+/* Seseragi 2018 - Media */
+
+/* This media query reduces the number of columns to one.
+ */
+@media (min-width: 255px) {
+
+    .grid-content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      margin: 2% auto;
+      grid-gap: 25px;
+      margin-top: 0px;
+    }
+}
+
+/* This media query reduces the number of columns to two.
+ */
+ @media (min-width: 500px) {
+
+    .grid-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      margin: 2% auto;
+      grid-gap: 25px;
+      margin-top: 0px;
+    }
+}
+
+/* This media query reduces the number of columns to three.
+ */
+@media (min-width: 700px) {
+
+    .grid-content {
+      display: grid;
+      /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      margin: 2% auto;
+      grid-gap: 25px;
+      margin-top: 0px;
+    }
+}
+
