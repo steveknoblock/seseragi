@@ -1,9 +1,9 @@
-Sesseragi
+# Sesseragi
 
-Theme without any Brandymore Castle-specific elements.
+New Sesseragi theme.
 
-New
---
+# New
+
 
 The new design will focus on a set of page types.
 
@@ -19,8 +19,8 @@ What will these pages show?
 An article page will show an article.
 
 
-Old
---
+# Old
+
 
 fonts are for only font import
 
