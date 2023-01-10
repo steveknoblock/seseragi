@@ -14,14 +14,17 @@
 }
 
 .show {
-  display: block
+  display: block;
+}
+
+.roll {
+  transition: top 300ms ease-out;
 }
 
 nav {
     background: transparent url(../img/page_background_gray.png);
     background-repeat: repeat-x;
     background-position: top;
-    transition: height 0.4s linear;
     padding-bottom: 1em;
 }
 
@@ -57,7 +60,7 @@ nav ul li a:visited { text-decoration: none };
   padding-left: 1.25em;
   margin-left: 0.25em;
 }
-
+/*
 .border-menu:before {
     content: "";
     position: absolute;
@@ -69,6 +72,7 @@ nav ul li a:visited { text-decoration: none };
     border-bottom: 0.125em solid #000;
     font-size: 1em;
 }
+*/
 
 /* This media query reduces the number of columns to one.
  */
