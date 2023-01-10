@@ -14,14 +14,17 @@
 }
 
 .show {
-  display: block
+  display: block;
+}
+
+.roll {
+  transition: top 300ms ease-out;
 }
 
 nav {
     background: transparent url(../img/page_background_gray.png);
     background-repeat: repeat-x;
     background-position: top;
-    transition: height 0.4s linear;
     padding-bottom: 1em;
 }
 
