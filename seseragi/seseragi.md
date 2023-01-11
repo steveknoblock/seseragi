@@ -4,15 +4,12 @@ New Sesseragi theme.
 
 # New
 
+The design of Seseragi will focus on balance between image and text, and visual flow. The design will provide templates for a concise set of page types:
 
-The new design will focus on a set of page types.
-
-
-home page
-article page
-contents or index page
-photos/mosaic page
-
+Homepage
+Article Page
+Flow Page
+Contents or Index Page
 
 What will these pages show?
 

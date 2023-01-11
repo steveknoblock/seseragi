@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Fragment Scroll</title>
+        <title>Seseragi Flows</title>
         <link rel="stylesheet" href="css/styles.css" />
 		
 	</head>
@@ -15,6 +15,13 @@
         top: 0;
         /* height: 100%;
         width: 50%; */
+    }
+
+    .pin-to-top {
+        position: sticky;
+        top: 0;
+        /* Critical to prevent sticky overlapping sticky header. */
+        z-index: 1;
     }
 
     .scroller {
@@ -37,11 +44,11 @@
     .notebook-panel {
         height: 50%;
         background-color:gainsboro;
-        padding: 1em
+        padding: 1em;
     }
 
 </style>
-<header class="panel pin-to-top waterfall">
+<header class="panel pin-to-top">
     <hgroup>
       <h1 class="logo">Seseragi</h1>
       <h2 class="tagline">The sound of flowing water.</h2>
@@ -62,8 +69,8 @@
     </div>
     <!-- start of content container -->
 
-    <div class="notebook-panelx">
-        <h2>Flows</h2>
+    <section>
+        <h2>Flow 1</h2>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
@@ -72,7 +79,7 @@
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
-    </div>
+    </section>
 
 </div>
 
@@ -89,8 +96,8 @@
         </div>
     </div>
     <!-- start of content container -->
-    <div class="notebook-panelx">
-        <h2>Mosaic</h2>
+    <section>
+        <h2>Flow 2</h2>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
