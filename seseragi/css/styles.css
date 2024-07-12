@@ -13,6 +13,12 @@
   --seseragi-black: #000;
 }
 
+.margin-set {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 55em;
+}
+
 /* Seseragi - Fonts */
 /* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
 @import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
