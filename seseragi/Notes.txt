@@ -44,3 +44,23 @@ The old Seseragi design has a border creating a visual space for the "page" with
 
 
 
+I think
+
+drop-cap where drop cap is applied without circle
+drop-cap-circle where drop cap is applied with circle
+
+class="drop-cap"
+class="drop-cap-circle"
+
+where there is an individual class for each type of drop cap and the name incorporates the inheritence
+
+or
+
+drop-cap where this is the base class
+with-circle where this is a class that is composable with the base class
+class="drop-cap"
+class="drop-cap with-circle"
+
+are best.
+
+
