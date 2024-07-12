@@ -64,5 +64,70 @@
     &copy;<!-- 2008-2019 Seseragi Theme -->2020 Steve Knoblock Seseragi Theme
 </footer> 
 
+<script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('DOM Loaded');
+      triggerElement = document.querySelector('.menu-button'); // <---------- get reference to element triggering toggle
+      console.log("triggerElement: " + triggerElement);
+      menu = document.querySelector('nav');                    // <---------- get reference to element being toggled
+      console.log("menu: " + menu);
+      triggerElement.addEventListener('click', function() {    // <----------- assign event listener to element we want to trgger toggle
+        console.log("heard the click");
+        menu.classList.toggle('toggle');
+      });
+    });
+    </script>
+    
+    <!-- HTML Template -->
+    <template id="panel-menu">
+        <link rel="stylesheet" href="../shared-content/seseragi-components/panel-menu/css/menu.css" />
+    
+      <div class='menu-button border-menu' id='panel-menu-button'>
+        <div id="menu-button-text" class="">Menu</div>
+      </div>
+    
+      <nav id="menu-nav" class="nav-grid hide">
+        <div class="container">
+        <ul id="menu-home">
+          <li>
+              <a href="http://brandymorecastle.org/projects/">Projects</a>
+          </li>
+          <li>
+              <a href="http://brandymorecastle.org/photography/">Photography</a>
+          </li>
+          <li>
+              <a href="http://brandymorecastle.org/code/">Code</a>
+          </li>
+        </ul>
+    
+        <ul id="menu-labels">
+          <li>
+             <a href="http://brandymorecastle.org/projects/">Photography</a>
+          </li>
+          <li>
+             <a href="http://brandymorecastle.org/contact/">Poetry</a>
+          </li>
+          <li>
+             <a href="http://brandymorecastle.org/about/">Writing</a>
+          </li>
+        </ul>
+    
+        <ul>
+          <li>
+            <a href="http://brandymorecastle.org/about/">About</a>
+          </li>
+          <li id="menu-contact">
+                <a href="http://twitter.com/haikuoftheday">@haikuoftheday</a>
+          </li>
+            <li>
+                <a href="http://twitter.com/photographist">@photographist</a>
+            </li>
+          </ul>
+          </div>
+      </nav>
+    </template>
+    
+    <script src='../shared-content/seseragi-components/panel-menu/js/panel-menu.js' ></script>
 </body>
 </html>
