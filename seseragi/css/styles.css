@@ -176,6 +176,7 @@ footer {
       grid-template-rows: auto;
     }
 
+    /* Homepage */
     section h1 {
       padding-left: 1em;
     }
@@ -188,6 +189,16 @@ footer {
       text-decoration: none
     }
     
+/* Article */
+
+    article h1 {
+      padding-left: 1em;
+    }
+
+    article p {
+      padding-left: 1em;
+    }
+
 .drop-capped {
     font-family: ReithSans;
     font-stretch: normal;
@@ -268,7 +279,4 @@ footer {
   text-shadow: none;
   box-shadow: none;
   text-transform: uppercase;
-}
-
-
 }
