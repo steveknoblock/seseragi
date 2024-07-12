@@ -1,6 +1,13 @@
 Notes
 --
 
+Next release: Essential Warmth
+Then: 
+Official Twist
+Calm Dot
+Mad Accident
+Free Alternative
+
 The only difference between the older version of Seseragi and the new is the header presentation. I can create two different headers to experiment with each.
 
 The older page header is a gradient that extends downward until it merges into the page body. Its similar to the gradient that extends downward from the header into the page body on the newer design.
