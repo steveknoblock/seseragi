@@ -1,6 +1,6 @@
-/* Seseragi 2020 */
-/* (CC) 2015-2020 Steve Knoblock */
-/* Seseragi 2020 - base */
+/* Seseragi 2024 */
+/* (CC) 2015-2024 Steve Knoblock */
+/* Seseragi - Base */
 
 :root {
   --bg-color: #eee;
@@ -13,7 +13,7 @@
   --seseragi-black: #000;
 }
 
-/* Seseragi 2020 - Fonts */
+/* Seseragi - Fonts */
 /* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
 @import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
 /* Seseragi 2020 - Typography */
@@ -209,7 +209,7 @@ footer {
     color: #444;
     display: -ms-flexbox;
     display: flex;
-    float: left;
+    float: left; /* Necessary for drop cap */
     font-size: 58px;
     -ms-flex-pack: center;
     justify-content: center;
