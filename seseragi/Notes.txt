@@ -54,6 +54,17 @@ class="drop-cap-circle"
 
 where there is an individual class for each type of drop cap and the name incorporates the inheritence
 
+essentially
+
+.drop-cap {
+  // drop cap
+}
+
+.drop-cap-circle {
+  //drop cap
+  // draw circle
+}
+
 or
 
 drop-cap where this is the base class
