@@ -1,23 +1,23 @@
-jQuery(document).ready( function() {
 
-var offset = 220;
-var duration = 500;
-
-jQuery(window).scroll( function() {
-	if (jQuery(this)).scrollTop() > offset) {
-		jQuery('.back-to-top').fadeIn(duration);
-		} else {
-			jQuery('.back-to-top').fadeOut(duration);
+document.addEventListener('DOMContentLoaded', function () {
+	console.log('DOM Loaded');
+	scrollButton.addEventListener('click', function(e) { 
+		if( e.scrollTop > offset) {
+			scrollTop();
 		}
-	}
-	
-	
-	jQuery('.back-to-top').click( function() {
-		event.
-	}
-	
-	
+	});
+  });
+
+const offset = 220;
+const duration = 500;
+
+const scrollButton = document.getElementById('.back-to-top');
+const scrollTarget = document.window;
+
+function scrollTop() {
+	//scrollButton.classList.toggle("scrolltop");
+	scrollTarget.scrollTo({
+		top: 0,
+		behavior: "smooth",
+	  });
 }
-
-
-	
