@@ -131,18 +131,6 @@ header hgroup h2.tagline {
   grid-template-rows: auto;
 }
 
-/* responsive images */
-section img {  height: auto;  width: 100%; }
-
-/* This really needs a gutter on the left of the grid. */
-section h1 {
-  padding-left: 1em;
-}
-
-section p {
-  padding-left: 1em;
-}
-
 /* Footer */
 footer {
   background: transparent url(../img/page_background_gray.png);
@@ -173,6 +161,7 @@ article {
 }
 
 article h1 {
+  /* This really needs a gutter on the left of the grid. */
   padding-left: 1em;
 }
 
@@ -180,8 +169,11 @@ article p {
   padding-left: 1em;
 }
 
+/* responsive images */
+article img {  height: auto;  width: 100%; }
 
-/* Change to drop-cap and with-circle */
+
+/* Drop Cap */
 .drop-cap {
   font-family: var(--drop-cap-font);
   font-size: 3.0em;
