@@ -10,7 +10,7 @@
   --bg-color: #eee;
   --black-level: #000;
   --body-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
-  --body-font-size: 1em;
+  --body-font-size: 1.0em;
   --body-line-height:  1.5;
 
   --drop-cap-font: "ReithSans", sans;
@@ -20,7 +20,7 @@
   --seseragi-black: #000;
   --seseragi-blue: #3377AA;
 
-  --layout-margin: 2%;
+  --layout-margin: auto;
 }
 
 body {
@@ -49,12 +49,6 @@ p {
   font-family: var(--body-font);
 }
 
-p {
-  font-size: 1.3em;
-  line-height: 1.5;
-  font-family: "Lora", serif;
-}
-
 pre {
   font-family: "Inconsolata", "Lucida Sans", monospace;
 }
@@ -67,14 +61,19 @@ header hgroup h1.logo {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   font-weight: normal;
+  margin: 0;
+  padding: 0.25em
 }
 
 header hgroup h2.tagline {
   background: transparent;
   text-align: center;
   color: var(--seseragi-blue);
-  font-size: 0.75em;
+  font-size: var(--body-font-size);
   font-family: var(--body-font);
+  padding: 0.25em;
+  margin: 0;
+  /* border: 1px red solid; */
 }
 
 .pin-to-top {
@@ -218,7 +217,7 @@ article p {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
-    margin:  auto;
+    margin: var(--layout-margin);
     grid-gap: 25px;
     margin-top: 0px;
   }
@@ -230,11 +229,14 @@ article p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    margin: var(--layout-margin) auto;
+    margin: var(--layout-margin);
     grid-gap: 25px;
     margin-top: 0px;
   }
 }
+
+/* Homepage layout */
+
 /* This media query reduces the number of columns to three.
  */
 @media (min-width: 700px) {
@@ -243,7 +245,7 @@ article p {
     /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    margin: var(--layout-margin) auto;
+    margin: var(--layout-margin);
     grid-gap: 25px;
     margin-top: 0px;
   }
@@ -253,6 +255,7 @@ article p {
 
 nav {
   display: none;
+  border: 1px red solid;
 }
 
 nav a, .action a {
