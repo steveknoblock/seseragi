@@ -10,7 +10,7 @@
   --bg-color: #eee;
   --black-level: #000;
   --body-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
-  --body-font-size: 1.3em;
+  --body-font-size: 1em;
   --body-line-height:  1.5;
 
   --drop-cap-font: "ReithSans", sans;
@@ -47,6 +47,12 @@ p {
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
   font-family: var(--body-font);
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 1.5;
+  font-family: "Lora", serif;
 }
 
 pre {
