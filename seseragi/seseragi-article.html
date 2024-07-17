@@ -6,18 +6,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato|Lora" type="text/css">
   </head>
 <body>
-    <header class="panel pin-to-top">
-        <hgroup>
-            <h1 class="logo">Seseragi</h1>
-            <h2 class="tagline">The sound of flowing water.</h2>
-        </hgroup>
-        <div class="" is='panel-menu'></div>
-    </header>
+
+<header class="panel pin-to-top">
+  <hgroup>
+    <h1 class="logo">Seseragi</h1>
+    <h2 class="tagline">The sound of flowing water.</h2>
+  </hgroup>
+  <div is='panel-menu'></div>
+</header>
+
 <!-- Begin Content -->
 <div id='content'>
     <div class="panel text panel-wide">
@@ -63,9 +64,20 @@
     <template id="panel-menu">
         <link rel="stylesheet" href="../shared-content/seseragi-components/panel-menu/css/menu.css" />
     
-      <div class='menu-button border-menu' id='panel-menu-button'>
-        <div id="menu-button-text" class="">Menu</div>
-      </div>
+        <div class='menu-button border-menu' id='panel-menu-button'>
+    
+          <!-- color options: #757575, #69c1d2 -->
+          <svg id="panel-menu-open" style="fill:#757575;width:24px;height:24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+      
+          <svg id="panel-menu-close" class="hide" xmlns="http://www.w3.org/2000/svg" 
+          style="fill:#757575;width:24px;height:24px" viewBox="0 0 16 16">
+            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
+          </svg>
+          <!--<div id="menu-button-text">Menu<div>-->
+        </div>
     
       <nav id="menu-nav" class="nav-grid hide">
         <div class="container">
