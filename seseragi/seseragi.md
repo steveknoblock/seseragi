@@ -1,36 +1,29 @@
-# Sesseragi
+# Seseragi
 
-New Sesseragi theme.
+New Seseragi static website theme.
 
 # New
 
+The new design will focus on a set of page types:
 
-The new design will focus on a set of page types.
+Home page (grid of cards)
 
+Article page (A single article)
 
-home page
-article page
-contents or index page
-photos/mosaic page
+Index page (A page with links to other pages.)
 
+Photos/mosaic page (Grid of images)
+
+Flow page (Blog stream of posts page.)
 
 What will these pages show?
 
 An article page will show an article.
 
 
-# Old
+# Stylesheet
 
+The stylesheet is divided into sections for Fonts, Base, Typography.
 
-fonts are for only font import
+The Typography section is for only font import. No font-related rules, no margin, borders, padding, and the like. Try to put everything here that defines font usage, except for components, which may have their own internal font rules for fonts.
 
-typography is only for font-related rules, no margin, borders, padding
-
-try to put everything here that defines font usage, except for components, which may have their own internal font rules fir using fonts
-
-i understand this means you cant look in one place for all the styles, but at least yiu know only font rules are in typography, pasding, margins, dimensions are sknewhere else
-
-
-
-
-what about line height, letter spacing and kerning?
