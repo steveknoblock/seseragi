@@ -313,3 +313,44 @@ nav a, .action a {
   grid-template-columns: 2fr 2fr;
   grid-template-rows: auto;
 }
+
+
+/* Flows */
+    .pin { 
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        /* height: 100%;
+        width: 50%; */
+    }
+
+    .pin-to-top {
+        position: sticky;
+        top: 0;
+        /* Critical to prevent sticky overlapping sticky header. */
+        z-index: 1;
+    }
+
+    .scroller {
+        height: 30%;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-padding: 40px;
+    }
+
+    .message-panel { 
+        height: 50%;
+        background-color:mediumpurple;
+        padding: 1em
+    }
+
+    .message {
+        padding: 2em
+    }
+
+    .notebook-panel {
+        height: 50%;
+        background-color:gainsboro;
+        padding: 1em;
+    }
+
