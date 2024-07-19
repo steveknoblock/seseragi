@@ -1,7 +1,11 @@
 /* Seseragi 2020 */
 /* (CC) 2015-2020 Steve Knoblock */
-/* Seseragi 2020 - base */
 
+/* Seseragi 2020 - Fonts */
+/* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
+@import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
+
+/* Seseragi 2020 - base */
 :root {
   --bg-color: #eee;
   --black-level: #000;
@@ -13,9 +17,6 @@
   --seseragi-black: #000;
 }
 
-/* Seseragi 2020 - Fonts */
-/* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
-@import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
 /* Seseragi 2020 - Typography */
 body {
   font-size: 1em;
