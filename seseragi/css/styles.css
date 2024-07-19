@@ -1,5 +1,5 @@
 /* Seseragi 2024 */
-/* (c) 2015-2024 Steve Knoblock, Creative Commons License */
+/* (c)2015-2024 Steve Knoblock Creative Commons License */
 
 /* Seseragi - Fonts */
 /* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
@@ -214,6 +214,14 @@ article img {  height: auto;  width: 100%; }
     margin-top: 0px;
   }
 }
+
+.grid-content {
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: 0%;
+    margin-right: auto;
+}
+
 /* This media query reduces the number of columns to two.
  */
 @media (min-width: 500px) {
