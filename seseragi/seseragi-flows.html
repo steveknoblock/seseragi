@@ -1,13 +1,15 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Seseragi Flows</title>
-        <link rel="stylesheet" href="css/styles.css" />
-		
-	</head>
+<html>
+  <head>
+    <title>Seseragi Theme - Flow Page</title>
+    <meta name="description" content="Seseragi. A page calming design">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato|Lora" type="text/css">
+  </head>
 <body>
-
 
 <header class="panel pin-to-top">
     <hgroup>
@@ -75,5 +77,64 @@
     &copy;<!-- 2008-2023 Seseragi Theme -->2020 Steve Knoblock Seseragi Theme
 </footer> 
 
+<!-- HTML Template -->
+<template id="panel-menu">
+    <link rel="stylesheet" href="../shared-content/seseragi-components/panel-menu/css/menu.css" />
+
+  <div class='menu-button border-menu' id='panel-menu-button'>
+        <!-- color options: #757575, #69c1d2 -->
+        <svg id="panel-menu-open" style="fill:#757575;width:24px;height:24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+    
+        <svg id="panel-menu-close" class="hide" xmlns="http://www.w3.org/2000/svg" 
+        style="fill:#757575;width:24px;height:24px" viewBox="0 0 16 16">
+          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
+        </svg>
+  </div>
+
+  <nav id="menu-nav" class="nav-grid hide">
+    <div class="container">
+    <ul id="menu-home">
+      <li>
+          <a href="http://brandymorecastle.org/projects/">Projects</a>
+      </li>
+      <li>
+          <a href="http://brandymorecastle.org/photography/">Photography</a>
+      </li>
+      <li>
+          <a href="http://brandymorecastle.org/code/">Code</a>
+      </li>
+    </ul>
+
+    <ul id="menu-labels">
+      <li>
+         <a href="http://brandymorecastle.org/projects/">Photography</a>
+      </li>
+      <li>
+         <a href="http://brandymorecastle.org/contact/">Poetry</a>
+      </li>
+      <li>
+         <a href="http://brandymorecastle.org/about/">Writing</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="http://brandymorecastle.org/about/">About</a>
+      </li>
+      <li id="menu-contact">
+            <a href="http://twitter.com/haikuoftheday">@haikuoftheday</a>
+      </li>
+        <li>
+            <a href="http://twitter.com/photographist">@photographist</a>
+        </li>
+      </ul>
+      </div>
+  </nav>
+</template>
+
+<script src='../shared-content/seseragi-components/panel-menu/js/panel-menu.js' ></script>
 </body>
 </html>
