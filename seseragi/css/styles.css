@@ -76,11 +76,6 @@ header hgroup h2.tagline {
   /* border: 1px red solid; */
 }
 
-.pin-to-top {
-  position: sticky;
-  top: 0;
-}
-
 .top {
   padding-top: 1em;
 }
@@ -322,6 +317,7 @@ nav a, .action a {
         top: 0;
         /* height: 100%;
         width: 50%; */
+        overflow-y: scroll;
     }
 
     .pin-to-top {
