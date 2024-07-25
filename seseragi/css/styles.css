@@ -76,7 +76,7 @@ header hgroup h2.tagline {
   /* border: 1px red solid; */
 }
 
-.pin-to-top {
+.pin {
   position: sticky;
   top: 0;
 }
@@ -304,4 +304,16 @@ nav a, .action a {
   display: block;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: auto;
+}
+
+/* Notebook */
+
+.notebook-panel {
+  padding: 1em;
+}
+
+/* Stream */
+
+span.tag {
+  font-weight: bolder;
 }
