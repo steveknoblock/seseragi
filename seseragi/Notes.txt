@@ -75,3 +75,41 @@ class="drop-cap with-circle"
 are best.
 
 
+I thought that the best way to set text width was using padding but I'm not sure.
+
+article p {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+article p {
+    padding-left: 6em;
+    padding-right: 6em;
+}
+
+I want a font, a font size, a line height, a margin or padding that keeps lines about 55 chars wide and readable under flexible conditions.
+
+i have a problem is this a local workspace with a server or a remote workspace with a server?
+
+if its a project and not a website then it will be contained in a git repo and the repo can be pulled into the website
+or linked to the repo on github
+
+
+each toy should have its own repo, which can be local or on github
+
+what if a project is a website?
+
+Like this
+
+projects
+  foo
+  bar
+  baz
+
+websites
+  learning
+    foo
+    bar
+    baz
