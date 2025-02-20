@@ -81,6 +81,11 @@ header hgroup h2.tagline {
   top: 0;
 }
 
+.pin-to-top {
+  position: sticky;
+  top: 0;
+}
+
 .top {
   padding-top: 1em;
 }
@@ -204,26 +209,30 @@ article img {  height: auto;  width: 100%; }
 /* Seseragi 2018 - Media */
 /* This media query reduces the number of columns to one.
  */
-@media (min-width: 255px) {
+@media (max-width: 255px) {
   .grid-content {
+    background-color: rgb(87, 141, 62);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
     margin: var(--layout-margin);
     grid-gap: 25px;
     margin-top: 0px;
+    font-weight: bold;
   }
 }
 /* This media query reduces the number of columns to two.
  */
-@media (min-width: 500px) {
+@media (max-width: 500px) {
   .grid-content {
+    background-color: rgb(80, 255, 205);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     margin: var(--layout-margin);
     grid-gap: 25px;
     margin-top: 0px;
+    font-style: italic;
   }
 }
 
@@ -233,6 +242,7 @@ article img {  height: auto;  width: 100%; }
  */
 @media (min-width: 700px) {
   .grid-content {
+    background-color: coral;
     display: grid;
     /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
     grid-template-columns: repeat(3, 1fr);
@@ -240,6 +250,7 @@ article img {  height: auto;  width: 100%; }
     margin: var(--layout-margin);
     grid-gap: 25px;
     margin-top: 0px;
+    padding: 12px
   }
 }
 
