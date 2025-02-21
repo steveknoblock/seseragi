@@ -123,3 +123,32 @@ article
 flows
 
 
+Thinking about the flows, a flow is often only applicable to one context, typically a kind of page. To keep flows from bleeding into one another one approach is to create a flow CSS file for each type of flow.
+
+
+Right now, sections are contained in a container that is a generic DIV element.
+
+<!-- start of section container -->
+<div>  <-- NOT STICKY
+  <!-- start of sticky panel -->
+  <div>  <-- STICKY
+  ...
+  </div>
+    <section>  <-- NOT STICKY
+      ...
+    </section>
+</div>
+
+Note: See arrows for where an element must be sticky.
+
+This allows any text section to scroll up past the sticky panel while it sticks.
+
+
+There is something in the current version of the style sheet that is causing images to float above the sticky header while the text goes under.
+
+I traced the issue to a stray position: relatvie property on the image container element. I understand now that it was cancelling the position: sticky for the image. I could have realized without debugging by thinking about how sticky is a value of the position property and that if an element isn't sticking, then perhaps its position is being canceled or modifiied somewhere close the the image element. Also, I had set the position: relative as a defualt defensively, which blocked the flow of position properties in the deeply nested element.
+
+Two days debugging.
+
+
+
