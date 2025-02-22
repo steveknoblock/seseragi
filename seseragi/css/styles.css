@@ -86,6 +86,10 @@ header hgroup h2.tagline {
   top: 0;
 }
 
+.zzz {
+    /* Critical to prevent sticky overlapping sticky header. */
+    z-index: 1;
+}
 .top {
   padding-top: 1em;
 }
@@ -293,12 +297,10 @@ nav a, .action a {
 /* Container holding the image and the text */
 .container {
   position: sticky;
-  top: 0;
   text-align: center;
   color: white;
 }
 
-.container 
 
 /* Centered text */
 .centered {

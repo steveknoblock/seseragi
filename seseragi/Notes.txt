@@ -150,5 +150,23 @@ I traced the issue to a stray position: relatvie property on the image container
 
 Two days debugging.
 
+Look what I found digging in the old commits.
+
+/* Flows */
+    .pin { 
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        /* height: 100%;
+        width: 50%; */
+        overflow-y: scroll;
+    }
+
+    .pin-to-top {
+        position: sticky;
+        top: 0;
+        /* Critical to prevent sticky overlapping sticky header. */
+        z-index: 1;
+    }
 
 

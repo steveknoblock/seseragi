@@ -2,11 +2,32 @@
 <html>
   <head>
     <title>Seseragi Theme - Flow Page</title>
-    <linkdsfasd rel="stylesheet" href="css/styles.css" type="text/css" />
     <style>
        header {
-        background-color: rgb(128, 128, 128); position: sticky; top: 0; border: 2px solid rgb(208, 182, 240)
+        position: sticky; top: 0;         overflow: hidden;
+        background-color: rgb(128, 128, 128); border: 2px solid rgb(208, 182, 240)
        }
+       .notebook-panel {
+          position: sticky; top: 0;
+          /* Sticks to nearest scrollable container. */
+          overflow: hidden;
+          /* Critical to prevent sticky overlapping sticky header. */
+          z-index: 1;
+       }
+       /* This media query reduces the number of columns to two.
+ */
+@media (max-width: 500px) {
+  .grid-content {
+    background-color: rgb(80, 255, 205);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin: var(--layout-margin);
+    grid-gap: 25px;
+    margin-top: 0px;
+    font-style: italic;
+  }
+}
     </style>
   </head>
 <body>
@@ -19,10 +40,10 @@
 </header>
 
 <!-- start of section container -->
-<div>
+<div class="grid-content panel panel-cards">
 
   <!-- start of sticky panel -->
-  <div>
+  <div class="notebook-panel">
       <div class="action">
           <div class="container">
           <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
@@ -33,6 +54,33 @@
 
   <section>
       <h2>Flow 1</h2>
+      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+  </section>
+
+</div>
+
+<!-- start of section container -->
+<div class="grid-content panel panel-cards">
+
+  <!-- start of sticky panel -->
+  <div class="notebook-panel">
+      <div class="action">
+          <div class="container">
+          <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+          </div>
+      </div>
+  </div>
+  <!-- start of content container -->
+
+  <section>
+      <h2>Flow 2</h2>
       <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
       <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
       <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
