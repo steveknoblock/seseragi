@@ -292,9 +292,13 @@ nav a, .action a {
 
 /* Container holding the image and the text */
 .container {
+  position: sticky;
+  top: 0;
   text-align: center;
   color: white;
 }
+
+.container 
 
 /* Centered text */
 .centered {
