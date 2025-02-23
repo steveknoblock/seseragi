@@ -170,3 +170,18 @@ Look what I found digging in the old commits.
     }
 
 
+--
+
+Doing some testing on the working version of Seseragi cloned from the server.
+
+I found:
+
+Removing sticky from div.notebook-panel stops image from sticking on scroll down.
+
+Removing (turning off) top: 0 from div.notebook-panel causes desired sticky behaviior to stop and image scrolls.
+
+Removing height: 50% from div.notebook-panel causes the sticky behavior to stop working.
+
+Overflow-y set to scroll turned off just affects the visible width of the layout.
+
+

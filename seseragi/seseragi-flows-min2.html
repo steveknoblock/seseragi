@@ -7,26 +7,16 @@
        .pin {
           position: sticky; 
           top: 0;
-          /* Sticks to nearest scrollable container. */
-          overflow: scroll;
-          /* Critical to prevent sticky overlapping sticky header. */
-          z-index: 1;
+         
        }
        /* This media query reduces the number of columns to two.
  */
-
- /* Notebook */
-
-.notebook-panel {
-  height: 50%;
-  padding: 1em;
-}
 
   .grid-content {
     scroll-snap-align: start;
     background-color: rgb(80, 255, 205);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     margin: var(--layout-margin);
     grid-gap: 25px;
@@ -38,20 +28,13 @@
   </head>
 <body>
 
-<header>
-  <hgroup>
-    <h1 class="logo">Seseragi</h1>
-    <h2 class="tagline">The sound of flowing water.</h2>
-  </hgroup>
-</header>
-
 <!-- start of section container -->
-<div class="grid-content panel panel-cards">
+<div class="grid-content">
 
   <!-- start of sticky panel -->
-  <div class="notebook-panel pin">
+  <div style="position: sticky; top:0">
       <div class="action">
-          <div class="container">
+          <div>
           <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
           </div>
       </div>
@@ -73,10 +56,10 @@
 </div>
 
 <!-- start of section container -->
-<div class="grid-content panel panel-cards">
+<div class="grid-content">
 
   <!-- start of sticky panel -->
-  <div class="notebook-panel">
+  <div class="pin">
       <div class="action">
           <div class="container">
           <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
