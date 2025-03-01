@@ -1,38 +1,45 @@
 <!doctype html>
 <html>
   <head>
-    <title>Seseragi Theme - Flow Page</title>
+    <title>Seseragi Theme - Flow Page Minimum</title>
     <style>
        
-       .pin {
-          position: sticky; 
-          top: 0;
-         
-       }
-       /* This media query reduces the number of columns to two.
- */
+      .pin {
+        position: sticky; 
+        top: 0;
+      }
+    
+      /* This media query reduces the number of columns to two.
+      */
 
-  .grid-content {
-    scroll-snap-align: start;
-    background-color: rgb(80, 255, 205);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    margin: var(--layout-margin);
-    grid-gap: 25px;
-    margin-top: 0px;
-    font-style: italic;
-  }
+      .grid-content {
+        scroll-snap-align: start;
+        background-color: rgb(80, 255, 205);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        margin: var(--layout-margin);
+        grid-gap: 25px;
+        margin-top: 0px;
+        font-style: italic;
+      }
+
+      .panel {
+        height: 50%;
+        padding: 1em;
+      }
 
     </style>
   </head>
 <body>
 
+  <p>Self-contained demonstration of flow movement.</p>
+
 <!-- start of section container -->
 <div class="grid-content">
 
   <!-- start of sticky panel -->
-  <div style="position: sticky; top:0">
+  <div class="panel pin">
       <div class="action">
           <div>
           <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
@@ -59,7 +66,7 @@
 <div class="grid-content">
 
   <!-- start of sticky panel -->
-  <div class="pin">
+  <div class="panel pin">
       <div class="action">
           <div class="container">
           <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
