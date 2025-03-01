@@ -19,10 +19,12 @@
   --seseragi-white: #fff;
   --seseragi-black: #000;
   --seseragi-blue: #3377AA;
+  --seseragi-purple: rgb(208, 182, 240);
 
   --layout-margin: auto;
 }
 
+/* Clear and set margins. */
 body {
   margin: 0;
   padding: 0;
@@ -90,6 +92,7 @@ header hgroup h2.tagline {
     /* Critical to prevent sticky overlapping sticky header. */
     z-index: 1;
 }
+
 .top {
   padding-top: 1em;
 }
@@ -103,7 +106,7 @@ header hgroup h2.tagline {
   font-size: var(--body-font-size);
 }
 
-/* Sesseragi 2018 - Layout */
+/* Layout **/
 
 /* Panels */
 .panel {
@@ -162,7 +165,7 @@ section p {
 }
 
 
-/* Article */
+/** Article **/
 
 article {
   font-size: inherit;
@@ -201,7 +204,7 @@ article img {  height: auto;  width: 100%; }
   text-transform: uppercase;
   height: 84px;
   width: 84px;
-}
+}*********************************
 
 .with-circle {
   line-height: 120px;
@@ -210,7 +213,8 @@ article img {  height: auto;  width: 100%; }
   border: 2px solid #3377;
 }
 
-/* Seseragi 2018 - Media */
+/** Media Queries **/
+
 /* This media query reduces the number of columns to one.
  */
 @media (max-width: 255px) {
@@ -334,3 +338,34 @@ nav a, .action a {
 span.tag {
   font-weight: bolder;
 }
+
+
+
+/* Flow Section */
+
+/* Set the number of columns to two.
+ */
+ @media (max-width: 500px) {
+  .grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin: var(--layout-margin);
+    grid-gap: 25px;
+    margin-top: 0px;
+  }
+}
+
+/* Reduce the number of columns to one.
+ */
+ @media (max-width: 255px) {
+  .grid-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin: var(--layout-margin);
+    grid-gap: 25px;
+    margin-top: 0px;
+  }
+}
+

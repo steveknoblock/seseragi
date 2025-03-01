@@ -185,3 +185,10 @@ Removing height: 50% from div.notebook-panel causes the sticky behavior to stop 
 Overflow-y set to scroll turned off just affects the visible width of the layout.
 
 
+--
+
+There's a tradeoff involved in putting all typography in one place versus putting typography with a specific component or area of the page.
+
+
+
+

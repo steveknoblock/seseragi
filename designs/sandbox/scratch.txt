@@ -1,0 +1,165 @@
+
+
+@media (min-width: 250px) { /* Apply styles when viewport is equal to or less than 250
+    width >= 250
+    */ }
+@media (max-width: 500px) { /* Apply styles when viewport is equal to or less than 500 */ }
+@media (max-width: 700px) { }
+
+/*
+Here's the problem.
+Setting only the minimum widths causes all three to apply when viewport >= 700
+
+|--------250------|
+|-----------------500---------------------|
+|------------------------------700------------------------------|
+
+
+max-width: 1000px
+
+Apply styles only if your browser viewport is equal to or less than 1000px.
+
+|----------------------1000------------------------|
+
+max-width: 500px
+
+Apply styles only if your browser viewport is equal to or less than 500px.
+
+|--------500--------------|
+
+You can see with only a maximum width specified between 0 and 500px BOTH styles will apply.
+
+@media (max-width: 500px) { font-weight: bold }
+@media (max-width: 1000px) { font-style: italic }
+
+
+I want the viewport width breakpoints to be specified by a variable.
+
+
+I'm trying to envsion what pages and parts of pages will be nececessaary.
+
+Homepage
+
+The content for the homepage will mostly be cards and callouts. Or large hero images, menus, callouts. Three columns typically.
+
+Article Page
+
+The article page will contain a single text, typically one column.
+
+Flow Page
+
+A flow page will contain a flow, a mixed texts and/or images scrolling stream.
+
+
+
+To manage responsive design for the Homepage a three column to one column set of media queries will be needed to present a grid of cards or callouts.
+
+|----|----|----|
+
+|----|----|
+
+|---|
+
+Of course, if the page starts with a hero image, followed by "virtual pages" or differently styled text section, if I want to keep it open to have full page width sections and multi column card sections it might be best to create responsive layouts for each one.
+
+|---- Hero Image        ----|
+|---- Hero Text Section ----|
+|---- Card Section      ----|
+|---- Article Section   ----|
+
+I suppose a section could contain any number of columns that collapse to a single column going down to mobile screen size.
+
+However, a card section may have three columns of cards, which collapse to two, then to one as the screen width falls.
+
+And even a hero image section may have columns to position text over the image.
+
+I can't have a general media query that will turn an article into three columns! Yet, a one column article may have columns on its sides for related things.
+
+The page layout, if it includes a column for navigation will have to be a multi column layout that collapses to a single column on narrow screens.
+
+If EVERY page requires navigation, then the overall layout for all pages needs to accomodate a namvigation column if that's where the navigation will be, which must be responsive.
+
+|---- Nav ----|---- Content ----|
+                   ^-- Any page content type goes here.
+
+It's really a page within a page (within a browser window with chrome).
+
+The Homepage is typically an exception to being contained in a navigation layout.
+
+If the navigation is atypical, or not a vertical column down the page, this doesn't apply.
+
+
+A Card Page requires a number of rows and columns to contain the cards in grid pattern. This can be flexible, collapsing to show three columns of cards, two columns of cards, or even one column of cards since the cards are not assigned to any column.
+
+I'm thinking about defining as many classes as utility classes as I can.
+
+.flex-columns {
+  
+}
+
+    /* Three columns
+    */
+    @media (min-width: 700px) {
+        .flex-columns {
+            display: grid;
+            /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            margin: var(--layout-margin);
+            grid-gap: 25px;
+            margin-top: 0px;
+            padding: 12px
+        }
+    }
+
+    /* Two columns.
+    */
+    @media (max-width: 500px) {
+        .flex-columns {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            margin: var(--layout-margin);
+            grid-gap: 25px;
+            margin-top: 0px;
+        }
+    }
+  
+    /* One column.
+    */
+    @media (max-width: 255px) {
+        .flex-columns {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            margin: var(--layout-margin);
+            grid-gap: 25px;
+            margin-top: 0px;
+        }
+    }
+
+
+*/*/
+
+I was today years old, 02 28 2025, when I learned there is a CSS column specification for presenting text spread across columns like in newspapers.
+
+The grid works for the flows but it doen't work for this kind of columnar format.
+
+Each child elment of the element that has a grid specified on it becomes are grid cell, which is not what you want for flowing text over columns.
+
+To have normal text inside a grid the structure must be
+
+section
+    section
+        h2
+        p
+        p
+    section
+        h2
+        p
+        p
+    section
+        h2
+        p
+        p
+The text within the section contianers flows normally. The sections are grid elements.
