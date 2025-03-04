@@ -189,6 +189,39 @@ Overflow-y set to scroll turned off just affects the visible width of the layout
 
 There's a tradeoff involved in putting all typography in one place versus putting typography with a specific component or area of the page.
 
+--
+
+Current status:
+
+seseragi-flows-text-refactor.html
+Failing (Everything else working but the navbar is not sticky, when it is, The problem is that the right PANEL flows UNDER the navbar and the left PANEL flows over the navbar.
+)
+Does this use styles.css? Yes.
+
+What if I replaced the header with another flow section? It would probably work like the other two sections on the page. What is the difference between a header and a section?
+
+I tried enclosing the header in a flow section and it works! Except for the right have of the section looking weird. And activating scroll bars.
 
 
+seseragi-flows-text.html
+Failing
+The problem is that the right PANEL flows UNDER the navbar and the left PANEL flows over the navbar.
+
+seseragi-flows-from-clone.html
+Failing
+
+seseragi-flow-section.html
+Working (rough) It is working but limited to no navbar. Added second section and still working.
+Does this use styles.css? No.
+
+seseragi-flows.html
+Failing
+The problem is that the TEXT flows UNDER the navbar and the IMAGES slide OVER the navbar.
+
+seseragi-flow.html
+Failing
+
+
+
+Note: I think it might work to have THREE columns on the flow page.
 
