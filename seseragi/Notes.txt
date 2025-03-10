@@ -220,8 +220,32 @@ The problem is that the TEXT flows UNDER the navbar and the IMAGES slide OVER th
 
 seseragi-flow.html
 Failing
+Each sticky section works fine, but the sticky left panel slides up over the navbar.
 
 
 
 Note: I think it might work to have THREE columns on the flow page.
+
+
+What does it mean to exceed the containing element?
+
+It seems that sticky does not work unless top is set.
+
+Why does the content flow under the sticky element in one circumstance and flow over it in another circumstance?
+
+<div class="container">  <-- Container
+  <div class="sticky">    <-- Sticky
+
+
+
+I know that this works
+
+<body>
+  <h1 class="sticky">foo</h1>
+  <p>
+
+
+A scrollbar only appears when there is sufficient content to extend past the bottom of a element rectangle.
+
+The browser default scrollbar is actually a scrollbar on BODY that appears when text or HTML is longer than the height of the browser window at full screen height.
 
