@@ -8,6 +8,10 @@
         position: sticky; 
         top: 0;
       }
+      .pin50 {
+        position: sticky; 
+        top: 50%;
+      }
     
       /* This media query reduces the number of columns to two.
       */
@@ -26,18 +30,25 @@
 
       .panel {
         height: 50%;
+        overflow-y: scroll;
         padding: 1em;
       }
+
+      .navbar {
+        background-color: gainsboro;
+        border: 1px gray solid; padding: 1em; margin: 1em;
+    }
     </style>
   </head>
 <body>
+  <div class="navbar pin">NAVBAR: The problem is that the sticky elements are sliding up over the navbar.</div>
   <p>Self-contained demonstration of flow movement. This scrolls text in the section panel using the scroll bar on the browser window. It works by making the left panel stick while the right panel is not stuck so it still scrolls with the page. The left panel is sticky. The right panel is not. When the page is scrolled the left panel sticks to its immediate parent container. The right panel continues to scroll with the page.
   </p>
 <!-- Start of Flow section container -->
 <div class="grid-content">
 
   <!-- start of sticky panel -->
-  <div class="panel pin"  style="overflow: scroll">
+  <div class="panel pin50">
       <div class="action">
         <div class="container">
           <a href="http://www.flickr.com/photos/knoblock/"><img src="../../shared-content/images/concrete-leaves.jpg"></a>

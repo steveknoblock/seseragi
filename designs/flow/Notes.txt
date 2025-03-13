@@ -249,3 +249,25 @@ A scrollbar only appears when there is sufficient content to extend past the bot
 
 The browser default scrollbar is actually a scrollbar on BODY that appears when text or HTML is longer than the height of the browser window at full screen height.
 
+Sometimes the content flows over the nav bar and other times it flows under the nav bar.
+
+Then in an inside container it is flowing under the top edge of the container.
+
+
+
+--
+
+    <div class="container notebook-panel scrollable">
+        <div class="left">
+            <h2>Heading 1</h2>
+            <section>
+
+
+    <div class="container scrollable">
+        <div class="left notebook-panel scrollable">
+            <h2>Heading 3</h2>
+            <section>
+
+
+
+

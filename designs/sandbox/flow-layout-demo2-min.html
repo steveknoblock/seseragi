@@ -11,8 +11,6 @@
     .pin-to-top {
         position: sticky;
         top: 0;    
-        overflow: hidden;
-
     }
     /* without a top the sticky has no visible effect */
     .pin {
@@ -20,23 +18,24 @@
     }
     .container { border: 1px red solid; padding: 1em; margin: 1em }
     .left { border: 1px gray solid; padding: 1em; margin: 1em; }
-    .scrollable { overflow: scroll }
+    .right { border: 1px gray solid; padding: 1em; margin: 1em; }
+    .scrollable { overflow: hidden }
     .notebook-panel {
-  /* The answer my friend, is blowing in the wind. */
-  height: 300px;
-  padding: 1em;
-}
+        /* The answer my friend, is blowing in the wind. */
+        height: 300px;
+        padding: 1em;
+    }
     </style>
 </head>
- 
+
 <body>
     <!-- sticks to containing element, which is body -->
     <div class="navbar pin-to-top">NAVBAR</div>
+    <p>Everything glides under the nav bar.</p>
     <!-- everything below the navbar slides under it -->
-    <div class="container pin-to-top scrollable notebook-panel">
-        <!-- this does not stick unless the content scrolls -->
-        <div class="left pin-to-top notebook-panel">
-            <h2>Heading</h2>
+    <div class="container notebook-panel scrollable">
+        <div class="left">
+            <h2>Heading 1</h2>
             <section>
                 <h2>Flow 1</h2>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
@@ -50,7 +49,7 @@
             </section>
         </div>
         <div class="right">
-            <h2>Heading</h2>
+            <h2>Heading 2</h2>
             <section>
                 <h2>Flow 2</h2>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
@@ -65,14 +64,12 @@
         </div>
     </div>
 
-    <div class="container pin-to-top scrollable notebook-panel">
-        <!-- this does not stick unless the content scrolls -->
-        <div class="left pin-to-top notebook-panel">
 
+    <div class="container notebook-panel scrollable">
         <div class="left">
-            <h2>Heading</h2>
+            <h2>Heading 3</h2>
             <section>
-                <h2>Flow 1</h2>
+                <h2>Flow 3</h2>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
@@ -84,9 +81,9 @@
             </section>
         </div>
         <div class="right">
-            <h2>Heading</h2>
+            <h2>Heading 4</h2>
             <section>
-                <h2>Flow 1</h2>
+                <h2>Flow 4</h2>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
