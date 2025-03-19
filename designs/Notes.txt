@@ -268,6 +268,69 @@ Then in an inside container it is flowing under the top edge of the container.
             <h2>Heading 3</h2>
             <section>
 
+--
+
+Today's notes:
+
+The Ome design consists of the basic design elements.
+
+An example or template for each kind of page or demonstrating a module or stack of modular sections.
+
+The modular aggregate page (known as the Homepage), the single page (known as the Article Page), and the flow page (Flow Page).
+
+* Homepage
+* Article Page
+* Flow Page
+
+Eventually, because of the modularity of sections there could be ONE demonstration page for showing all modules at once. There could also be demonstration pages for each module's typical use.
+
+Any website needs a design for an aggregate page for the homepage, a listing page for pages that are essentially index pages for other pages, and a single page for the actual content like articles.
+
+I guess I'm over thinking it again.
+
+A homepage is both explanatory, and an index to other content pages or index pages.
+
+Other kinds of section or page designs are for specific purposes like the flow page is for mixing images and text.
+
+
+
+All these imponderables. The terror of choosing names.
+
+Homepage
+Article Page
+Listing Page
+Flow Page
+
+The homepage is the "root" index page for the whole website.
+
+That makes for only two kinds of pages:
+
+* Index page
+* Single page
+
+Homepage, post pages, results pages, flow pages, are all variations.
+
+So there isn't a fixed specific number of demonstration pages if the modular concept is followed.
+
+Index
+    Home Page
+    Listing Page
+    Search Results Page
+Single
+    Article/Content Page
+    Flow
+
+
+Of course, the flow is a special feature of the design, which is an experiment and may or may not work.
+
+A homepage, a page listing other pages, a search results page are all index pages.
+
+I think I can safely move to the SECTION based layouts.
+
+I guess a section isn't a Homepage or any kind of page, but a section of a page of any kind.
+
+I felt I had to rename the photographs grid "callouts" or maybe I should rename it "image gallery" or "image-grid?"
+
 
 
 
