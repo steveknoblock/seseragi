@@ -154,6 +154,77 @@ footer {
   min-height: 7em;
 }
 
+/* Modular Sections */
+
+/* Grid Section */
+
+section .grid {
+  background: transparent;
+}
+
+section .grid-card {
+  background: transparent;
+}
+
+section .grid-card header {
+  font-weight: bold
+}
+
+section .grid-card p {
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+}
+
+/* Callouts Section */
+
+section .callouts {
+  background: transparent;
+}
+
+section .callouts {
+  background: transparent;
+}
+
+section .callouts header {
+  font-weight: bold
+}
+
+section .callouts p {
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+}
+
+/* Content Section */
+
+section .content {
+  background: transparent;
+}
+
+section .content article header {
+  font-weight: bold
+}
+
+section .content article p {
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+}
+
+/* Flow Section */
+
+section .flow {
+  background: transparent;
+}
+
+section .flow article header {
+  font-weight: bold
+}
+
+section .flow article p {
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+}
+
+/* End Modular Sections */
 
 /* Homepage */
 section h1 {
