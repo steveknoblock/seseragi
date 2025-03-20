@@ -1,5 +1,6 @@
 /**
  * panel-menu.js
+ * A web component panel menu.
  * (c)2020 Steve Knoblock
  * MIT LICENSE
  */
@@ -13,9 +14,10 @@ class PanelMenu extends HTMLDivElement {
       console.log('DOM Loaded');
     });
 
-      const template = document.getElementById('panel-menu');
-      const templateContent = template.content;
       
+      const template = document.getElementById('panel-menu');
+      console.log(template);
+      const templateContent = template.content;
       const shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.appendChild(templateContent.cloneNode(true));
 

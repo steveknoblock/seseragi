@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
   <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <title>Homepage</title>
-    <meta charset="utf-8">
     <meta name="description" content="Page calming design">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
     <link rel="stylesheet" href="css/styles.css" />
     <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <style>
 
     /* Container holding the image and the text */
@@ -53,6 +53,7 @@
     nav a {
       text-decoration: none
     }
+    
     </style>
   </head>
 <body>
@@ -135,26 +136,32 @@
 </div>
 
 <footer>
-      &copy;<!-- 2008-2019 Seseragi Theme -->2019 Steve Knoblock Seseragi Theme
+      &copy;<!-- 2008-2019 Seseragi Theme -->2020 Steve Knoblock Seseragi Theme
 </footer> 
+
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOM Loaded');
+  triggerElement = document.querySelector('.menu-button'); // <---------- get reference to element triggering toggle
+  console.log("triggerElement: " + triggerElement);
+  menu = document.querySelector('nav');                    // <---------- get reference to element being toggled
+  console.log("menu: " + menu);
+  triggerElement.addEventListener('click', function() {    // <----------- assign event listener to element we want to trgger toggle
+    console.log("heard the click");
+    menu.classList.toggle('toggle');
+  });
+});
+
+
+</script>
 
 <!-- HTML Template -->
 <template id="panel-menu">
-    <link rel="stylesheet" href="../shared-content/seseragi-components/menu/css/menu.css" />
+    <link rel="stylesheet" href="../shared-content/seseragi-components/panel-menu/css/menu.css" />
 
   <div class='menu-button border-menu' id='panel-menu-button'>
-    
-    <!-- color options: #757575, #69c1d2 -->
-    <svg id="panel-menu-open" style="fill:#757575;width:24px;height:24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-    </svg>
-
-    <svg id="panel-menu-close" class="hide" xmlns="http://www.w3.org/2000/svg" 
-    style="fill:#757575;width:24px;height:24px" viewBox="0 0 16 16">
-      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
-    </svg>
-    <!--<div id="menu-button-text">Menu<div>-->
+    <div id="menu-button-text">Menu</div>
   </div>
 
   <nav id="menu-nav" class="nav-grid hide">
@@ -198,43 +205,6 @@
   </nav>
 </template>
 
-<script>
-
-customElements.define('panel-menu',
-
-class PanelMenu extends HTMLDivElement {
-  constructor() {
-    super();
-
-    document.addEventListener('DOMContentLoaded', function () {
-      console.log('DOM Loaded');
-    });
-
-      const template = document.getElementById('panel-menu');
-      const templateContent = template.content;
-      
-      const shadowRoot = this.attachShadow({mode: 'open'});
-      shadowRoot.appendChild(templateContent.cloneNode(true));
-
-      const shadowButton = shadowRoot.querySelector('#panel-menu-button');
-      const shadowMenuOpen = shadowRoot.querySelector('#panel-menu-open');
-      const shadowMenuClose = shadowRoot.querySelector('#panel-menu-close');
-
-      const shadowNav = shadowRoot.querySelector('#menu-nav');
-
-      shadowButton.addEventListener('click', function(e) { 
-        //console.log("heard the click");
-        shadowNav.classList.toggle('hide');
-        shadowNav.classList.toggle('roll');
-        shadowMenuOpen.classList.toggle('hide');
-        shadowMenuClose.classList.toggle('hide');
-      });
-
-    }
-}
-, { extends: 'div'} );
-
-</script>
-
+<script src='../shared-content/seseragi-components/panel-menu/js/panel-menu.js' ></script>
 </body>
 </html>
