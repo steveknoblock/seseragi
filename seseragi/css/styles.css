@@ -1,10 +1,11 @@
-/* Seseragi 2018 */
-/* (CC) 2015-2018 Steve Knoblock */
-/* Seseragi 2018 - base */
-/* Seseragi 2018 - Fonts */
+/* Seseragi 2020 */
+/* (CC) 2015-2020 Steve Knoblock */
+/* Seseragi 2020 - base */
+/* Seseragi 2020 - Fonts */
 /* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
 @import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
-/* Seseragi 2018 - Typography */
+/* Seseragi 2020 - Typography */
+
 body {
   font-size: 1em;
   font-family: "Lora", "Georgia", "Times New Roman", "Times", serif;
@@ -99,24 +100,11 @@ nav {
   margin-top: 0px;
 }
 
-/* Text and actions */
-.float_left {
-  float: left;
-}
-
-.float_right {
-  float: right;
-}
-
 .action {
   margin: 0 0 0 0;
   display: block;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: auto;
-}
-
-.action > p {
-  float: right;
 }
 
 /* responsive images */
@@ -181,4 +169,4 @@ footer {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+
