@@ -1,28 +1,25 @@
-@import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
-/* Seseragi 2015 */
-/* base */
-/* fonts */
+/* Seseragi 2020 */
+/* (CC) 2015-2020 Steve Knoblock */
+/* Seseragi 2020 - base */
+/* Seseragi 2020 - Fonts */
 /* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
-/* Seseragi 2015 Typography */
-/* line 4, ../scss/_typography.scss */
+@import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
+/* Seseragi 2020 - Typography */
 body {
   font-size: 1em;
-  font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+  font-family: "Lora", "Georgia", "Times New Roman", "Times", serif;
 }
 
-/* line 9, ../scss/_typography.scss */
 p {
   font-size: 1.3em;
   line-height: 1.5;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 
-/* line 15, ../scss/_typography.scss */
 pre {
   font-family: "Inconsolata", "Lucida Sans", monospace;
 }
 
-/* line 20, ../scss/_typography.scss */
 header hgroup h1.logo {
   font-size: 24px;
   text-align: center;
@@ -31,218 +28,157 @@ header hgroup h1.logo {
   font-weight: normal;
 }
 
-/* line 28, ../scss/_typography.scss */
 header hgroup h2.tagline {
   background: transparent;
   text-align: center;
   color: #3377AA;
   font-size: 1em;
-  font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+  font-family: "Lora", "Georgia", "Times New Roman", "Times", serif;
 }
 
-/* line 37, ../scss/_typography.scss */
 .top {
   padding-top: 1em;
 }
 
-/* line 41, ../scss/_typography.scss */
 .prose {
   font-size: 1.3em;
 }
 
-/* line 45, ../scss/_typography.scss */
 .wide-one-column h1 {
   text-align: center;
   font-size: 1.5em;
 }
 
-/* line 51, ../scss/_typography.scss */
 footer {
-  background-color: transparent;
-  background: transparent url("../img/footer_background_gray.png");
-  margin: 2px;
-  padding: 4px;
-  text-align: center;
   font-size: 0.75em;
   text-align: center;
+  min-height: 7em;
 }
 
-/* Sesseragi 2015 */
-/* line 3, ../scss/_layout-bak.scss */
+/* Sesseragi 2018 - Layout */
 body {
   background-color: #eee;
+  /* move to base */
   margin: 0;
   padding: 0;
   border: 0;
 }
 
+nav {
+  display: none;
+}
+
 /* Panels */
-/* line 12, ../scss/_layout-bak.scss */
-.wide-one-column {
-  min-width: 768px;
+.panel {
   background: transparent url(../img/page_background_gray.png);
+  /* move to base */
   background-repeat: repeat-x;
+  /* move to base */
   background-position: top;
-  padding: 0;
-  padding-bottom: 0;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  /* move to base */
+  background-color: #eee;
+  padding-top: 0.5em;
+  width: 100%;
 }
 
-/* line 24, ../scss/_layout-bak.scss */
-.tagline {
-  text-align: center;
+/* CSS Grid */
+.grid-content-img {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  margin: 2% auto;
+  grid-gap: 25px;
+  margin-top: 0px;
 }
 
-/* grid */
-/* line 31, ../scss/_layout-bak.scss */
+.stupid_container_for_css_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  margin: 0;
+  grid-gap: 3px;
+  margin-top: 0px;
+}
+
+/* Text and actions */
 .float_left {
   float: left;
 }
 
-/* line 32, ../scss/_layout-bak.scss */
 .float_right {
   float: right;
 }
 
-/* line 33, ../scss/_layout-bak.scss */
-.clearfix:before, .clearfix:after {
-  content: "\0020";
+.action {
+  margin: 0 0 0 0;
   display: block;
-  height: 0;
-  overflow: hidden;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: auto;
 }
 
-/* line 34, ../scss/_layout-bak.scss */
-.clearfix:after {
-  clear: both;
+.action > p {
+  float: right;
 }
 
-/* line 35, ../scss/_layout-bak.scss */
-.clearfix {
-  zoom: 1;
-}
+/* responsive images */
+section img {  height: auto;  width: 100%; }
 
-/* line 36, ../scss/_layout-bak.scss */
-.clear {
-  clear: both;
-  display: block;
-  visibility: hidden;
-  height: 0;
-  font-size: 0;
-}
-
-/* line 39, ../scss/_layout-bak.scss */
-.container {
-  overflow: hidden;
-  padding: 1em 2em;
-}
-
-/*
-@media (min-width: 560px) {
-	.col {
-	float: left;
-	margin-right: 2%;
-	}
-	
-	.col > li:nth-child(even) {
-	clear: left;
-}
-}
-*/
-/* gradient background */
-/* background: transparent url(../img/page_background_gray.png); */
-/* background-repeat: repeat-x; */
-/* background-position: top; */
-/* line 64, ../scss/_layout-bak.scss */
-section.text {
-  box-sizing: border-box;
+/* This really needs a gutter on the left of the grid. */
+section h1 {
   padding-left: 1em;
-  padding-right: 1em;
-  /* margin: 0 auto; 
-  box-sizing: border-box;
+}
+
+section p {
   padding-left: 1em;
-  padding-right: 1em;*/
 }
 
-/* line 75, ../scss/_layout-bak.scss */
-section.root {
-  width: 100%;
-}
-
-/* line 80, ../scss/_layout-bak.scss */
-section.panel {
-  /* gradient background */
-  background: transparent url(../img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
-  width: 100%;
-  clear: both;
-}
-
-/* line 90, ../scss/_layout-bak.scss */
-.panel > .text > h1 {
-  text-align: center;
-  padding-top: 1em;
-  font-size: 1.5em;
-}
-
-/* line 98, ../scss/_layout-bak.scss */
-footer, .grid {
-  clear: both;
-}
-
-/* line 100, ../scss/_layout-bak.scss */
+/* Footer */
 footer {
-  /* gradient background */
   background: transparent url(../img/page_background_gray.png);
+  /* move to base */
   background-repeat: repeat-x;
+  /* move to base */
   background-position: top;
+  /* move to base */
   padding: 1em;
 }
 
-/* todo make this recursive, but follow the inception rule, no more than
-four levels deep (except for text) */
-/* line 117, ../scss/_layout-bak.scss */
-.grid > section > h1 {
-  text-align: center;
-  font-size: 1.5em;
+/* Seseragi 2018 - Media */
+/* This media query reduces the number of columns to one.
+ */
+@media (min-width: 255px) {
+  .grid-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin: 2% auto;
+    grid-gap: 25px;
+    margin-top: 0px;
+  }
+}
+/* This media query reduces the number of columns to two.
+ */
+@media (min-width: 500px) {
+  .grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin: 2% auto;
+    grid-gap: 25px;
+    margin-top: 0px;
+  }
+}
+/* This media query reduces the number of columns to three.
+ */
+@media (min-width: 700px) {
+  .grid-content {
+    display: grid;
+    /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin: 2% auto;
+    grid-gap: 25px;
+    margin-top: 0px;
+  }
 }
 
-/** This media query sets the number of columns to three.
-**/
-@media (max-width: 1280px) {
-  /* line 127, ../scss/_layout-bak.scss */
-  .grid > section {
-    background-color: red;
-    width: 33.33333%;
-    float: left;
-  }
-
-  /*
-  	.text {
-  		width: 55em;
-  	}
-  	*/
-}
-/** This media query reduces the number of columns to two.
-**/
-@media (max-width: 1024px) {
-  /* line 144, ../scss/_layout-bak.scss */
-  .grid > section {
-    background-color: green;
-    width: 50%;
-    float: left;
-  }
-}
-/** This media query reduces the number of columns to one.
-**/
-@media (max-width: 414px) {
-  /* line 156, ../scss/_layout-bak.scss */
-  .grid > section {
-    background-color: blue;
-    width: 100%;
-    float: none;
-  }
-}
+/*#  HAND EDITED! sourceMappingURL=styles.css.map */

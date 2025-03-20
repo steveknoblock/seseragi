@@ -1,3 +1,11 @@
+Sesseragi
+
+Theme without any Brandymore Castle-specific elements.
+
+
+
+
+
 fonts are for only font import
 
 typography is only for font-related rules, no margin, borders, padding

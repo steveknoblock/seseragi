@@ -1,0 +1,249 @@
+@import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
+
+
+
+body {
+  font-size: 1em;
+  font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+/* This media query reduces the number of columns to one.
+ */
+@media (min-width: 255px) {
+
+    .grid-content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      margin: 2% auto;
+      grid-gap: 25px;
+      margin-top: 0px;
+    }
+}
+
+/* This media query reduces the number of columns to two.
+ */
+ @media (min-width: 500px) {
+
+    .grid-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      margin: 2% auto;
+      grid-gap: 25px;
+      margin-top: 0px;
+    }
+}
+
+/* This media query reduces the number of columns to three.
+ */
+@media (min-width: 700px) {
+
+    .grid-content {
+      display: grid;
+      /*grid-template-columns: 0.3fr 0.3fr 0.3fr;*/
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      margin: 2% auto;
+      grid-gap: 25px;
+      margin-top: 0px;
+    }
+}
+
+
+/* line 9, ../scss/_typography.scss */
+p {
+  font-size: 1.3em;
+  line-height: 1.5;
+  font-family: 'Lora', serif;
+}
+
+/* line 15, ../scss/_typography.scss */
+pre {
+  font-family: "Inconsolata", "Lucida Sans", monospace;
+}
+
+/* line 20, ../scss/_typography.scss */
+header hgroup h1.logo {
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* line 28, ../scss/_typography.scss */
+header hgroup h2.tagline {
+  background: transparent;
+  text-align: center;
+  color: #3377AA;
+  font-size: 1em;
+  font-family: 'Lora', 'Georgia', 'Times New Roman', 'Times', serif;
+}
+
+
+/* line 51, ../scss/_typography.scss */
+footer {
+  background-color: transparent;
+  background: transparent url("../img/footer_background_gray.png");
+  margin: 2px;
+  padding: 4px;
+  text-align: center;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+
+
+/* Panels */
+/* line 12, ../scss/_layout.scss */
+.tagline {
+  text-align: center;
+}
+
+/* grid */
+/* line 17, ../scss/_layout.scss */
+.panel {
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: #eee;
+  padding-top: 0.5em;
+  width: 100%;
+  /* border-top: 1px solid turquoise; */
+  clear: both;
+}
+
+/* line 28, ../scss/_layout.scss */
+.grid {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+}
+
+/* line 35, ../scss/_layout.scss */
+.float_left {
+  float: left;
+}
+
+/* line 36, ../scss/_layout.scss */
+.float_right {
+  float: right;
+}
+
+/* line 37, ../scss/_layout.scss */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  /* display: block; */
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 38, ../scss/_layout.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 39, ../scss/_layout.scss */
+.clearfix {
+  zoom: 1;
+}
+
+/* line 40, ../scss/_layout.scss */
+.clear {
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+
+/* line 43, ../scss/_layout.scss */
+.container {
+  overflow: hidden;
+  padding: 1em 2em;
+}
+
+
+/* line 88, ../scss/_layout.scss */
+.panel > .text > h1 {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+
+/* line 96, ../scss/_layout.scss */
+footer, .grid {
+  clear: both;
+}
+
+/* line 98, ../scss/_layout.scss */
+footer {
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  padding: 1em;
+}
+
+/* New Styles */
+
+    nav { 
+      display: none;
+    }
+
+    
+
+    .callout {
+      margin: 0 0 0 0;
+      display: block;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: auto;
+    }
+
+    .callout > p {
+      float: right;
+    }
+
+    /* This really needs a gutter on the left of the grid. */
+    section h1 {
+      padding-left: 1em;
+    }
+
+    section p {
+      padding-left: 1em;
+    }
+
+
+    
+.panel {
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: #eee;
+  padding-top: 0.5em;
+  width: 100%;
+}
+
+.grid-content-img {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  margin: 2% auto;
+  grid-gap: 25px;
+  margin-top: 0px;
+}
+
+.stupid_container_for_css_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  margin: 0;
+  grid-gap: 3px;
+  margin-top: 0px;
+}
+
+
+
