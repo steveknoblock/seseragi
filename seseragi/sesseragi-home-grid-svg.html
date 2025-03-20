@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+  <head>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <title>Homepage</title>
+    <meta charset="utf-8">
+    <meta name=description content="Page calming design">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato|Lora' rel='stylesheet' type='text/css'>
+    <script src="../shared-content/seseragi-components/option-tile/optionTile.js"></script>
+<link rel="stylesheet" href="../shared-content/seseragi-components/option-tile/option-tile.css">
+
+<script>
+  $(document).ready(function(ind, val){
+      $('<div>').optionTile();
+  });
+  </script>
+<style>
+
+  /*
+  
+  A tile is typically squares of the same size although other kinds
+   of tile exist like subway tile in running bond. This does not create a grid, but tiles can change size with content. A kanban typically has equally spaced columns. A CSS grid could be better for a square tiling or even columns.
+  
+    Structure is
+  <div class="option-surface">
+    <ul id="option-name" class="option-tiles">
+        <li data-select-index="1" data-cost="100">&nbsp;<span>Option overflow-x: Tile 1</span>&nbsp;<span class="delta"></span></li>
+        <li data-select-index="2" data-cost="200">&nbsp;<span>Option Tile 2</span>&nbsp;<span class="delta"></span></li>
+        <li data-select-index="3" data-cost="300">&nbsp;<span>Option Tile 3</span>&nbsp;<span class="delta"></span></li>
+        <li data-select-index="4" data-cost="400">&nbsp;<span>Option Tile 4</span>&nbsp;<span class="delta"></span></li>      
+    </ul>
+  </div>
+  
+  .option-surface
+    .option-tiles
+      .option-tile
+  
+  */
+  
+  .option-tile-source { visibility: hidden; }
+  
+  
+  .option-surface { 
+    width: 640px;
+    box-sizing: border-box;
+    border-bottom: 1px gray solid;
+  }
+  
+  .option-tiles li { 
+    background: white;
+    color: black;
+    list-style: none;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    padding: .3em;
+    margin: .3em;
+    float: left;
+    overflow: hidden;
+    cursor: hand;
+  }
+  
+  ul.option-tiles li:hover {
+    border: 1px solid #333;
+  }
+  
+  ul.option-tiles {
+    /* border: 1px solid red; */
+    padding: 0;
+    margin: 0;
+    clear: both;
+  }
+  
+  li.option-tile-selected {
+    background: #eee;
+    border: 1px solid blue;
+    padding: .3em;
+    margin: .3em;
+  }
+  
+  
+  @media (max-width: 600px) {
+  
+    .option-surface {
+      max-width: 100%;
+    }
+  
+    .option-tilex {
+      width: 33.3%;
+      float: left;
+     }
+  }
+  
+  /** This media query reduces the number of columns to one.
+  **/
+  
+  @media (max-width: 414px) {
+    li {
+      /* background-color: blue; */
+      width: 92%;
+      float:none;
+      }
+  }
+  
+  }
+  
+  
+  </style>
+    <style>
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Centered text */
+.centered {
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+}
+
+    .action {
+      margin: 0 0 0 0;
+      display: block;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: auto;
+    }
+
+    .action > p {
+      float: right;
+      font-size: 1em
+    }
+
+    section h1 {
+      padding-left: 1em;
+    }
+
+    section p {
+      padding-left: 1em;
+    }
+
+    .actionx {
+	padding-top: 1em;
+ font-size: 1em;
+}
+
+.actionx img {max-width:100% !important;
+    height:auto;
+    display:block;}
+.actionx p {
+   font-size: 1em
+  /*
+  margin: 0; padding-top: 1em; margin-right: 1em;
+  */
+}
+    </style>
+  </head>
+<body>
+
+<header>
+  <hgroup>
+    <h1 class="logo">Seseragi</h1>
+    <h2 class="tagline">The sound of flowing water.</h2>
+    <form>
+    <select id="option-007" class="option-tile-source">
+      <option value="1" data-cost="">Apple Magic Mouse</option>
+      <option value="2" data-cost="">Magic Trackpad</option>
+      <option value="3" data-cost="69">Apple Magic Mouse + Magic Trackpad</option>
+      <option value="4" data-cost="">Apple Mouse</option>
+    </select>
+  </form>
+  </hgroup>
+  <div is='panel-menu'></div>
+</header>
+
+<style>
+nav a {
+  text-decoration: none
+}
+ </style>
+
+<div class="grid-content panel panel-cards">
+	<section>
+        <h1>A wonderful serenity</h1>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+	</section>
+	
+	<section>
+        <h1>Sweet mornings of spring</h1>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+	</section>
+	
+	<section>
+        <h1>I am alone</h1>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+	</section>
+
+    <section>
+        <h1>The charm of existence</h1>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+    </section>
+</div>
+
+<div class="panel text panel-wide">
+    <section style="margin-left: auto; margin-right: auto; max-width: 55em">
+        <h1 style="text-align: center">Heading</h1>
+        <p>1. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+    </section>
+
+</div>
+
+<div class="grid-content-img panel" style="padding-top:2rem; background: inherit;">
+    <section>
+        <div class="action">
+            <div class="photox container">
+              <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+              <p class=" centered"><a href="" style="color:white">Photographs</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="action">
+          <div class="photox container">
+            <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+            <p class=" centered"><a href="" style="color:white">Photographs</a></p>
+          </div>
+      </div>
+  </section>
+
+  <section>
+    <div class="action">
+        <div class="photox container">
+          <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+          <p class=" centered"><a href="" style="color:white">Photographs</a></p>
+        </div>
+    </div>
+</section>
+
+<section>
+  <div class="action">
+      <div class="photox container">
+        <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
+        <p class=" centered"><a href="" style="color:white">Photographs</a></p>
+      </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+      &copy;<!-- 2008-2019 Seseragi Theme -->2019 Steve Knoblock Seseragi Theme
+</footer> 
+
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOM Loaded');
+  triggerElement = document.querySelector('.menu-button'); // <---------- get reference to element triggering toggle
+  console.log("triggerElement: " + triggerElement);
+  menu = document.querySelector('nav');                    // <---------- get reference to element being toggled
+  console.log("menu: " + menu);
+  triggerElement.addEventListener('click', function() {    // <----------- assign event listener to element we want to trgger toggle
+    console.log("heard the click");
+    menu.classList.toggle('toggle');
+  });
+});
+
+
+</script>
+
+
+<template id="panel-menu">
+    <link rel="stylesheet" href="../shared-content/seseragi-components/menu/css/menu.css" />
+    <style>
+
+    nav { 
+      display: none;
+    }
+
+    .toggle {
+      display: block;
+    }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin: 0;
+    grid-gap: 3px;
+    margin-top: 0px;
+}
+
+nav {
+	background: transparent url(img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.border-menux {
+  position: relative;
+  padding-left: 1.25em;
+  margin-left: 0.25em;
+}
+
+.border-menux:before {
+    content: "";
+    position: absolute;
+    top: -0.10em;
+    left: 0;
+    width: 1em;
+    height: 0.125em;
+    border-top: 0.375em double #000;
+    border-bottom: 0.125em solid #000;
+    font-size: 2em;
+}
+
+#menu-button-text {
+  font-size: 1em
+}
+  </style>
+  <div class='menu-button border-menu' id='panel-menu-button'>
+    <style>svg{display:block;height:100%;width:100%}</style>
+    <!-- color options: #757575, #69c1d2 -->
+    <svg style="fill:#757575;width:48px;height:48px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+    </svg><!--
+    <div id="menu-button-text">Menu<div>-->
+  </div>
+
+  <nav id="menu-nav" class="nav-grid">
+    <div class="container">
+    <ul id="menu-home">
+      <li>
+          <a href="http://brandymorecastle.org/projects/">Projects</a>
+      </li>
+      <li>
+          <a href="http://brandymorecastle.org/photography/">Photography</a>
+      </li>
+      <li>
+          <a href="http://brandymorecastle.org/code/">Code</a>
+      </li>
+    </ul>
+
+    <ul id="menu-labels">
+      <li>
+         <a href="http://brandymorecastle.org/projects/">Photography</a>
+      </li>
+      <li>
+         <a href="http://brandymorecastle.org/contact/">Poetry</a>
+      </li>
+      <li>
+         <a href="http://brandymorecastle.org/about/">Writing</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li id="menu-contact">
+            <a href="http://twitter.com/haikuoftheday">@haikuoftheday</a>
+      </li>
+        <li>
+            <a href="http://twitter.com/photographist">@photographist</a>
+        </li>
+        <li>
+          <a href="http://brandymorecastle.org/about/">About</a>
+        </li>
+      </ul>
+      </div>
+  </nav>
+</template>
+
+<script>
+
+customElements.define('panel-menu',
+
+class PanelMenu extends HTMLDivElement {
+  constructor() {
+    super();
+
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('DOM Loaded');
+    });
+
+      const template = document.getElementById('panel-menu');
+      const templateContent = template.content;
+      
+      const shadowRoot = this.attachShadow({mode: 'open'});
+      shadowRoot.appendChild(templateContent.cloneNode(true));
+
+      const shadowButton = shadowRoot.querySelector('#panel-menu-button');
+
+      const shadowNav = shadowRoot.querySelector('#menu-nav');
+
+      shadowButton.addEventListener('click', function(e) { 
+        //console.log("heard the click");
+        shadowNav.classList.toggle('toggle');
+      });
+
+    }
+}
+, { extends: 'div'} );
+
+</script>
+
+
+
+
+</body>
+</html>

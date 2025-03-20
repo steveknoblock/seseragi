@@ -5,6 +5,7 @@
 /* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
 @import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
 /* Seseragi 2020 - Typography */
+
 body {
   font-size: 1em;
   font-family: "Lora", "Georgia", "Times New Roman", "Times", serif;
@@ -168,4 +169,4 @@ footer {
   }
 }
 
-/*#  HAND EDITED! sourceMappingURL=styles.css.map */
+
