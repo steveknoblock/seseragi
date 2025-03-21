@@ -1,28 +1,33 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Seseragi Theme - Flow Page</title>
+<head>
+  <title>Seseragi Ome - Homepage</title>
+  <meta name="description" content="Seseragi. A page calming design">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../shared-content/images/weather-clouds.png"/>
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato|Lora" type="text/css">
+</head>
+<body>
+
+  <header class="panel">
+    <hgroup>
+      <h1 class="logo">Seseragi</h1>
+      <h2 class="tagline">The sound of flowing water.</h2>
+    </hgroup>
+    <div class="panel-menu" is='panel-menu'></div>
+  </header>
     <style>
-       
-       .pin {
-          position: sticky; 
-          top: 0;
-          /* Sticks to nearest scrollable container. */
-          overflow: scroll;
-          /* Critical to prevent sticky overlapping sticky header. */
-          z-index: 1;
-       }
 
   /* Notebook */
 
   .notebook-panel {
-    height: 50%;
     padding: 1em;
 }
   /* define flow section */
   section.flow {
     scroll-snap-align: start;
-    background-color: rgb(80, 255, 205);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -33,24 +38,13 @@
   }
 
     </style>
-  </head>
-<body>
-
-<header>
-  <hgroup>
-    <h1 class="logo">Seseragi</h1>
-    <h2 class="tagline">The sound of flowing water.</h2>
-  </hgroup>
-</header>
-
-<p>Self-contained demonstration of flow movement using SECTION structure.</p>
 
 <!-- Start of Flow section container -->
 <section class="flow">
     <section class="left">
 
         <!-- start of sticky panel -->
-        <div class="notebook-panel pin">
+        <div class="notebook-panel">
         <div class="action">
             <div class="container">
             <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
@@ -85,7 +79,7 @@
   <section class="left">
 
       <!-- start of sticky panel -->
-      <div class="notebook-panel pin">
+      <div class="notebook-panel">
       <div class="action">
           <div class="container">
           <a href="http://www.flickr.com/photos/knoblock/"><img src="../shared-content/images/concrete-leaves.jpg"></a>
