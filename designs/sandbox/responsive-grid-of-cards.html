@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Seseragi - Responsive Grid</title>
+    <style>
+
+    .card {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* Three columns
+    */
+    @media ((min-width: 700px)) {
+        .flex-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            margin: var(--layout-margin);
+            grid-gap: 25px;
+            margin-top: 0px;
+            padding: 12px
+        }
+    }
+
+    /* Two columns
+    */
+    @media ((min-width: 500px) and (max-width: 700px)) {
+        .flex-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            margin: var(--layout-margin);
+            grid-gap: 25px;
+            margin-top: 0px;
+        }
+    }
+  
+    /* One column
+    */
+    @media (max-width: 250px) {
+        .flex-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            margin: var(--layout-margin);
+            grid-gap: 25px;
+            margin-top: 0px;
+        }
+    }
+    
+    </style>
+  </head>
+<body>
+
+    <h2>Responsive Cards Grid</h2>
+
+    <p>Each card is a cell in three columns that reduce to two columns then to one colum as browser window narrows.</p>
+
+<section class="flex-grid">
+
+  <div class="card"><p>1. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>2. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>3. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>4. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>5. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>6. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>7. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>8. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>9. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>10. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>11. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+  <div class="card"><p>12. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p></div>
+</section>
+
+</body>
+</html>

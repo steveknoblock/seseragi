@@ -1,0 +1,378 @@
+
+
+/******************************************************
+ * style     Seseragi Ome (2.3.6)
+ * author    Steve Knoblock
+ * rights    Copyright 2008-2014
+ * date      12 March 2014
+ *****************************************************/
+/*
+
+style model
+
+page layout grid
+#page_container contains the grid
+#content left column
+#sidebar right column
+
+layout grid model
+div.grid
+	div.col1
+	div.col2
+
+translates to
+
+div.grid
+	section.content
+	aside.sidebar
+
+
+for a sitewide framework, might use
+
+div.grid
+	div.col1 nav
+	div.col2 content
+	div.col3 sidebar
+
+1 always contains sitewide navigation
+2-3 always contain content w/ optional sidebar content
+people expect the sidebar to be just to the right of the content
+its not a question of whether the site nav should be on the left or right,
+its a question of keeping the content and sidebar together and in left to right order, then putting that content/sidebar content on the right, and the nav on the left.
+
+the problem is that if you switch this over, putting the content on the left, the sidebar on the right, then the sitewide nav on the right edge, sidebar content and nav content are probably going to be mixed, that is hard to see the difference between the two.
+
+current
+
+page_container { width: 1200px }
+header { width: 1200px }
+content { width: 700px }
+sidebar { width: 250px }
+
+body
+
+header.pagetop
+header.pagetop hgroup
+header.pagetop hgroup h1
+header.pagetop hgroup h2
+
+nav.sitewide
+nav.sitewide ul
+nav.sitewide ul li
+
+*/
+
+
+body {
+	background: #eee;
+	color: #333;
+	text-align: left;
+	font-size: 15px/22px;
+	font-family: Georgia, serif;
+}
+
+a:link {
+	color: #58a;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #58a;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #58a;
+	border-bottom: dotted;
+	text-decoration: none;
+}
+
+
+/**
+ * Header
+ */
+
+header.pagetop {
+	background: #cfcfcf;
+	height: 64px;
+	padding: 6px;
+	border: none;
+	margin: 0 0 0 0;
+}
+
+header.pagetop hgroup { background: transparent; width: 50%; float: left }
+
+header.pagetop hgroup h1.logo {
+    background: transparent;
+    margin-top: 0.25em;
+	color: #f1f1f1; 
+	height: 100%;
+	font-size: 24px;
+	text-align: center;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	font-family: Georgia, serif;
+	font-weight: normal;
+	}
+	
+header.pagetop hgroup h2.slogan {
+	text-align: center;
+	color: #3377AA;
+	font-size: 0.75em;
+}
+
+
+/*
+ * Navigation
+ *
+ */
+ 
+header nav {
+	float: left;
+}
+
+header nav.sitewide {
+	color: white;
+	border: 0;
+	padding-bottom: 0.5em; /* Deleting this prevents floating menu dividers in IE6, but is required to prevent overlap into feature area in FF1.5 Both look okay and are usable. */
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0.5em;
+	text-align: right;
+	height: 32px;
+}
+
+header nav.sitewide ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	/*
+	border-left: 1px solid #004e61;
+	border-right: 1px solid #006486;
+	*/
+	position: relative;
+	top: 0;
+}
+
+    
+header nav.sitewide ul li {
+	list-style: none;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+nav.sitewide ul a:link, nav.sitewide ul a:visited {
+	display: block;
+	float: left;
+	padding: 10px 15px;
+	text-decoration: none;
+/*	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+*/
+	color: #fff /* #dee0e5 */;
+	height: 16px;
+	font-weight: normal;
+	font-size: 1em;
+	
+}
+
+nav.sitewide ul li a:hover {
+	background: #b3b3b3;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+
+/**
+ * Bottom Ledge Container
+ */
+
+#spotlight {
+	margin: 0;
+	padding: 4px;
+	text-align: center;
+	font-size: 12px;
+	border-top: 2px solid #3377aa;
+}
+
+
+/**
+ * Page Container
+ */
+
+#page_container {
+/*    overflow: hidden; */
+/* background: #c60; */
+	background: transparent url(../img/page_background_gray.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding-top: 1em;
+	padding-left: 1.5em;
+	padding-bottom: 3em;
+	padding-right: 1.5em;
+	border-top: 0;
+	padding: 6px;
+}
+
+
+/**
+ * Sidebar
+ */
+
+#sidebar {
+	width: 30%;
+	float: left;
+	padding: 4px;
+}
+
+h2.sidebar-title {
+  margin:1.5em 0 .75em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+
+#sidebar ul {
+  margin: 0 0 1.5em;
+  padding: 0 0 1.5em;
+/*  border-bottom: 1px solid #b3b3b3;*/
+  list-style: none;
+}
+
+#sidebar li {
+  margin: 0;
+  padding: 0 0 .25em 15px;
+  text-indent: -15px;
+  line-height: 1.5em;
+}
+
+#sidebar p {
+  color:#666;
+  line-height:1.5em;
+}
+
+
+/*
+ * Sections
+ *
+ */
+ 
+section {
+	width:100%;
+	padding: 1em;
+	border: 1px dashed #ccc;
+	margin-bottom: 1.5em
+}
+
+/**
+ * Footers
+ *
+ */
+
+footer {
+	background: transparent url(../img/footer_background_gray.png);
+	margin: 2px;
+	padding: 4px;
+	text-align: center;
+	font-size: 12px
+}
+
+
+/**
+ * Content
+ */
+
+#content {
+	width: 60%;
+/*	background: #f1f1f1;  same as background */
+	background: transparent;
+	/* background: #666; */
+	float: left;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	padding: 0.5em 0.50em 0.25em 0.5em;
+	padding-left: 2em;
+	padding-right: 2em;
+	margin: 0 0 0 8px;
+}
+
+#content h2 {
+	text-align: center;
+	margin: 1em 0px 0px 0px;
+	padding: 0 0 0 0px;
+	color: #333;
+	font-size: 1.3em;
+/*	color:#c60; &/
+}
+	
+#text {
+	margin: 20px 60px 0px 60px;
+	padding: 1em 1em 1em 1em;
+	/* font: 14px/20px "Times New Roman", serif; */
+	color: #000;
+	/*list-style-image: url(http://woodblock.com/shiki/images/bubble.png);
+*/
+}
+
+p {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+	line-height: 1.5em;
+	width: 36em;
+}
+
+
+
+
+
+#ignored {
+}
+
+#menu-empty {
+	padding-left: 12px;
+}
+
+
+/* add ins */
+
+
+	.picture {
+		text-align: center;
+	}
+
+	.picture img {
+		background: #ccc;
+		border: 1px solid #333;
+		padding: 8px 8px 8px 8px;
+	}
+
+	@media print {
+		background: #fff;
+		color: #000;
+	}
+
+
+.float_left{float:left}.float_right{float:right}.clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;overflow:hidden}.clearfix:after{clear:both}.clearfix{zoom:1}.clear{clear:both;display:block;visibility:hidden;height:0;font-size:0}
+
+
+.infobox { 
+margin-top: 6%;
+margin: 8px;
+width: 50%;
+list-style: none;
+padding: 8px 8px 8px 8px;
+background: transparent url(http://brandymorecastle.org/looks/seseragi-2.3.4/img/page_background_gray.png);
+background-repeat: repeat-x;
+background-position: top; }
+
+div.infobox ul { line-height: 1.5em }
+div.infobox ul li { padding: 6px }
+
+
+
