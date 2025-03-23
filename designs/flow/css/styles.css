@@ -257,7 +257,8 @@ article img {  height: auto;  width: 100%; }
     margin: var(--layout-margin);
     grid-gap: 25px;
     margin-top: 0px;
-    padding: 12px
+    /* Padding pushing out container. */
+    /* padding: 12px */
   }
 }
 
