@@ -164,6 +164,7 @@ section .grid {
 
 section .grid-card {
   background: transparent;
+  padding: 1em; /* Added padding here to correct for lack of padding in content container. */
 }
 
 section .grid-card header {
