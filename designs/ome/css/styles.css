@@ -265,7 +265,7 @@ article img {  height: auto;  width: 100%; }
   font-weight: 700;
   -ms-flex-align: center;
   align-items: center;
-  border: 2px solid #444;
+  border: none;
   color: #444;
   display: -ms-flexbox;
   display: flex;
@@ -282,15 +282,18 @@ article img {  height: auto;  width: 100%; }
   line-height: 120px;
   border-radius: 50%;
   text-align: center;
-  border: 2px solid #3377;
+  border: 2px solid #333;
+  /* border: 2px solid #3377; */
 }
 
 .with-square {
   line-height: 120px;
-  border-radius: 50%;
+  border-radius: 0;
   text-align: center;
-  border: 2px solid #3377;
+  border: 2px solid #333;
+  /* border: 2px solid #3377; */
 }
+
 
 /** Media Queries **/
 
