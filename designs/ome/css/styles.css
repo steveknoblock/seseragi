@@ -399,7 +399,7 @@ nav a, .action a {
 
 
 /* Centered IMAGE text, change the class name, not a good utility class name.*/
-.centered {
+.centered-img-text {
     border-width: 1px;
     border-color: white;
     border-style: solid;
