@@ -122,6 +122,8 @@ header hgroup h2.tagline {
 
 /* CSS Grid */
 .grid-content-img {
+  padding-top:2rem; 
+  background: inherit;
   display: grid;
   grid-template-columns: 3fr 3fr;
   margin: 2% auto;
@@ -385,16 +387,21 @@ nav a, .action a {
 
 /* Container holding the image and the text */
 .container {
-  position: sticky;
+  /* position: sticky; This is the culprit for images sliding up over the menu bar. */
+  /* Setting the position to relative causes the images to skim over the navbar. Any setting for
+  position seems to cause it.
+   position: relative;
+  */
+ 
   text-align: center;
   color: white;
 }
 
 
-/* Centered text */
+/* Centered IMAGE text, change the class name, not a good utility class name.*/
 .centered {
     border-width: 1px;
-    border-color: white;
+    border-color: white;.
     border-style: solid;
     position: absolute;
     top: 50%;
