@@ -88,11 +88,6 @@ header hgroup h2.tagline {
   top: 0;
 }
 
-.zzz {
-    /* Critical to prevent sticky overlapping sticky header. */
-    z-index: 1;
-}
-
 .top {
   padding-top: 1em;
 }
