@@ -122,15 +122,6 @@ header hgroup h2.tagline {
   margin-top: 0px;
 }
 
-.stupid_container_for_css_grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-  margin: 0;
-  grid-gap: 3px;
-  margin-top: 0px;
-}
-
 .action {
   margin: 0 0 0 0;
   display: block;
