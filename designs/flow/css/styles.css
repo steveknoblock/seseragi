@@ -329,6 +329,7 @@ nav a, .action a {
 /* Notebook */
 
 .notebook-panel {
+  /* Move this notebook stuff out? */
   /* The answer my friend, is blowing in the wind. */
   height: 50%;
   padding: 1em;
