@@ -301,7 +301,7 @@ nav a, .action a {
 
 /* Container holding the image and the text */
 .container {
-  position: sticky;
+ /* position: sticky;*/ /* This is the culprit of why the images float over the nav menu. I can't believe I found it. ARRRRGGhhh! What was it for? */
   text-align: center;
   color: white;
 }
