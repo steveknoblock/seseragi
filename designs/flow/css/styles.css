@@ -104,6 +104,9 @@ header hgroup h2.tagline {
 /* Layout **/
 
 /* Panels */
+/*
+  The issue is that the background does not extend horizontally across the page. It only applies to the background of the first grid column. The others do not display the background graphic.
+*/
 .panel {
   background: transparent url(../img/page_background_gray.png);
   background-repeat: repeat-x;
@@ -240,6 +243,11 @@ article img {  height: auto;  width: 100%; }
     /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    /* Placing the background on the grid content container applies it across all columns. I am not liking this because I have to repeat the background for each media query. */
+    background: transparent url(../img/page_background_gray.png);
+    background-repeat: repeat-x;
+    background-position: top;
+    background-color: var(--bg-color);
     margin: var(--layout-margin);
     grid-gap: 25px;
     margin-top: 0px;
@@ -287,7 +295,8 @@ nav a, .action a {
 
 /* Container holding the image and the text */
 .container {
- /* position: sticky;*/ /* This is the culprit of why the images float over the nav menu. I can't believe I found it. ARRRRGGhhh! What was it for? */
+ /* position: sticky;*/ /* This is the culprit of why the images float over the nav menu. I can't believe I found it. ARRRRGGhhh! What was it for?
+ */
   text-align: center;
   color: white;
 }
