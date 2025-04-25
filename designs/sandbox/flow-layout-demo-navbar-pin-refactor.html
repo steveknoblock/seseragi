@@ -16,14 +16,19 @@
 
         }
 
+        .sticky {position: sticky}
+
         .container { border: 1px red solid; padding: 1em; margin: 1em }
 
         .left { border: 1px gray solid; padding: 1em; margin: 1em; }
+        .right { border: 1px gray solid; padding: 1em; margin: 1em; }
     
-        .grid { display: grid;
-    /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;}
+        .grid { 
+            display: grid;
+            /* grid-template-columns: 0.3fr 0.3fr 0.3fr; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+        }
 
         .gradient {
             background: transparent url(img/page_background_gray.png);
@@ -41,7 +46,7 @@
     
     <div class="container gradient grid">
 
-        <div class="left">
+        <div class="left sticky">
 
             <h2>Heading</h2>
             <section>
