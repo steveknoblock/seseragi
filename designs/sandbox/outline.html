@@ -17,10 +17,15 @@
                 margin-top: 0px;
             }
             .panel {
-        height: 50%; /* Necessary for the flow effect */
-        padding: 1em;
-      }
+                padding: 1em;
+            }
             .pin {
+                position: sticky; 
+                top: 0;
+            }
+            .flow {
+                 /* Necessary for the flow effect. This enables the text to scroll even if it is short. */
+                height: 50%;
                 position: sticky; 
                 top: 0;
             }
@@ -36,12 +41,12 @@
 	<body>
 
         <div class="grid-content">
-            <div class="panel pin">
-                <h2>Flow 1</h2>
+            <div class="panel pin flow">
+                <h2>Pinned</h2>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
             </div>
-            <div>
-                <h2>Flow 2</h2>
+            <div class="panel">
+                <h2>Scrolling</h2>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
@@ -50,7 +55,21 @@
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
             </div>
         </div>
-
+        <div class="grid-content">
+            <div class="panel pin flow">
+                <h2>Pinned</h2>
+                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+            </div>
+            <div class="panel">
+                <h2>Scrolling</h2>
+                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+            </div>
+        </div>
 		<div id="not-a-grid">
 				THIS IS NOT A GRID
 			<div id="is-a-grid">
