@@ -269,5 +269,267 @@ Then in an inside container it is flowing under the top edge of the container.
             <section>
 
 
+--
 
+Some thinking about document structure.
+
+The original idea is like this
+
+header
+
+  navbar 
+
+    div.grid-content
+      div.panel
+        section
+
+footer
+
+The sandbox refactor looked like this, introducing utility classes
+
+div.container gradient grid
+  div.left sticky 
+  div.right
+
+
+The flow refactor looked like this
+
+header
+
+  div.navbar
+
+    div.grid-content
+      div.panel pin
+        section
+    div.grid-content
+      div.panel pin
+        section
+    div.grid-content
+      div.panel pin
+        section
+
+footer
+
+
+The new flow version (outline.html, then new-flow.html)
+
+div.grid-content  <-- grid layout container
+  div.panel pin flow  <-- pinned panel
+  div.panel  <-- scrolling panel
+
+div.grid-content 
+  div.panel pin flow
+  div.panel
+
+pin and flow are both sticky styles
+
+Proposed refactor
+
+div.container grid gradient
+  div.panel pin flow
+  div.panel
+
+I want to name the image container "panel" and the text container something else. It also eliminates ambiguity.
+
+Using section
+
+div.container grid gradient
+  section pin
+  section
+
+This one lacks specificity on the sections, can't address panel and text individually
+
+section.container section  <-- panel
+section.container section  <-- text
+
+Unless you use
+
+section section.pin 
+
+(for sticky panel)
+
+(you must always use the full path for addressing the scrollable panel) as does the version with div.panel and section.
+
+I do not want specificity dependent on a utility class.
+
+
+
+With this pattern
+
+    div.grid-content
+      div.panel pin
+        section
+
+To address the left panel
+
+    div.grid-content div.panel {...}
+
+    or
+
+    .panel
+
+
+To address the right panel
+
+    div.grid-content section {...}
+
+
+
+
+
+
+With this pattern
+
+div.container grid gradient
+  div.panel pin
+  div.panel
+
+To address the left panel
+
+  div.container div.panel.pin {...}
+
+To address the right panel
+
+  div.container div.panel {...}
+
+I want to keep the difference between the image and text containers of the flow section.
+
+I might rename it "mixer" instead of "flow"
+
+div.container grid  <-- grid utility class makes this container a CSS grid layout
+  div.panel pin     <-- pin utility class makes this container sticky
+  section           <-- for text
+
+Another idea
+
+section.flow
+  .panel
+  .block
+
+section.flow grid     <-- grid utility class makes this container a CSS grid layout
+  section.panel pin   <-- pin utility class makes this container sticky
+  section.block       <-- for text
+
+
+section.flow 
+  section.panel
+  section
+
+section.flow section.panel
+
+Can flow be a utility class?
+
+
+
+
+
+
+
+
+
+
+Wordy:
+
+section.imageTextMixer grid       <-- grid utility class makes this container a CSS grid layout
+  section.mixerPanel pin     <-- pin utility class makes this container sticky
+  section.mixerText          <-- for text
+  
+
+
+
+If I go with a modular container for the different kinds of content on the page, I may want to contain a module with an element.
+
+section.module
+  section.panel
+  section.block
+
+I previously used an implicit naming where "section" implies a module.
+
+
+If I wrote this out fully
+
+
+section.webPageModularSection
+  section.flowSection
+    section.imagePanel
+    section.textBlock
+
+With utility classes:
+
+.pin <-- sticky
+
+.grid <-- layout
+
+section.webPageModularSection
+  section.flowSection .grid
+    section.imagePanel .pin
+    section.textBlock
+
+
+With concise class names:
+
+section
+  section.flow .grid
+    section.panel .pin
+    section.block
+
+
+Using "mixer" name.
+
+section.webPageModularSection
+  section.mixerSection .grid
+    section.imagePanel .pin
+    section.textBlock
+
+With concise class names:
+
+section
+  section.mixer .grid
+    section.panel .pin
+    section.block
+
+section section.mixer .grid
+section section.mixer section.panel
+section section.mixer section.block
+
+The panel class could be a utility class. Also, the block text class.
+
+This utility class would make these composable.
+
+section section.mixer .grid
+section section.mixer .panel .pin
+section section.mixer .block
+
+I've spaced out the utility classes for clarity.
+
+The first section element ensures styles only apply within a modular section.
+
+
+What if I used article?
+
+section
+  section.mixer .grid
+    section.panel .pin
+    article
+
+section .gradient
+section section.mixer
+section section.mixer section.panel
+section section.mixer article
+
+I notice that section is defined as the section of a document and it is strongly recommended to include a heading.
+
+I may have to abandon section.
+
+
+If the containers had unique names
+
+.flow
+.panel
+.block
+
+They could be addressed directly.
+
+
+Should the grid layout be a utility class? Yes, if you want to potentially apply different layouts to the same container.
 
