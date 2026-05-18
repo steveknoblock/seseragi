@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Seseragi — Homepage</title>
+  <meta name="description" content="Seseragi. A page calming design.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+  <style>
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
+    ul { list-style: none; }
+    a { text-decoration: none; }
+    img { display: block; width: 100%; height: auto; }
+
+    /* ── Tokens ── */
+    :root {
+      --bg:          #eeeeee;
+      --white:       #ffffff;
+      --black:       #000000;
+      --blue:        #3377aa;
+      --gray-mid:    #888888;
+      --gray-border: #cccccc;
+      --body-font:   "Lora", Georgia, "Times New Roman", serif;
+      --ui-font:     "Lato", "Lucida Grande", Verdana, sans-serif;
+      --body-size:   1rem;
+      --body-lh:     1.75;
+      --measure:     44em;
+    }
+
+    /* ── Base ── */
+    body {
+      background-color: var(--bg);
+      font-family: var(--body-font);
+      font-size: var(--body-size);
+      color: var(--black);
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--white);
+      border-bottom: 1px solid var(--gray-border);
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header hgroup { text-align: center; flex: 1; }
+
+    h1.logo {
+      font-family: var(--body-font);
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    h2.tagline {
+      font-family: var(--body-font);
+      font-style: italic;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--blue);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Hamburger button ── */
+    .menu-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 0;
+    }
+    .menu-btn svg { fill: var(--gray-mid); width: 24px; height: 24px; }
+    .hide { display: none !important; }
+
+    /* ── Slide-down nav ── */
+    #panel-nav {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--gray-border);
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 280ms ease-out;
+    }
+    #panel-nav.open { max-height: 320px; }
+
+    #panel-nav .nav-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      padding: 1.25rem 1.5rem 1.5rem;
+    }
+
+    #panel-nav ul { padding-top: 0.25rem; }
+    #panel-nav ul li { line-height: 2.2; }
+    #panel-nav ul li a {
+      font-family: var(--ui-font);
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--black);
+    }
+    #panel-nav ul li a:hover { color: var(--blue); }
+
+    /* ── 3-column card grid ── */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .grid-cards section {
+      padding: 1.5rem 1.25rem;
+      border-right: 1px solid var(--gray-border);
+      background-color: var(--bg);
+    }
+    .grid-cards section:last-child { border-right: none; }
+
+    .grid-cards h1 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      line-height: 1.35;
+    }
+
+    .grid-cards p {
+      font-size: 0.9rem;
+      line-height: var(--body-lh);
+      color: #333;
+    }
+
+    /* ── Drop cap ── */
+    .drop-cap {
+      font-family: var(--body-font);
+      font-size: 2.6rem;
+      font-weight: 400;
+      float: left;
+      line-height: 1;
+      margin: 3px 9px 2px 0;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #777;
+      border-radius: 50%;
+      color: #444;
+    }
+
+    /* ── Wide single-column prose ── */
+    .wide-prose {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--gray-border);
+      padding: 2rem 1.5rem;
+    }
+
+    .wide-prose section {
+      max-width: var(--measure);
+      margin: 0 auto;
+    }
+
+    .wide-prose h1 {
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .wide-prose p {
+      font-size: 1rem;
+      line-height: var(--body-lh);
+      color: #222;
+    }
+
+    /* ── Flow layout: sticky left + scrolling right ── */
+    .flow-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .flow-sticky {
+      position: sticky;
+      top: 64px; /* clears the header */
+      align-self: start;
+      padding: 1.5rem 1.25rem;
+      border-right: 1px solid var(--gray-border);
+      background-color: var(--bg);
+    }
+
+    .flow-scroll {
+      padding: 1.5rem 1.25rem;
+      background-color: var(--white);
+    }
+
+    .flow-sticky h2,
+    .flow-scroll h2 {
+      font-size: 0.75rem;
+      font-family: var(--ui-font);
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin-bottom: 0.85rem;
+    }
+
+    .flow-sticky p,
+    .flow-scroll p {
+      font-size: 0.9rem;
+      line-height: var(--body-lh);
+      color: #333;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ── Image grid ── */
+    .grid-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .grid-images .img-cell {
+      padding: 1rem;
+      border-right: 1px solid var(--gray-border);
+      text-align: center;
+    }
+    .grid-images .img-cell:last-child { border-right: none; }
+
+    .grid-images .img-cell img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+
+    .grid-images .img-cell a {
+      font-family: var(--ui-font);
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: var(--black);
+    }
+    .grid-images .img-cell a:hover { color: var(--blue); }
+
+    /* Placeholder block for images that aren't local */
+    .img-placeholder {
+      width: 100%;
+      height: 160px;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--ui-font);
+      font-size: 0.7rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 1.5rem;
+      font-family: var(--ui-font);
+      font-size: 0.75rem;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: var(--gray-mid);
+      text-align: center;
+      min-height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid var(--gray-border);
+    }
+
+    /* ── Section label (navigation aid) ── */
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--gray-border);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .grid-cards,
+      .grid-images {
+        grid-template-columns: 1fr 1fr;
+      }
+      .flow-wrap {
+        grid-template-columns: 1fr;
+      }
+      .flow-sticky {
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid var(--gray-border);
+      }
+      #panel-nav .nav-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .grid-cards,
+      .grid-images {
+        grid-template-columns: 1fr;
+      }
+      .grid-cards section { border-right: none; border-bottom: 1px solid var(--gray-border); }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <button class="menu-btn" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+    <svg id="icon-open" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </svg>
+    <svg id="icon-close" class="hide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
+    </svg>
+  </button>
+
+  <hgroup>
+    <h1 class="logo">Seseragi</h1>
+    <h2 class="tagline">The sound of flowing water.</h2>
+  </hgroup>
+
+  <!-- spacer to balance the hamburger -->
+  <div style="width:32px;"></div>
+</header>
+
+<!-- ── Slide-down nav panel ── -->
+<div id="panel-nav" role="navigation" aria-label="Site menu">
+  <div class="nav-inner">
+    <ul>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Photography</a></li>
+      <li><a href="#">Code</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Photography</a></li>
+      <li><a href="#">Poetry</a></li>
+      <li><a href="#">Writing</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="https://twitter.com/haikuoftheday">@haikuoftheday</a></li>
+      <li><a href="https://twitter.com/photographist">@photographist</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── Card grid ── -->
+<div class="grid-cards">
+  <section>
+    <h1>A wonderful serenity</h1>
+    <p><span class="drop-cap">A</span> wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+  </section>
+
+  <section>
+    <h1>Sweet mornings of spring</h1>
+    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+  </section>
+
+  <section>
+    <h1>I am alone</h1>
+    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+  </section>
+
+  <section>
+    <h1>The charm of existence</h1>
+    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+  </section>
+</div>
+
+<!-- ── Wide prose ── -->
+<div class="wide-prose">
+  <section>
+    <h1>Heading</h1>
+    <p><span class="drop-cap">A</span> wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+  </section>
+</div>
+
+<!-- ── Flow layout ── -->
+<div class="flow-wrap">
+  <div class="flow-sticky">
+    <h2>Flow 1 — pinned</h2>
+    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+  </div>
+
+  <div class="flow-scroll">
+    <h2>Flow 1 — scrolls</h2>
+    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+  </div>
+</div>
+
+<!-- ── Image grid ── -->
+<div class="grid-images">
+  <div class="img-cell">
+    <div class="img-placeholder">photograph</div>
+    <a href="#">Photographs</a>
+  </div>
+  <div class="img-cell">
+    <div class="img-placeholder">photograph</div>
+    <a href="#">Photographs</a>
+  </div>
+  <div class="img-cell">
+    <div class="img-placeholder">photograph</div>
+    <a href="#">Photographs</a>
+  </div>
+  <div class="img-cell">
+    <div class="img-placeholder">photograph</div>
+    <a href="#">Photographs</a>
+  </div>
+</div>
+
+<!-- ── Footer ── -->
+<footer>
+  &copy; 2025 Steve Knoblock &middot; Seseragi Theme
+</footer>
+
+<script>
+  (function () {
+    const toggle  = document.getElementById('menu-toggle');
+    const nav     = document.getElementById('panel-nav');
+    const iconO   = document.getElementById('icon-open');
+    const iconC   = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', function () {
+      const isOpen = nav.classList.toggle('open');
+      iconO.classList.toggle('hide', isOpen);
+      iconC.classList.toggle('hide', !isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  })();
+</script>
+
+</body>
+</html>

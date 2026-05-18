@@ -2,24 +2,26 @@
 /* (c)2015-2025 Steve Knoblock Creative Commons License */
 
 /* Fonts */
-/* http://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
-@import url(http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
+/* https://www.google.com/fonts#UsePlace:use/Collection:Lato|Lora|Inconsolata */
+@import url(https://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata);
 
 /* Settings */
 :root {
   --bg-color: #eee;
-  --black-level: #000;
+  --body-font-size: 1.0rem;
+  --body-line-height:  1.75;
   --body-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
-  --body-font-size: 1.0em;
-  --body-line-height:  1.5;
+  --ui-font: "Lato", "Lucida Grande", Verdana, sans-serif;
 
-  --drop-cap-font: "ReithSans", sans;
+  --seseragi-text-color: #000;
 
   --seseragi-gray: #eee;
+  --seseragi-medium-gray: #777;
+  --seseragi-dark-gray: #444;
   --seseragi-white: #fff;
   --seseragi-black: #000;
   --seseragi-blue: #3377AA;
-  --seseragi-purple: rgb(208, 182, 240);
+  --seseragi-purple: rgb(109, 79, 145);
 
   --layout-margin: auto;
 }
@@ -176,30 +178,26 @@ article img {  height: auto;  width: 100%; }
 
 /* Drop Cap */
 .drop-cap {
-  font-family: var(--drop-cap-font);
-  font-size: 3.0em;
-  font-stretch: normal;
-  font-weight: 700;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 2px solid #444;
-  color: #444;
-  display: -ms-flexbox;
-  display: flex;
-  float: left; /* Necessary for drop cap */
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 8px 10px 4px 0;
+  font-family: var(--body-font);
+  font-size: 2.6rem;
+  font-weight: 400;
   text-transform: uppercase;
-  height: 84px;
-  width: 84px;
+  border: 2px solid var(--seseragi-purple);
+  color: var(--seseragi-text-color);
+  margin: 3px 9px 2px 0;
+  height: 58px;
+  width: 58px;
+  float: left; /* Necessary for drop cap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .with-circle {
   line-height: 120px;
   border-radius: 50%;
   text-align: center;
-  border: 2px solid #3377;
+  border: 2px solid var(--seseragi-purple);
 }
 
 /** Media Queries **/
@@ -208,7 +206,6 @@ article img {  height: auto;  width: 100%; }
  */
 @media (max-width: 255px) {
   .grid-content {
-    background-color: rgb(87, 141, 62);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
@@ -222,7 +219,6 @@ article img {  height: auto;  width: 100%; }
  */
 @media (max-width: 500px) {
   .grid-content {
-    background-color: rgb(80, 255, 205);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -359,10 +355,50 @@ span.tag {
   .grid-content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
+
     margin: var(--layout-margin);
     grid-gap: 25px;
     margin-top: 0px;
   }
 }
+
+/* Layout */
+
+  .grid-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: var(--layout-margin);
+    gap: var(--layout-margin); /* 25px maybe --layout-gap? */
+  }
+
+/* Cards */
+
+.cards {
+  background: transparent url(../img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: var(--bg-color);
+  padding-top: 0.5em;
+  width: 100%;
+}
+
+/* Default element for each card is the section element. */
+.cards .card {
+    padding: 1.5rem 1.25rem;
+}
+
+.cards .card h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+  color: var(--seseragi-text-color);
+}
+
+.cards .card p {
+  font-size: 0.9rem;
+  line-height: var(--body-line-height);
+  color: var(--seseragi-text-color);
+}
+
 
