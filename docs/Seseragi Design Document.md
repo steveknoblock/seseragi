@@ -1,5 +1,18 @@
 # Seseragi Design Document
 
+## Components
+
+
+## Cards
+
+A number of cards organized into a grid. A card contains a heading and a paragraph for title and description. Each "card" is contained by a SECTION element, which contains a H1 element for the heading and typically one P element containing the card text content. A card typically represents something clickable to another page.
+
+## Article
+
+A long form text consisting of headings and paragraphs.
+
+## Flow
+
 ## Homepage
 
 The homepage typically contains "card" content organized into a grid.

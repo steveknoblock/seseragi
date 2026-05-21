@@ -1,4 +1,4 @@
-# Colors
+# Seseragi Colors
 
 # Header
 

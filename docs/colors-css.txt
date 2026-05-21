@@ -1,0 +1,79 @@
+
+I suppose it depends on the perspective on colors 
+
+If the color scheme for Seseragi defines white as off-white then describing it as "Seseragi white" makes sense.
+
+Or if there might be actual white one could define
+
+--white: #fff
+--seseragi-white: #eee
+
+But that implies that white is outside the color scheme yet its being used in the actual design as a color.
+
+An alternative is defining white as pure white and off white as off-white
+
+--white: #fff
+--off-white: #eee
+
+The original reasoning was that while working on the Seseragi design that colors that were known to be in the Seseragi color scheme would be prefixed "--seseragi" leading to:
+
+--white: #fff
+--seseragi-white: #eee
+
+but there is also background color for the design
+
+--bg-color: #eee
+
+
+
+Suggestions and excerpts
+
+--seseragi-text-color: #000;
+
+  --seseragi-gray: #eee;
+  --seseragi-medium-gray: #777;
+  --seseragi-dark-gray: #444;
+  --seseragi-white: #fff;
+  --seseragi-black: #000;
+  --seseragi-blue: #3377AA;
+  --seseragi-purple: rgb(109, 79, 145);
+  --seseragi-purple: #6D4F91;
+  --seseragi-purple: rgb(208, 182, 240);
+  --bg-color: #eee;
+  --border-divider: #ccc;
+  --seseragi-green: #4CAF50;
+  --seseragi-red: #f44336;
+  --seseragi-yellow: #ffeb3b;
+  --seseragi-orange: #ff9800;
+  --seseragi-light-blue: #03a9f4;
+  --seseragi-light-green: #8bc34a;
+  --seseragi-light-red: #e57373;
+  --seseragi-light-yellow: #fff176;
+  --seseragi-light-orange: #ffb74d;
+  --seseragi-dark-blue: #2196f3;
+  --seseragi-dark-green: #388e3c;
+
+
+  --seseragi-dark-red: #d32f2f;
+  --seseragi-dark-yellow: #fbc02d;
+  --seseragi-dark-orange: #f57c00;
+
+
+
+  --seseragi-primary-color: #3377AA;
+  --seseragi-secondary-color: #6D4F91;
+  --seseragi-accent-color: #ff9800;
+  --seseragi-background-color: #eee;
+  --seseragi-text-color: #000;
+  --seseragi-border-color: #ccc;
+  --seseragi-success-color: #4CAF50;
+  --seseragi-error-color: #f44336;
+  --seseragi-warning-color: #ffeb3b;
+  --seseragi-info-color: #03a9f4;
+  --seseragi-light-primary-color: #03a9f4;
+  --seseragi-light-secondary-color: #8bc34a;
+  --seseragi-light-accent-color: #ffb74d;
+  --seseragi-light-background-color: #fff;
+  --seseragi-light-text-color: #000;
+  
+  

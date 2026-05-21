@@ -51,6 +51,9 @@ body {
 
 header {
   background-color: var(--bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
   /* border-bottom: 1px solid var(--gray-border); */
   padding: 0.6rem 1.25rem;
   display: grid;
@@ -92,12 +95,6 @@ footer {
 }
 
 /* Layout */
-
-.pin {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
 
 .grid {
   display: grid;
