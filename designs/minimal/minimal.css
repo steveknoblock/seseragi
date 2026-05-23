@@ -58,7 +58,7 @@ header {
   align-items: center;
 }
 
-header hgroup { text-align: center; flex: 1; }
+header hgroup { text-align: center }
 
 h1.logo {
   font-family: var(--body-font);
@@ -247,12 +247,6 @@ article p  {
 
 /* Responsive */
 
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 750px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -265,13 +259,19 @@ article p  {
   }
 }
 
-    /* Hamburger button */ 
-    .menu-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-      line-height: 0;
-    }
-    .menu-btn svg { fill: var(--gray-mid); width: 24px; height: 24px; }
-    .hide { display: none !important; }
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hamburger button */ 
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 0;
+}
+.menu-btn svg { fill: var(--seseragi-medium-gray); width: 24px; height: 24px; }
+.hide { display: none !important; }
