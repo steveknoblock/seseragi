@@ -275,3 +275,49 @@ article p  {
     }
     .menu-btn svg { fill: var(--gray-mid); width: 24px; height: 24px; }
     .hide { display: none !important; }
+
+/* Panel Nav */
+/* Outer — animates the row height */
+.panel-nav {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 280ms ease-out;
+  background-color: var(--bg-color);
+}
+
+.panel-nav.open {
+  grid-template-rows: 1fr;
+}
+
+/* Inner — must have overflow: hidden and min-height: 0 */
+.panel-nav .nav-inner {
+  overflow: hidden;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+}
+
+.panel-nav.open .nav-inner {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.panel-nav ul {
+  padding-top: 0.25rem;
+}
+
+.panel-nav ul li {
+  line-height: 2.2;
+}
+
+.panel-nav ul li a {
+  font-family: var(--ui-font);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--seseragi-text-color);
+  letter-spacing: 0.02em;
+}
+
+.panel-nav ul li a:hover {
+  color: var(--seseragi-blue);
+}
