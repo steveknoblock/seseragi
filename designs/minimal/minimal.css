@@ -117,6 +117,13 @@ footer {
   margin: 0 auto;
 }
 
+/* Main */
+main {
+  background: transparent url(img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: var(--bg-color);
+}
 
 /* Article */
 
@@ -172,10 +179,6 @@ article p  {
 /* Cards */
 
 .cards {
-  background: transparent url(../img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
-  background-color: var(--bg-color);
   padding: 0;
   width: 100%;
 }
