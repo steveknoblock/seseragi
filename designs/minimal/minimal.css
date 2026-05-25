@@ -119,6 +119,11 @@ footer {
   margin: 0 auto;
 }
 
+.margin-set-quote {
+  max-width: var(--measure-quote);
+  margin: 0 auto;
+}
+
 /* Main */
 main {
   background: transparent url(img/page_background_gray.png);
@@ -246,7 +251,7 @@ article p  {
 .flow-scroll p {
   font-size: 0.9rem;
   line-height: var(--body-line-height);
-  color: #333;
+  color: var(--seseragi-dark-gray);
   margin-bottom: 0.75rem;
 }
 
