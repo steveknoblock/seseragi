@@ -104,8 +104,8 @@ footer {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: var(--layout-margin);
   gap: var(--layout-gap);
+  margin: var(--layout-margin);
   /* border: 1px solid red; */
 }
 
@@ -126,13 +126,17 @@ footer {
 
 /* Main */
 main {
+  background: none;
+}
+
+/* Article */
+
+article {
   background: transparent url(img/page_background_gray.png);
   background-repeat: repeat-x;
   background-position: top;
   background-color: var(--bg-color);
 }
-
-/* Article */
 
 article h1 {
   font-size: var(--article-h1);
@@ -186,6 +190,10 @@ article p  {
 /* Cards */
 
 .cards {
+  background: transparent url(img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: var(--bg-color);
   padding: 0;
   width: 100%;
 }
@@ -218,7 +226,10 @@ article p  {
 .flow-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid var(--border-divider);
+  background: transparent url(img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: var(--bg-color);
   /* no height, no overflow */
 }
 
@@ -227,7 +238,6 @@ article p  {
   top: 76.75px; /* Computed height of header */
   align-self: start;
   padding: 1.5rem 1.25rem;
-  border-right: 1px solid var(--border-divider);
 }
 
 .flow-scroll {
