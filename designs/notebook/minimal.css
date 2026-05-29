@@ -35,8 +35,10 @@
 
   --layout-margin: auto;
   --layout-gap: 0;
-  --layout-measure-wide: 44em;
-  --layout-measure-narrow: 30em;
+  --layout-measure-content: 74em;
+
+  --measure-readable: 30em;
+  --measure-quote: 22em;
 
   --card-breathing-room: 1.75rem;
 }
@@ -58,7 +60,7 @@ header {
   align-items: center;
 }
 
-header hgroup { text-align: center; flex: 1; }
+header hgroup { text-align: center }
 
 h1.logo {
   font-family: var(--body-font);
@@ -93,7 +95,7 @@ footer {
 
 /* Layout */
 
-.pin {
+.pin, .pin-to-top {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -107,23 +109,35 @@ footer {
   /* border: 1px solid red; */
 }
 
-.margin-set-wide {
-  max-width: var(--layout-measure-wide);
+.margin-set-content {
+  max-width: var(--layout-measure-content);
   margin: 0 auto;
 }
 
-.margin-set-narrow {
-  max-width: var(--layout-measure-narrow);
+.margin-set-readable {
+  max-width: var(--measure-readable);
   margin: 0 auto;
 }
 
+.margin-set-quote {
+  max-width: var(--measure-quote);
+  margin: 0 auto;
+}
+
+/* Main */
+main {
+  background: transparent url(img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: var(--bg-color);
+}
 
 /* Article */
 
 article h1 {
   font-size: var(--article-h1);
   text-align: center; 
-  margin-top: 0;
+  margin-top: 3rem;
   margin-bottom: 1.5rem; 
 }
 
@@ -172,10 +186,6 @@ article p  {
 /* Cards */
 
 .cards {
-  background: transparent url(../img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
-  background-color: var(--bg-color);
   padding: 0;
   width: 100%;
 }
@@ -241,17 +251,11 @@ article p  {
 .flow-scroll p {
   font-size: 0.9rem;
   line-height: var(--body-line-height);
-  color: #333;
+  color: var(--seseragi-dark-gray);
   margin-bottom: 0.75rem;
 }
 
 /* Responsive */
-
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 @media (max-width: 750px) {
   .grid {
@@ -265,16 +269,22 @@ article p  {
   }
 }
 
-    /* Hamburger button */ 
-    .menu-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-      line-height: 0;
-    }
-    .menu-btn svg { fill: var(--gray-mid); width: 24px; height: 24px; }
-    .hide { display: none !important; }
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hamburger button */ 
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 0;
+}
+.menu-btn svg { fill: var(--seseragi-medium-gray); width: 24px; height: 24px; }
+.hide { display: none !important; }
 
 /* Panel Nav */
 /* Outer — animates the row height */

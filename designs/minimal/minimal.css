@@ -124,6 +124,14 @@ footer {
   margin: 0 auto;
 }
 
+/* Gradient Surface */
+.gradient-surface {
+  background: transparent url(img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: var(--bg-color);
+}
+
 /* Main */
 main {
   background: none;
