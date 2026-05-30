@@ -37,6 +37,8 @@
   --layout-gap: 0;
   --layout-measure-content: 74em;
 
+  --header-height: 62.5333px; /* Measured from actual computed height of header */
+
   --measure-readable: 30em;
   --measure-quote: 22em;
 
@@ -128,7 +130,8 @@ footer {
 .gradient-surface {
   background: transparent url(img/page_background_gray.png);
   background-repeat: repeat-x;
-  background-position: top;
+  background-attachment: fixed;
+  background-position: var(--header-height);
   background-color: var(--bg-color);
 }
 
@@ -140,9 +143,6 @@ main {
 /* Article */
 
 article {
-  background: transparent url(img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
   background-color: var(--bg-color);
 }
 
@@ -198,10 +198,6 @@ article p  {
 /* Cards */
 
 .cards {
-  background: transparent url(img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
-  background-color: var(--bg-color);
   padding: 0;
   width: 100%;
 }
@@ -234,16 +230,12 @@ article p  {
 .flow-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: transparent url(img/page_background_gray.png);
-  background-repeat: repeat-x;
-  background-position: top;
-  background-color: var(--bg-color);
   /* no height, no overflow */
 }
 
 .flow-sticky {
   position: sticky;
-  top: 76.75px; /* Computed height of header */
+  top: var(--header-height);
   align-self: start;
   padding: 1.5rem 1.25rem;
 }
