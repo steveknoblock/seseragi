@@ -159,7 +159,7 @@ main {
 /* Article */
 
 article {
-  background-color: var(--bg-color);
+  background-color: transparent;
 }
 
 article h1 {
@@ -167,19 +167,24 @@ article h1 {
   font-size: var(--title-font-size);
   font-weight: var(--title-font-weight);
   text-align: center; 
-  margin-top: 3rem;
+  margin-top: 0rem;
   margin-bottom: 1.5rem; 
 }
 
 article h2 {
+  font-family: var(--title-font);
   font-size: var(--article-h2);
+  font-weight: var(--title-font-weight);
   margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
-article h3 {  font-size: var(--article-h3);
+article h3 {  
+  font-family: var(--title-font);
+  font-size: var(--article-h3);
+  font-weight: var(--title-font-weight);
   margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 article p  {
@@ -221,6 +226,7 @@ article p  {
 }
 
 .card {
+/* The card breathing room is pushing the card headings down too far against the gradient */
     padding: var(--card-breathing-room);
     margin: 0;
     /* border: 1px solid red; */
