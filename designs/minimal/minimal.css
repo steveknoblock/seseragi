@@ -21,11 +21,12 @@
   --seseragi-black: #000;
   --seseragi-blue: #3377AA;
   --border-divider: #ccc;
-
+  --surface-color: #ccc;
 
   --body-font-size: 1.0rem; /* .9rem maybe? */
   --body-line-height: 1.75;
   --body-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
+  --title-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
 
   --ui-font: "Lato", "Lucida Grande", Verdana, sans-serif;
 
@@ -41,6 +42,9 @@
 
   --measure-readable: 30em;
   --measure-quote: 22em;
+
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
 
   --card-breathing-room: 1.75rem;
 }
@@ -130,9 +134,14 @@ footer {
 .gradient-surface {
   background: transparent url(img/page_background_gray.png);
   background-repeat: repeat-x;
-  background-attachment: fixed;
-  background-position: var(--header-height);
+  background-position: top;
   background-color: var(--bg-color);
+}
+
+/* Surface */
+.surface {
+  background-color: var(--surface-color);
+  padding: 1.5rem;
 }
 
 /* Main */
@@ -202,23 +211,23 @@ article p  {
   width: 100%;
 }
 
-.cards .card {
+.card {
     padding: var(--card-breathing-room);
     margin: 0;
     /* border: 1px solid red; */
     /* background-color: var(--seseragi-purple); */
 }
 
-.cards .card h1 {
-  font-size: 1.3rem;
-  font-weight: 400;
+.card h1 {
+  font-size: 3rem;
+  font-weight: var(--font-weight-normal);
   margin-top: 0;
   margin-bottom: 0.6rem;
   line-height: 1.35;
   color: var(--seseragi-text-color);
 }
 
-.cards .card p {
+.card p {
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
   color: var(--seseragi-text-color);
@@ -246,12 +255,10 @@ article p  {
 
 .flow-sticky h2,
 .flow-scroll h2 {
-  font-size: 0.75rem;
-  font-family: var(--ui-font);
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--seseragi-medium-gray);
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  font-weight: var(--font-weight-normal);
+  color: var(--seseragi-black);
   margin-bottom: 0.85rem;
 }
 
