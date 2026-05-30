@@ -27,6 +27,8 @@
   --body-line-height: 1.75;
   --body-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
   --title-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
+  --title-font-weight: 400;
+  --title-font-size: 1.5rem;
 
   --ui-font: "Lato", "Lucida Grande", Verdana, sans-serif;
 
@@ -115,6 +117,11 @@ footer {
   /* border: 1px solid red; */
 }
 
+.content {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
 .margin-set-content {
   max-width: var(--layout-measure-content);
   margin: 0 auto;
@@ -141,7 +148,7 @@ footer {
 /* Surface */
 .surface {
   background-color: var(--surface-color);
-  padding: 1.5rem;
+  padding: 0;
 }
 
 /* Main */
@@ -156,7 +163,9 @@ article {
 }
 
 article h1 {
-  font-size: var(--article-h1);
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
   text-align: center; 
   margin-top: 3rem;
   margin-bottom: 1.5rem; 
@@ -219,7 +228,7 @@ article p  {
 }
 
 .card h1 {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: var(--font-weight-normal);
   margin-top: 0;
   margin-bottom: 0.6rem;
