@@ -69,3 +69,47 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: auto;
 margin: var(--layout-margin);
 ```
+
+
+
+## Seseragi Notebooks
+
+A Notebook consists of two sections, a notebook document and a stream of posts.
+
+The Notebook Document is the document for a topic, a text associated with a tag, which develops over time.
+
+Design features:
+
+* Tags are presented in --seseragi-purple to make the connection between notebook and stream sections visually clear.
+
+* Notebook sections are responsive, collapsing to a single column at 750px with the notebook document located above the stream of posts.
+
+## Example Notebook
+
+```HTML
+<main>
+  <section class="flow-wrap">
+    <section class="flow-sticky notebook">
+      <span class="tag">#transform</span>
+      <h2>Transforming Conversations to Knowledge</h2>
+      <p>...</p>
+    </section>
+    <section class="flow-scroll stream">
+      <p>Post content <span class="tag">#transform</span></p>
+      <p>Post content <span class="tag">#transform</span></p>
+    </section>
+  </section>
+
+  <section class="flow-wrap">
+    <section class="flow-sticky notebook">
+      <span class="tag">#expertise</span>
+      <h2>Capturing and Refining User Expertise</h2>
+      <p>...</p>
+    </section>
+    <section class="flow-scroll stream">
+      <p>Post content <span class="tag">#expertise</span></p>
+    </section>
+  </section>
+</main>
+```
+
