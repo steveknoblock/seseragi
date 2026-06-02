@@ -1,136 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Seseragi Notebook</title>
-    <meta name="description" content="Seseragi Notebook. A stream-to-knowledge interface.">
+    <title>Seseragi Theme - Flow (minimal)</title>
+    <meta name="description" content="Seseragi. A page calming design">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
     <link rel="stylesheet" href="minimal.css" type="text/css" />
-    <style>
-
-/* Notebook page */
-
-html, body {
-  height: auto;
-  min-height: 100%;
-  margin: 0;
-}
-
-/* ── Flow wrap ── */
-.flow-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid var(--border-divider);
-}
-
-/* ── Notebook column (sticky left) ── */
-.notebook {
-  position: sticky;
-  top: 0;
-  align-self: start;
-  padding: var(--card-breathing-room);
-  border-right: 1px solid var(--border-divider);
-  background-color: var(--bg-color);
-}
-
-.notebook .tag {
-  display: inline-block;
-  font-family: var(--ui-font);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--seseragi-purple);
-  margin-bottom: 0.75rem;
-}
-
-.notebook h2 {
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 1.35;
-  margin-top: 0;
-  margin-bottom: 0.85rem;
-  color: var(--seseragi-text-color);
-}
-
-.notebook p {
-  font-size: 0.9rem;
-  line-height: var(--body-line-height);
-  color: var(--seseragi-dark-gray);
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-}
-
-/* ── Stream column (scrolling right) ── */
-.stream {
-  padding: var(--card-breathing-room);
-  background-color: var(--seseragi-white);
-}
-
-.stream p {
-  font-size: 0.9rem;
-  line-height: var(--body-line-height);
-  color: var(--seseragi-text-color);
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border-divider);
-}
-
-.stream p:last-child {
-  border-bottom: none;
-}
-
-.stream .tag {
-  font-family: var(--ui-font);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--seseragi-purple);
-  margin-left: 0.25rem;
-}
-
-/* ── Responsive ── */
-@media (max-width: 750px) {
-  .flow-wrap {
-    grid-template-columns: 1fr;
-  }
-  .notebook {
-    position: static;
-    border-right: none;
-    border-bottom: 1px solid var(--border-divider);
-  }
-}
-
-    /* ── Slide-down nav ── */
-    #panel-nav {
-      background-color: var(--white);
-      border-bottom: 1px solid var(--gray-border);
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 280ms ease-out;
-    }
-    #panel-nav.open { max-height: 320px; }
-    #panel-nav .nav-inner {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 1.25rem 1.5rem 1.5rem;
-    }
-    #panel-nav ul { padding-top: 0.25rem; }
-    #panel-nav ul li { line-height: 2.2; }
-    #panel-nav ul li a {
-      font-family: var(--ui-font);
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--black);
-    }
-    #panel-nav ul li a:hover { color: var(--blue); }
-    </style>
   </head>
 <body>
 
-<header>
+<header class="panel pin">
   <button class="menu-btn" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
     <svg id="icon-open" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M0 0h24v24H0z" fill="none"/>
@@ -142,8 +24,9 @@ html, body {
   </button>
   <hgroup>
     <h1 class="logo">Seseragi</h1>
-    <h2 class="tagline">The sound of flowing water.</h2>
+    <h2 class="tagline">The sound of flowing water</h2>
   </hgroup>
+  <div class="panel-menu"></div>
 </header>
 
 <nav class="panel-nav" id="panel-nav" aria-label="Site menu">
@@ -166,53 +49,62 @@ html, body {
   </div>
 </nav>
 
-<!-- Notebook -->
+<!-- Flow -->
 <main>
-
-  <section class="flow-wrap">
-    <section class="notebook">
-      <span class="tag">#transform</span>
-      <h2>Transforming Conversations to Knowledge</h2>
-      <p>This problem of how to transition ephemeral, but timely, information found in forums, Q and A sessions, all the forum-like forms on the network from Usenet to Twitter is one that fascinates me.</p>
-      <p>I've thought about this for a long time without really coming up with any good mechanism for capturing the knowledge and experience of the forum, the group, from scattered individual, unrefined forms, to coherent, refined forms maintained by the community.</p>
-      <p>I think that the idea of automatically transitioning content created by an individual into community property is a great idea. It may meet with some resistance from individuals. But I think it is a good solution to this problem, since anyone can start a conversation that does not just spin out into the oblivion of old forum posts, but can become a seed that grows into a well maintained, coherent, concise source of information.</p>
+  <div class="surface">
+  <section class="card margin-set-content">
+    <h1>Notebook Title</h1>
+    <p>A brief description of what this notebook contains and its purpose.</p>
+  </section>
+  </div>
+  <div class="gradient-surface">
+  <section class="flow-wrap margin-set-wide gradient-surface">
+    <section class="flow-sticky">
+        <h2>A Wonderful Serenity</h2>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
     </section>
-    <section class="stream">
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
+    <section class="flow-scroll">
+        <h2>The Charm of Existence</h2>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
     </section>
   </section>
+  </div>
 
-  <section class="flow-wrap">
-    <section class="notebook">
-      <span class="tag">#expertise</span>
-      <h2>Capturing and Refining User Expertise</h2>
-      <p>One of my longtime interests has been how to create a system that captures the knowledge of experts and refines it into a single resource. I was attracted to wikis early on by their communal authorship, but found the lack of structure unsuitable for my needs.</p>
-      <p>What I wanted was a way to let users engage in a Q and A and then somehow capture and distill the expertise into a more traditional article format, which could be maintained by everyone. I wanted to capture the expertise emerging from the group discussion through some mechanism.</p>
+<!-- Flow -->
+   <div class="gradient-surface">
+    <section class="flow-wrap margin-set-wide">
+      <section class="flow-sticky">
+          <h2>A Wonderful Serenity</h2>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+      </section>
+      <section class="flow-scroll">
+          <h2>The Charm of Existence</h2>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was.</p>
+      </section>
     </section>
-    <section class="stream">
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#expertise</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#expertise</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#expertise</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#expertise</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#expertise</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#expertise</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#expertise</span></p>
-      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#expertise</span></p>
-    </section>
-  </section>
-
+   </div>
 </main>
-
 <footer>
-  &copy; 2026 Steve Knoblock &middot; Seseragi Notebook
-</footer>
+      &copy;<!-- 2020-2026 Seseragi Theme -->2026 Steve Knoblock Seseragi Theme
+</footer> 
 
 <script>
   (function () {

@@ -1,39 +1,29 @@
-/* Flows */
-    .pin { 
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        /* height: 100%;
-        width: 50%; */
-        overflow-y: scroll;
-    }
+/* ── Stream column (scrolling right) ── */
+.stream {
+  padding: var(--card-breathing-room);
+  background-color: var(--seseragi-white);
+}
 
-    .pin-to-top {
-        position: sticky;
-        top: 0;
-        /* Critical to prevent sticky overlapping sticky header. */
-        z-index: 1;
-    }
+.stream p {
+  font-size: 0.9rem;
+  line-height: var(--body-line-height);
+  color: var(--seseragi-text-color);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-divider);
+}
 
-    .scroller {
-        height: 30%;
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-        scroll-padding: 40px;
-    }
+.stream p:last-child {
+  border-bottom: none;
+}
 
-    .message-panel { 
-        height: 50%;
-        background-color:mediumpurple;
-        padding: 1em
-    }
-
-    .message {
-        padding: 2em
-    }
-
-    .notebook-panel {
-        height: 50%;
-        background-color:gainsboro;
-        padding: 1em;
-    }
+.stream .tag {
+  font-family: var(--ui-font);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--seseragi-purple);
+  margin-left: 0.25rem;
+}

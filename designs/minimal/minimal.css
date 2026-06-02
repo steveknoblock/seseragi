@@ -20,10 +20,11 @@
   --seseragi-white: #fff;
   --seseragi-black: #000;
   --seseragi-blue: #3377AA;
+  
   --border-divider: #ccc;
   --surface-color: #ccc;
 
-  --body-font-size: 1.0rem; /* .9rem maybe? */
+  --body-font-size: 1.0rem;
   --body-line-height: 1.75;
   --body-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
   --title-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
@@ -42,7 +43,7 @@
 
   --header-height: 62.5333px; /* Measured from actual computed height of header */
 
-  --measure-readable: 30em;
+  --measure-readable: 35em;
   --measure-quote: 22em;
 
   --font-weight-normal: 400;
