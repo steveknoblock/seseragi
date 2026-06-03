@@ -369,9 +369,11 @@ figure {
   padding: 0;
 }
 
-figure-caption {
-  font-size: 0.75rem;
+figcaption {
+  font-family: var(--ui-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--font-weight-light);
   color: var(--seseragi-medium-gray);
-  text-align: center;
-  margin-top: 0.5rem;
+  padding: 0.5rem 0;
 }
+
