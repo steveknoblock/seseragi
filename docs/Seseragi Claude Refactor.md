@@ -18,7 +18,7 @@ When I wrote original version I had a goal of eliminating as many DIV elements a
   </section> 
   ```
 
-  Which has an influence on the CSS usage and readability. I am thinking that the .cards .card nesting might be better.   
+  Which has an influence on the CSS usage and readability. I am thinking that the .cards .card nesting might be better.
   
   ```HTML
   <section class="card">
