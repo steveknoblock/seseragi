@@ -362,3 +362,16 @@ article p  {
 .panel-nav ul li a:hover {
   color: var(--seseragi-blue);
 }
+
+/* Media Flow */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figure-caption {
+  font-size: 0.75rem;
+  color: var(--seseragi-medium-gray);
+  text-align: center;
+  margin-top: 0.5rem;
+}
