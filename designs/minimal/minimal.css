@@ -377,3 +377,7 @@ figcaption {
   padding: 0.5rem 0;
 }
 
+.flow-sticky figure img {
+  /* height: 80vh; needs adjustment */
+  object-fit: cover;
+}
