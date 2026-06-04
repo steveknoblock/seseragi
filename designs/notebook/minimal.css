@@ -20,12 +20,16 @@
   --seseragi-white: #fff;
   --seseragi-black: #000;
   --seseragi-blue: #3377AA;
+  
   --border-divider: #ccc;
+  --surface-color: #ccc;
 
-
-  --body-font-size: 1.0rem; /* .9rem maybe? */
+  --body-font-size: 1.0rem;
   --body-line-height: 1.75;
   --body-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
+  --title-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
+  --title-font-weight: 400;
+  --title-font-size: 1.5rem;
 
   --ui-font: "Lato", "Lucida Grande", Verdana, sans-serif;
 
@@ -37,8 +41,13 @@
   --layout-gap: 0;
   --layout-measure-content: 74em;
 
-  --measure-readable: 30em;
+  --header-height: 62.5333px; /* Measured from actual computed height of header */
+
+  --measure-readable: 35em;
   --measure-quote: 22em;
+
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
 
   --card-breathing-room: 1.75rem;
 }
@@ -104,9 +113,14 @@ footer {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: var(--layout-margin);
   gap: var(--layout-gap);
+  margin: var(--layout-margin);
   /* border: 1px solid red; */
+}
+
+.content {
+  width: 100%;
+  padding-top: 1.5rem;
 }
 
 .margin-set-content {
@@ -124,32 +138,54 @@ footer {
   margin: 0 auto;
 }
 
-/* Main */
-main {
+/* Gradient Surface */
+.gradient-surface {
   background: transparent url(img/page_background_gray.png);
   background-repeat: repeat-x;
   background-position: top;
   background-color: var(--bg-color);
 }
 
+/* Surface */
+.surface {
+  background-color: var(--surface-color);
+  padding: 0;
+}
+
+/* Main */
+main {
+  background: none;
+}
+
 /* Article */
 
+article {
+  background-color: transparent;
+}
+
 article h1 {
-  font-size: var(--article-h1);
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
   text-align: center; 
-  margin-top: 3rem;
+  margin-top: 0rem;
   margin-bottom: 1.5rem; 
 }
 
 article h2 {
+  font-family: var(--title-font);
   font-size: var(--article-h2);
+  font-weight: var(--title-font-weight);
   margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
-article h3 {  font-size: var(--article-h3);
+article h3 {  
+  font-family: var(--title-font);
+  font-size: var(--article-h3);
+  font-weight: var(--title-font-weight);
   margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 article p  {
@@ -190,23 +226,24 @@ article p  {
   width: 100%;
 }
 
-.cards .card {
+.card {
+/* The card breathing room is pushing the card headings down too far against the gradient */
     padding: var(--card-breathing-room);
     margin: 0;
     /* border: 1px solid red; */
     /* background-color: var(--seseragi-purple); */
 }
 
-.cards .card h1 {
-  font-size: 1.3rem;
-  font-weight: 400;
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-normal);
   margin-top: 0;
   margin-bottom: 0.6rem;
   line-height: 1.35;
   color: var(--seseragi-text-color);
 }
 
-.cards .card p {
+.card p {
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
   color: var(--seseragi-text-color);
@@ -218,32 +255,26 @@ article p  {
 .flow-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid var(--border-divider);
   /* no height, no overflow */
 }
 
 .flow-sticky {
   position: sticky;
-  top: 76.75px; /* Computed height of header */
+  top: var(--header-height);
   align-self: start;
   padding: 1.5rem 1.25rem;
-  border-right: 1px solid var(--border-divider);
-  background-color: var(--bg-color);
 }
 
 .flow-scroll {
   padding: 1.5rem 1.25rem;
-  background-color: var(--seseragi-white);
 }
 
 .flow-sticky h2,
 .flow-scroll h2 {
-  font-size: 0.75rem;
-  font-family: var(--ui-font);
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--seseragi-medium-gray);
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  font-weight: var(--font-weight-normal);
+  color: var(--seseragi-black);
   margin-bottom: 0.85rem;
 }
 
@@ -330,4 +361,23 @@ article p  {
 
 .panel-nav ul li a:hover {
   color: var(--seseragi-blue);
+}
+
+/* Media Flow */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  font-family: var(--ui-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--font-weight-light);
+  color: var(--seseragi-medium-gray);
+  padding: 0.5rem 0;
+}
+
+.flow-sticky figure img {
+  /* height: 80vh; needs adjustment */
+  object-fit: cover;
 }
