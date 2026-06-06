@@ -1,4 +1,6 @@
 
+Thinking through the idea of a Seseragi color scheme and how to define variables for colors.
+
 I suppose it depends on the perspective on colors 
 
 If the color scheme for Seseragi defines white as off-white then describing it as "Seseragi white" makes sense.
@@ -24,6 +26,7 @@ but there is also background color for the design
 
 --bg-color: #eee
 
+The choice is between setting the standard white color to the Seseragi color (--color-white: #eee) or specifying a color scheme color (--seseragi-white: #eee). 
 
 
 Suggestions and excerpts
