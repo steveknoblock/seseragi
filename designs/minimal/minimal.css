@@ -381,3 +381,23 @@ figcaption {
   /* height: 80vh; needs adjustment */
   object-fit: cover;
 }
+
+/* Masking main content to create a fade effect at the top */
+/* This is a bit of a hack to create a fade effect at the top of the main content, so that it fades out as it approaches the header. This is to create a sense of depth and to make the header feel more integrated with the content. */
+/* The mask-image is a linear gradient that goes from transparent to black, with the transition happening at the height of the header plus some extra space (1rem in this case). This means that the content will be fully visible below the header, but will fade out as it approaches the header. */  
+/* The -webkit-mask-image is for Safari support. */
+/*
+main {
+  background: none;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black calc(var(--header-height) + 1rem)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black calc(var(--header-height) + 1rem)
+  );
+}
+*/
