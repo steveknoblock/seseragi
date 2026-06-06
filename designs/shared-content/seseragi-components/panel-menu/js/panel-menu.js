@@ -1,40 +1,38 @@
 /**
  * panel-menu.js
  * A web component panel menu.
- * (c)2020 Steve Knoblock
+ * Autonomous custom element — no Shadow DOM, styles in minimal.css.
+ * Uses a <template id="panel-menu"> in the page HTML for markup.
+ * (c)2020-2026 Steve Knoblock
  * MIT LICENSE
  */
-customElements.define('panel-menu',
 
-class PanelMenu extends HTMLDivElement {
-  constructor() {
-    super();
+class PanelMenu extends HTMLElement {
 
-    document.addEventListener('DOMContentLoaded', function () {
-      console.log('DOM Loaded');
+  connectedCallback() {
+
+    // Clone template content into light DOM
+    const template = document.getElementById('panel-menu');
+    const clone = template.content.cloneNode(true);
+    this.appendChild(clone);
+
+    // Wire up toggle behavior
+    const toggle = this.querySelector('#menu-toggle');
+    const iconO  = this.querySelector('#icon-open');
+    const iconC  = this.querySelector('#icon-close');
+
+    // The nav panel is a sibling element in the page
+    const nav = document.getElementById('panel-nav');
+
+    toggle.addEventListener('click', function () {
+      const isOpen = nav.classList.toggle('open');
+      iconO.classList.toggle('hide', isOpen);
+      iconC.classList.toggle('hide', !isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
     });
 
-      
-      const template = document.getElementById('panel-menu');
-      console.log(template);
-      const templateContent = template.content;
-      const shadowRoot = this.attachShadow({mode: 'open'});
-      shadowRoot.appendChild(templateContent.cloneNode(true));
+  }
 
-      const shadowButton = shadowRoot.querySelector('#panel-menu-button');
-      const shadowMenuOpen = shadowRoot.querySelector('#panel-menu-open');
-      const shadowMenuClose = shadowRoot.querySelector('#panel-menu-close');
-
-      const shadowNav = shadowRoot.querySelector('#menu-nav');
-
-      shadowButton.addEventListener('click', function(e) { 
-        //console.log("heard the click");
-        shadowNav.classList.toggle('hide');
-        shadowNav.classList.toggle('roll');
-        shadowMenuOpen.classList.toggle('hide');
-        shadowMenuClose.classList.toggle('hide');
-      });
-
-    }
 }
-, { extends: 'div'} );
+
+customElements.define('panel-menu', PanelMenu);
