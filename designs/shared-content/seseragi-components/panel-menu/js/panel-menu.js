@@ -9,29 +9,31 @@
 
 class PanelMenu extends HTMLElement {
 
-  connectedCallback() {
-
-    // Clone template content into light DOM
-    const template = document.getElementById('panel-menu');
-    const clone = template.content.cloneNode(true);
-    this.appendChild(clone);
-
-    // Wire up toggle behavior
-    const toggle = this.querySelector('#menu-toggle');
-    const iconO  = this.querySelector('#icon-open');
-    const iconC  = this.querySelector('#icon-close');
-
-    // The nav panel is a sibling element in the page
-    const nav = document.getElementById('panel-nav');
-
-    toggle.addEventListener('click', function () {
-      const isOpen = nav.classList.toggle('open');
-      iconO.classList.toggle('hide', isOpen);
-      iconC.classList.toggle('hide', !isOpen);
-      toggle.setAttribute('aria-expanded', isOpen);
-    });
-
+connectedCallback() {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => this._init());
+  } else {
+    this._init();
   }
+}
+
+_init() {
+  const template = document.getElementById('panel-menu');
+  const clone = template.content.cloneNode(true);
+  this.appendChild(clone);
+
+  const toggle = this.querySelector('#menu-toggle');
+  const iconO  = this.querySelector('#icon-open');
+  const iconC  = this.querySelector('#icon-close');
+  const nav    = document.getElementById('panel-nav');
+
+  toggle.addEventListener('click', function () {
+    const isOpen = nav.classList.toggle('open');
+    iconO.classList.toggle('hide', isOpen);
+    iconC.classList.toggle('hide', !isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+}
 
 }
 
