@@ -251,61 +251,6 @@ article p  {
   margin-bottom: 0;
 }
 
-/* Flow */
-.flow-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* no height, no overflow */
-}
-
-.flow-sticky {
-  position: sticky;
-  top: var(--header-height);
-  align-self: start;
-  padding: 1.5rem 1.25rem;
-}
-
-.flow-scroll {
-  padding: 1.5rem 1.25rem;
-}
-
-.flow-sticky h2,
-.flow-scroll h2 {
-  font-size: 1.5rem;
-  font-family: var(--title-font);
-  font-weight: var(--font-weight-normal);
-  color: var(--seseragi-black);
-  margin-bottom: 0.85rem;
-}
-
-.flow-sticky p,
-.flow-scroll p {
-  font-size: 0.9rem;
-  line-height: var(--body-line-height);
-  color: var(--seseragi-dark-gray);
-  margin-bottom: 0.75rem;
-}
-
-/* Responsive */
-
-@media (max-width: 750px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .flow-wrap {
-    grid-template-columns: 1fr;
-  }
-  .flow-sticky {
-    position: static;
-  }
-}
-
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Hamburger button */ 
 .menu-btn {
   background: none;
