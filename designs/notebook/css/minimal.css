@@ -1,0 +1,348 @@
+/* Seseragi Minimal */
+
+/* Reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
+    ul { list-style: none; }
+    a { text-decoration: none; }
+    img { display: block; width: 100%; height: auto; }
+
+/* Settings */
+:root {
+  --bg-color: #eee;
+  --seseragi-text-color: #000;
+
+  --seseragi-purple: #6D4F91;
+
+  --seseragi-white: #fff;
+  --seseragi-gray: #eee;
+  --seseragi-medium-gray: #777;
+  --seseragi-dark-gray: #444;
+  --seseragi-black: #000;
+  --seseragi-blue: #3377AA;
+  
+  --border-divider: #ccc;
+  --surface-color: #ccc;
+
+  --body-font-size: 1.0rem;
+  --body-line-height: 1.75;
+  --body-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
+  --title-font: "Lora", "Georgia", "Times New Roman", "Times", serif;
+  --title-font-weight: 400;
+  --title-font-size: 1.5rem;
+
+  --ui-font: "Lato", "Lucida Grande", Verdana, sans-serif;
+
+  --article-h1: 2.2rem;
+  --article-h2: 1.5rem;
+  --article-h3: 1.1rem;
+
+  --layout-margin: auto;
+  --layout-gap: 0;
+  --layout-measure-content: 74em;
+
+  --header-height: 62.5333px; /* Measured from actual computed height of header */
+
+  --measure-readable: 35em;
+  --measure-quote: 22em;
+
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
+
+  --card-breathing-room: 1.75rem;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  color: var(--seseragi-text-color);
+}
+
+header {
+  background-color: var(--bg-color);
+  /* border-bottom: 1px solid var(--gray-border); */
+  padding: 0.6rem 1.25rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+header hgroup { text-align: center }
+
+h1.logo {
+  font-family: var(--body-font);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+h2.tagline {
+  font-family: var(--body-font);
+  font-style: italic;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--seseragi-blue);
+  letter-spacing: 0.02em;
+}
+
+footer {
+  padding: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--seseragi-medium-gray);
+  text-align: center;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--border-divider);
+}
+
+/* Layout */
+
+.pin, .pin-to-top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--layout-gap);
+  margin: var(--layout-margin);
+  /* border: 1px solid red; */
+}
+
+.content {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+.margin-set-content {
+  max-width: var(--layout-measure-content);
+  margin: 0 auto;
+}
+
+.margin-set-readable {
+  max-width: var(--measure-readable);
+  margin: 0 auto;
+}
+
+.margin-set-quote {
+  max-width: var(--measure-quote);
+  margin: 0 auto;
+}
+
+/* Gradient Surface */
+.gradient-surface {
+  background: transparent url(img/page_background_gray.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: var(--bg-color);
+}
+
+/* Surface */
+.surface {
+  background-color: var(--surface-color);
+  padding: 0;
+}
+
+/* Main */
+main {
+  background: none;
+}
+
+/* Article */
+
+article {
+  background-color: transparent;
+}
+
+article h1 {
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  text-align: center; 
+  margin-top: 0rem;
+  margin-bottom: 1.5rem; 
+}
+
+article h2 {
+  font-family: var(--title-font);
+  font-size: var(--article-h2);
+  font-weight: var(--title-font-weight);
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+article h3 {  
+  font-family: var(--title-font);
+  font-size: var(--article-h3);
+  font-weight: var(--title-font-weight);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+article p  {
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  color: var(--seseragi-text-color);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Drop Cap */
+.drop-cap {
+  color: var(--seseragi-text-color);
+  font-family: var(--body-font);
+  font-size: 2.6rem;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 3px 9px 2px 0;
+  height: 58px;
+  width: 58px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Drop Cap with Circle */
+.with-circle {
+  border-radius: 50%;
+  border: 2px solid var(--seseragi-purple);
+}
+
+/* Cards */
+
+.cards {
+  padding: 0;
+  width: 100%;
+}
+
+.card {
+/* The card breathing room is pushing the card headings down too far against the gradient */
+    padding: var(--card-breathing-room);
+    margin: 0;
+    /* border: 1px solid red; */
+    /* background-color: var(--seseragi-purple); */
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-normal);
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+  color: var(--seseragi-text-color);
+}
+
+.card p {
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  color: var(--seseragi-text-color);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Hamburger button */ 
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 0;
+}
+.menu-btn svg { fill: var(--seseragi-medium-gray); width: 24px; height: 24px; }
+.hide { display: none !important; }
+
+/* Panel Nav */
+/* Outer — animates the row height */
+.panel-nav {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 280ms ease-out;
+  background-color: var(--bg-color);
+}
+
+.panel-nav.open {
+  grid-template-rows: 1fr;
+}
+
+/* Inner — must have overflow: hidden and min-height: 0 */
+.panel-nav .nav-inner {
+  overflow: hidden;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+}
+
+.panel-nav.open .nav-inner {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.panel-nav ul {
+  padding-top: 0.25rem;
+}
+
+.panel-nav ul li {
+  line-height: 2.2;
+}
+
+.panel-nav ul li a {
+  font-family: var(--ui-font);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--seseragi-text-color);
+  letter-spacing: 0.02em;
+}
+
+.panel-nav ul li a:hover {
+  color: var(--seseragi-blue);
+}
+
+/* Media Flow */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  font-family: var(--ui-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--font-weight-light);
+  color: var(--seseragi-medium-gray);
+  padding: 0.5rem 0;
+}
+
+.flow-sticky figure img {
+  /* height: 80vh; needs adjustment */
+  object-fit: cover;
+}
+
+/* Masking main content to create a fade effect at the top */
+/* This is a bit of a hack to create a fade effect at the top of the main content, so that it fades out as it approaches the header. This is to create a sense of depth and to make the header feel more integrated with the content. */
+/* The mask-image is a linear gradient that goes from transparent to black, with the transition happening at the height of the header plus some extra space (1rem in this case). This means that the content will be fully visible below the header, but will fade out as it approaches the header. */  
+/* The -webkit-mask-image is for Safari support. */
+/*
+main {
+  background: none;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black calc(var(--header-height) + 1rem)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black calc(var(--header-height) + 1rem)
+  );
+}
+*/
