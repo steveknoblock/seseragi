@@ -1,0 +1,35 @@
+/* ── Divider ── */
+.divider {
+    width: 4px;
+    background: var(--border-divider);
+    cursor: col-resize;
+    flex-shrink: 0;
+    transition: background 0.15s;
+}
+
+.divider:hover, .divider.dragging { background: var(--accent); }
+
+.flow-wrap {
+  display: grid;
+  grid-template-columns: 1fr 4px 1fr;
+  /* no height, no overflow */
+}
+
+.flow-sticky h2,
+.flow-scroll h2 {
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  font-weight: var(--font-weight-normal);
+  color: var(--seseragi-black);
+  margin-bottom: 0.85rem;
+  width: 34rem;
+}
+
+.flow-sticky p,
+.flow-scroll p {
+  font-size: 0.9rem;
+  line-height: var(--body-line-height);
+  color: var(--seseragi-dark-gray);
+  margin-bottom: 0.75rem;
+  width: 34rem;
+}
