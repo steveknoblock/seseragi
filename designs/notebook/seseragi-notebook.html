@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
     <link rel="stylesheet" href="css/minimal.css" type="text/css" />
     <link rel="stylesheet" href="css/flow.css" type="text/css" />
-       <link rel="stylesheet" href="css/notebook.css" type="text/css" />
+    <link rel="stylesheet" href="css/notebook.css" type="text/css" />
   </head>
 <body>
 
@@ -51,15 +51,15 @@
   </section>
   </div>
   <div class="gradient-surface">
-  <section class="flow-wrap margin-set-wide gradient-surface">
-    <section class="flow-sticky">
+  <section class="flow-wrap margin-set-content gradient-surface">
+    <section class="flow-sticky" id="flow-left">
       <p><span class="tag">#transform</span></p>
       <h2>Transforming Conversations to Knowledge</h2>
       <p>This problem of how to transition ephemeral, but timely, information found in forums, Q and A sessions, all the forum-like forms on the network from Usenet to Twitter is one that fascinates me. I've thought about this for a long time without really coming up with any good mechanism for capturing the knowledge and experience of the forum, the group, from scattered individual, unrefined forms, to coherent, refined forms maintained by the community. I think that the idea of automatically transitioning content created by an individual into community property is a great idea. It may meet with some resistance from individuals. But I think it is a good solution to this problem, since anyone can start a conversation that does not just spin out into the oblivion of old forum posts, but can become a seed that grows into a well maintained, coherent, concise source of information.
       </p>
     </section>
     <div class="divider" id="divider"></div>
-    <section class="flow-scroll">
+    <section class="flow-scroll" id="flow-right">
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
@@ -73,14 +73,15 @@
   </div>
 
     <div class="gradient-surface">
-  <section class="flow-wrap margin-set-wide gradient-surface">
-    <section class="flow-sticky">
+  <section class="flow-wrap margin-set-content gradient-surface">
+    <section class="flow-sticky" id="flow-left">
       <p><span class="tag">#transform</span></p>
             <h2>Capturing and Refining User Expertise</h2>
       <p>One of my longtime interests has been how to create a system that captures the knowledge of experts and refines it into a single resource. I was attracted to wikis early on by their communal authorship, but found the lack of structure unsuitable for my needs. What I wanted, for two of my early efforts, one a site intended to help family photography historians answer questions about old photographs and the other a site for programmers to find help with coding questions, was a way to let users engage in a Q and A and then somehow capture and distill the expertise into a more traditional article format (like a wiki page), which could be maintained by everyone. I wanted to capture the expertise emerging from the group discussion through some mechanism.
       </p>
     </section>
-    <section class="flow-scroll">
+    <div class="divider" id="divider"></div>
+    <section class="flow-scroll" id="flow-right">
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was. <span class="tag">#transform</span></p>
@@ -110,6 +111,8 @@
 </template>
 
 <script src="../shared-content/seseragi-components/panel-menu/js/panel-menu.js" defer></script>
+
+<script src="js/notebook.js" defer></script>
 
 </body>
 </html>

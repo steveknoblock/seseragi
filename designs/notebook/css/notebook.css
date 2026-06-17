@@ -5,9 +5,9 @@
     cursor: col-resize;
     flex-shrink: 0;
     transition: background 0.15s;
-}
+} 
 
-.divider:hover, .divider.dragging { background: var(--accent); }
+.divider:hover, .divider.dragging { background: var(--seseragi-purple); }
 
 .flow-wrap {
   display: grid;
@@ -22,7 +22,7 @@
   font-weight: var(--font-weight-normal);
   color: var(--seseragi-black);
   margin-bottom: 0.85rem;
-  width: 34rem;
+  /* width: 34rem; */
 }
 
 .flow-sticky p,
@@ -31,5 +31,33 @@
   line-height: var(--body-line-height);
   color: var(--seseragi-dark-gray);
   margin-bottom: 0.75rem;
-  width: 34rem;
+  /* width: 34rem; */
+}
+
+/* ── Divider Affordance ── */
+
+.divider::after {
+  content: '⋮⋮';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--seseragi-medium-gray);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.divider {
+  position: relative;
+}
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 2rem;
+  background: var(--seseragi-medium-gray);
+  border-radius: 2px;
 }
