@@ -45,6 +45,8 @@
 
   --measure-readable: 35em;
   --measure-quote: 22em;
+  --measure-narrow: 20em;
+  --measure-hardstop: 6em;
 
   --font-weight-normal: 400;
   --font-weight-light: 300;
