@@ -61,3 +61,11 @@
   background: var(--seseragi-medium-gray);
   border-radius: 2px;
 }
+
+.tag {
+  display: inline-block;
+  color: var(--seseragi-purple);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
